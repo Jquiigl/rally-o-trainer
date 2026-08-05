@@ -112,6 +112,8 @@ input:focus, select:focus, button:focus-visible, a:focus-visible { outline: 3px 
 .rating-buttons button { min-height: 58px; color: var(--ink); background: var(--surface); border: 2px solid var(--line); border-radius: 14px; font-weight: 800; }
 .setup { text-align: center; }
 .setup-logo { width: 112px; border-radius: 24px; }
+.setup-brand { margin: .5rem 0 .7rem; font-size: clamp(2rem, 9vw, 2.6rem); }
+.setup-question { margin: .2rem 0 .55rem; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.55rem, 7vw, 2rem); line-height: 1.05; letter-spacing: -.025em; }
 .form-stack { display: grid; gap: 14px; text-align: left; }
 .splash { display: grid; place-items: center; align-content: center; gap: 12px; min-height: 100dvh; color: #fffaf0; background: var(--forest); font-family: Georgia, serif; font-size: 1.4rem; }
 .splash img { width: 96px; border-radius: 22px; }

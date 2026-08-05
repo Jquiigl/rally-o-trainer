@@ -18,8 +18,9 @@ export function SetupPage() {
 
   return <section className="center-card setup">
     <img className="setup-logo" src="./brand-symbol.png" alt="" />
+    <h1 className="setup-brand">Rally O Trainer</h1>
     <p className="eyebrow">Tu entrenador personal</p>
-    <h1>Empecemos por tu perro</h1>
+    <h2 className="setup-question">Empecemos por tu perro</h2>
     <p>Solo necesitamos dos datos. Permanecerán en este dispositivo.</p>
     <form onSubmit={submit} className="form-stack">
       <label>Nombre<input value={name} onChange={(event) => setName(event.target.value)} autoComplete="off" maxLength={40} required /></label>
