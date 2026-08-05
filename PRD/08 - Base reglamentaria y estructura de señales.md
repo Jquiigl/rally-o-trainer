@@ -126,7 +126,7 @@ No debe:
 - sustituir la consulta del reglamento vigente;
 - emitir decisiones arbitrales;
 - interpretar automáticamente ambigüedades reglamentarias;
-- copiar o reutilizar las imágenes oficiales;
+- alterar, redibujar o asociar una señal oficial a un ejercicio distinto;
 - convertir reglas administrativas en funciones sin valor para entrenar.
 
 ### 2. Declaración de independencia
@@ -138,7 +138,7 @@ La biblioteca, la pantalla de reglamento y la ficha de cada señal mostrarán, e
 Normas de presentación:
 
 - no usar los logotipos de RSCE o FCI como marca propia;
-- no emplear “oficial” para describir la aplicación, sus ilustraciones o su redacción;
+- emplear “oficial” solo para identificar la señal gráfica o la fuente, nunca la aplicación ni su redacción propia;
 - sí usar “Fuente oficial” en el enlace al documento de origen;
 - mostrar autoridad y edición en cada ficha;
 - avisar cuando el contenido esté pendiente de revisión o pueda haber quedado desactualizado.
@@ -603,7 +603,7 @@ El usuario será autor y revisor final, por lo que no existe una separación rea
 - [ ] Ubicación y espacio realistas.
 - [ ] Prerrequisitos sin ciclos.
 - [ ] Compatibilidad de progreso decidida.
-- [ ] Ilustración propia o ausencia explícita.
+- [ ] Imagen oficial, autoridad, documento y página comprobados.
 - [ ] Revisión final aprobada.
 
 #### 15.2 Validaciones automáticas del paquete
@@ -618,7 +618,7 @@ El usuario será autor y revisor final, por lo que no existe una separación rea
 - `progressCompatibilityKey` presente;
 - señal de sistema excluida de progreso;
 - toda restricción ejecutable tiene fuente y pruebas;
-- ningún activo apunta a imagen oficial;
+- toda señal publicada tiene exactamente un activo oficial local y trazable;
 - textos no vacíos y dentro de límites definidos.
 
 #### 15.3 Muestreo visual
@@ -667,22 +667,22 @@ Periodicidad recomendada: antes de una nueva publicación de la aplicación y, m
 - regenerar proyecciones solo cuando cambie compatibilidad o reglas;
 - permitir recuperar el paquete anterior si falla la activación.
 
-### 17. Ilustraciones propias
+### 17. Señales gráficas oficiales
 
-Las ilustraciones tendrán función didáctica, no identidad reglamentaria.
+Toda referencia visible a un ejercicio mostrará la señal oficial correspondiente. La imagen se extraerá sin redibujar de la fuente facilitada y revisada por el propietario.
 
 Requisitos:
 
-- diseño original, esquemático y coherente con Rally O Trainer;
-- perro y guía distinguibles sin detalles innecesarios;
-- flechas con dirección clara;
-- lado izquierdo y derecho no dependientes solo del color;
-- versión clara y oscura cuando sea necesario;
-- texto alternativo que describa la secuencia;
-- SVG preferido para nitidez y tamaño, sanitizado antes de incluirlo;
-- sin escudos, logotipos ni composición que pueda confundirse con la señal oficial.
+- autoridad explícita: RSCE o FCI;
+- correspondencia exacta entre identificador, número y ejercicio;
+- documento, página y checksum trazables;
+- archivo local optimizado para funcionamiento offline;
+- texto alternativo con autoridad, número y nombre;
+- fondo blanco y proporciones originales, también en modo oscuro;
+- miniatura legible en listas y versión completa en ficha y preparación;
+- validación automática que impida publicar una señal sin imagen oficial.
 
-La ausencia de ilustración nunca impedirá consultar o practicar una señal revisada.
+Los logotipos institucionales no se usarán como marca de Rally O Trainer. La reproducción de la señal no convierte la aplicación en oficial y se mantiene el aviso de independencia.
 
 ### 18. Presentación en la interfaz
 
@@ -692,7 +692,7 @@ Mostrará:
 
 - número y nombre;
 - autoridad y grado o grupo;
-- miniatura propia si existe;
+- miniatura oficial obligatoria;
 - estado del perro por lado;
 - material principal;
 - acción `Practicar`.
@@ -756,7 +756,7 @@ Estas correcciones no cambian IndexedDB del producto porque todavía no existe i
 | ADR-08-001 | RSCE es la ruta prioritaria para España; FCI actúa como base cuando exista remisión y como autoridad de la clase internacional. | Aprobada por contexto y fuentes |
 | ADR-08-002 | Todo contenido es consultable; la progresión controla recomendaciones, no acceso. | Aprobada previamente |
 | ADR-08-003 | La aplicación usa redacción reglamentaria propia, explicación sencilla y consejo positivo separados. | Aprobada previamente |
-| ADR-08-004 | Las señales oficiales no se reutilizan como imágenes; se crearán recursos originales. | Aprobada previamente |
+| ADR-08-004 | Toda referencia a una señal mostrará su imagen oficial RSCE o FCI, extraída de la fuente facilitada y trazable por página. Sustituye la decisión anterior sobre recursos propios. | Aprobada por el propietario el 6 de agosto de 2026 |
 | ADR-08-005 | Señal y asignación a grado son entidades distintas. | Aprobada en este capítulo |
 | ADR-08-006 | Reglamento consultable y restricciones ejecutables son estructuras distintas. | Aprobada en este capítulo |
 | ADR-08-007 | La equivalencia RSCE–FCI siempre se revisa manualmente. | Aprobada en este capítulo |

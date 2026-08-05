@@ -495,7 +495,7 @@ Las marcas en UC-10 y UC-11 indican que la copia, restauración y borrado abarca
 - RSCE Debutante y Grados 1, 2 y 3;
 - equivalencias FCI;
 - bloque internacional;
-- ilustraciones propias;
+- señales gráficas oficiales con trazabilidad;
 - revisión editorial completa.
 
 Cada corte debe añadir contenido y capacidades sin sustituir las fuentes de verdad ni cambiar las dependencias permitidas.

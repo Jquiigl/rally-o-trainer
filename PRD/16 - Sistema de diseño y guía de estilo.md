@@ -272,12 +272,15 @@ Un botón ocupado conserva anchura y texto contextual. No se deshabilita sin exp
 
 Variantes compacta y detallada. Anatomía contractual:
 
+- señal gráfica oficial obligatoria, sin redibujar;
 - identidad;
 - contexto;
 - estado;
 - motivo opcional;
 - material especializado opcional;
 - indicador de navegación.
+
+La variante compacta reserva 88 × 68 px para la señal sobre fondo blanco. La variante detallada conserva la proporción original, muestra autoridad, documento y página, y mantiene fondo blanco también en modo oscuro. El texto alternativo sigue el patrón `Señal oficial {autoridad} {número}: {nombre}`.
 
 #### 8.4 Insignia de estado
 

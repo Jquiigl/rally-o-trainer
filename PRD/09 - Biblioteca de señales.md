@@ -29,7 +29,7 @@
 - Una misma señal aparece en varios grados y no debe duplicar progreso.
 - Los nombres reglamentarios no siempre coinciden con las palabras que buscará un principiante.
 - La ficha debe ser útil tanto para aprender como para iniciar entrenamiento con una mano.
-- El modo offline debe incluir textos, relaciones e ilustraciones propias.
+- El modo offline debe incluir textos, relaciones y señales gráficas oficiales.
 - Mostrar demasiados estados editoriales puede confundir al usuario normal.
 
 ### Mejoras propuestas
@@ -237,7 +237,7 @@ Si existen varios motivos, el detalle los muestra ordenados. El usuario puede pr
 
 ### 13. Rendimiento y offline
 
-- textos, índices e ilustraciones propias forman parte del paquete local;
+- textos, índices y señales gráficas oficiales forman parte del paquete local;
 - primera lista visible en menos de 500 ms con base inicializada;
 - cambio de filtro perceptualmente inmediato;
 - imágenes perezosas y con dimensiones reservadas;

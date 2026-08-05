@@ -117,7 +117,7 @@ P1 se usa personalmente durante al menos 10 sesiones antes de expandir contenido
 
 - Debutante completo;
 - señales nacionales aplicables;
-- ilustraciones propias cuando estén disponibles, sin bloquear texto;
+- señales gráficas oficiales obligatorias para todo contenido publicado;
 - ambos lados como objetivo de entrenamiento;
 - copia de seguridad;
 - modos claro y oscuro;

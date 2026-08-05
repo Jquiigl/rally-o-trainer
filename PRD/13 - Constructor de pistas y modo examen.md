@@ -26,7 +26,7 @@
 
 - Las restricciones de diseño varían por grado y edición.
 - Una secuencia válida puede ser físicamente imposible en un espacio concreto.
-- Las ilustraciones propias todavía deberán producirse.
+- Cada referencia a un ejercicio deberá mostrar su señal gráfica oficial.
 - El modo examen puede convertirse en curso, que es un no objetivo.
 - Los recorridos no deben contaminar el progreso individual sin distinguir contexto.
 

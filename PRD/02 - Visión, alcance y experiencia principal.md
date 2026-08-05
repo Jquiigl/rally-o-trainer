@@ -70,7 +70,7 @@ Cada señal presentará tres capas con distinta responsabilidad:
 2. explicación sencilla para comprender qué se solicita;
 3. consejo de entrenamiento en positivo.
 
-La autoridad, versión, vigencia y enlace de referencia acompañarán al contenido, pero Rally O Trainer no se presentará como aplicación oficial ni reproducirá imágenes oficiales.
+La autoridad, versión, vigencia y enlace de referencia acompañarán al contenido. Rally O Trainer no se presentará como aplicación oficial, aunque mostrará la señal gráfica oficial correspondiente en toda referencia a un ejercicio.
 
 #### 3.4 Empezar por el caso más pequeño que cierra el ciclo
 
@@ -193,10 +193,10 @@ Cada señal incluida deberá disponer de:
 - prerrequisitos;
 - ubicación posible;
 - material necesario;
-- ilustración propia cuando esté disponible;
+- señal gráfica oficial y fuente trazable;
 - estado de revisión editorial.
 
-Las ilustraciones serán originales y esquemáticas. No se utilizarán imágenes oficiales ni se imitará su diseño de forma que pueda confundirse el producto con una publicación oficial.
+Las señales gráficas serán reproducciones fieles de las fuentes RSCE o FCI facilitadas. La identidad visual de la aplicación seguirá siendo propia y no usará los logotipos institucionales como marca.
 
 #### 3.3 Progresión y consulta
 
@@ -409,7 +409,7 @@ Cambiar a “necesita repaso” no borrará la fecha en que la señal fue aprend
 - cobertura RSCE Debutante y Grados 1, 2 y 3;
 - contenido FCI relacionado y bloque internacional separado;
 - descripción reglamentaria propia, explicación sencilla y consejo positivo;
-- ilustraciones propias;
+- señales gráficas oficiales disponibles offline;
 - sesiones individuales de 15 minutos;
 - ubicaciones casa, exterior reducido y club/pista;
 - inventario de material opcional;
@@ -454,7 +454,7 @@ Cambiar a “necesita repaso” no borrará la fecha en que la señal fue aprend
 - telemetría de producto;
 - inteligencia artificial remota;
 - diagnóstico veterinario o conductual;
-- reproducción de imágenes oficiales.
+- redibujar, alterar o asociar una señal oficial al ejercicio equivocado.
 
 ### 7. Incorporación sin cuenta
 
@@ -541,7 +541,7 @@ Estas métricas evaluarán el producto, no el rendimiento deportivo del perro. L
 |---|---|---:|---|
 | El alcance editorial de todos los grados retrasa el primer uso | Alto | Alta | Incorporación incremental, empezando por un ciclo completo de Debutante. |
 | La redacción reglamentaria introduce errores | Alto | Media | Fuente y versión obligatorias, estado editorial y revisión final por el propietario. |
-| Las ilustraciones propias se interpretan como oficiales | Medio | Media | Identidad claramente distinta y aviso de producto independiente. |
+| La reproducción de señales hace pensar que la aplicación es oficial | Medio | Media | Identidad propia, autoridad visible y aviso de producto independiente. |
 | El criterio 7/10 favorece repeticiones excesivas en una sesión | Alto | Media | Bloques recomendados de 3–5 intentos, reparto entre días y cierre anticipado. |
 | Registrar cada intento distrae | Alto | Media | Entrada agregada alternativa, botones grandes y deshacer inmediato. |
 | El grado recomendado se percibe como prohibición | Medio | Media | Usar lenguaje de recomendación y mantener siempre “Elegir cualquier señal”. |
@@ -572,7 +572,7 @@ Estas métricas evaluarán el producto, no el rendimiento deportivo del perro. L
 | DP-02-003 | Intervalo mínimo para alcanzar “consolidada” | Se ha aprobado el concepto, pero no su duración concreta. | Algoritmo de repaso |
 | DP-02-004 | Umbral exacto de “ayuda recurrente” | Debe ser observable y no reaccionar en exceso a un único día. | Algoritmo de repaso |
 | DP-02-005 | Lista de materiales y ubicaciones válidas por señal | Depende del inventario reglamentario y de entrenamiento. | Base de señales |
-| DP-02-006 | Sistema gráfico de ilustraciones propias | Debe resolverse sin copiar imágenes oficiales y funcionar a tamaño móvil. | Sistema de diseño |
+| DP-02-006 | Presentación de señales oficiales | Resuelta con activos locales, miniatura, vista completa, fuente y texto alternativo. | Cerrada el 6 de agosto de 2026 |
 | DP-02-007 | Adaptación del logotipo a “Rally O Trainer” | La referencia adjunta todavía contiene el nombre “Rally Entrena”. | Identidad visual |
 | DP-02-008 | Dispositivo Android físico de validación | Aún no se ha confirmado un probador con Android. | Antes de aceptar el MVP |
 | DP-02-009 | Framework y persistencia local | No corresponde fijarlos antes del análisis técnico. | Arquitectura técnica |

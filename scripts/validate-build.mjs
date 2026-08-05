@@ -29,6 +29,7 @@ assert(index.includes('apple-mobile-web-app-capable'), 'iOS install metadata is 
 assert(index.includes('manifest.webmanifest'), 'Manifest link is missing from index');
 assert(serviceWorker.includes('SKIP_WAITING'), 'Service worker update message support is missing');
 assert(serviceWorker.includes('index.html') && serviceWorker.includes('manifest.webmanifest'), 'Core shell is not precached');
+assert(serviceWorker.includes('signals/fci/101.webp') && serviceWorker.includes('signals/rsce/13.webp'), 'Official signs are not available in the offline precache');
 
 for (const icon of manifest.icons) {
   assert(files.includes(icon.src), `Manifest icon ${icon.src} is missing`);
@@ -37,13 +38,17 @@ for (const icon of manifest.icons) {
 for (const match of index.matchAll(/(?:src|href)="\.\/(assets\/[^"?]+)"/g)) assert(files.includes(match[1]), `Index asset ${match[1]} is missing`);
 assert(!files.some((file) => file.endsWith('.pdf')), 'Official PDF sources must not be shipped in the PWA');
 assert(!files.some((file) => /draft|source/i.test(file)), 'Draft or source content must not be shipped as a standalone asset');
+const officialSigns = files.filter((file) => /^signals\/(?:fci|rsce)\/\d+\.webp$/.test(file));
+assert(officialSigns.length === 33, `Expected 33 official sign images, found ${officialSigns.length}`);
+for (let code = 101; code <= 122; code += 1) assert(officialSigns.includes(`signals/fci/${code}.webp`), `Official FCI sign ${code} is missing`);
+for (const code of ['13','14','15','16','25','26','28','33','34','35','36']) assert(officialSigns.includes(`signals/rsce/${code}.webp`), `Official RSCE sign ${code} is missing`);
 const javascript = (await Promise.all(files.filter((file) => file.endsWith('.js') && file.startsWith('assets/')).map((file) => readFile(new URL(file, dist), 'utf8')))).join('\n');
 assert(javascript.includes('Frente, regreso por detrás sin parada'), 'Reviewed RSCE content is missing from the bundle');
 assert(!javascript.includes('Dos medias vueltas, perro por detrás'), 'Unapproved advanced content leaked into the bundle');
 
 let totalBytes = 0;
 for (const file of files) totalBytes += (await stat(new URL(file, dist))).size;
-assert(totalBytes < 2_000_000, `PWA distribution is unexpectedly large: ${totalBytes} bytes`);
+assert(totalBytes < 3_500_000, `PWA distribution is unexpectedly large: ${totalBytes} bytes`);
 
 if (errors.length) {
   console.error(errors.map((error) => `- ${error}`).join('\n'));

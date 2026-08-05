@@ -4,7 +4,7 @@
 |---|---|
 | Producto | Rally O Trainer |
 | Estado | Registro consolidado v1 |
-| Fecha | 5 de agosto de 2026 |
+| Fecha | 6 de agosto de 2026 |
 | Autoridad de producto | Propietario del proyecto |
 | Propósito | Resolver ambigüedades entre decisiones iniciales, capítulos y código |
 
@@ -51,7 +51,7 @@ El estado de implementación distingue cuatro términos:
 | D-020 | Repositorio público `Jquiigl/rally-o-trainer` y alojamiento gratuito mediante GitHub Actions y GitHub Pages | Aprobada, implementada y publicada |
 | D-020 | Copia JSON completa, recordatorio a 30 días y restauración validada | Aprobada e implementada |
 | D-021 | Borrado total con doble confirmación | Aprobada e implementada |
-| D-022 | Sin imágenes oficiales; descripción propia fiel, explicación sencilla y consejo positivo | Aprobada e implementada en Debutante; preparada en Grupos 2–4 |
+| D-022 | Toda referencia visible muestra la señal oficial RSCE o FCI; descripción reglamentaria propia, explicación sencilla y consejo positivo permanecen separadas | Aprobada e implementada para las 33 señales publicadas; sustituye la decisión anterior |
 | D-023 | React, TypeScript, Vite, Dexie, Zod, CSS local, Vitest y PWA `generateSW` | Aprobada e implementada |
 | D-024 | Colores verde bosque, dorado y marfil; icono simplificado sin texto | Aprobada e implementada |
 
@@ -67,6 +67,8 @@ El estado de implementación distingue cuatro términos:
 | START y FINISH | 2 | Inventario fuente; no se tratan como ejercicio de entrenamiento individual |
 
 La aplicación muestra el número real de fichas revisadas por grado y nunca presenta los borradores como oficiales o terminados.
+
+Las 33 fichas publicadas incluyen su señal gráfica oficial local: 22 extraídas del PDF español de señales FCI (páginas 5–26) y 11 del reglamento RSCE 2026 (páginas 8–9). Los activos se validan en cada build y funcionan offline.
 
 ### 3. Alcance ejecutable actual
 

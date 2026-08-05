@@ -18,6 +18,7 @@
     "content:build:advanced": "node scripts/build-advanced-content.mjs",
     "content:build:published": "node scripts/build-published-content.mjs",
     "content:validate": "node scripts/validate-content.mjs",
+    "signals:extract": "python3 scripts/extract-official-signs.py",
     "sources:validate": "node scripts/validate-sources.mjs",
     "pwa:validate": "node scripts/validate-build.mjs",
     "pages:validate": "node scripts/validate-github-pages.mjs",

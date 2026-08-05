@@ -5,6 +5,7 @@ import { db, ensureSettings, getEvidence, startSession } from '../data/db';
 import { useLiveData } from '../data/useLiveData';
 import { recommendSignals } from '../domain/planner';
 import type { Location, SessionObjective, Side } from '../domain/types';
+import { OfficialSignalSign } from '../components/OfficialSignalSign';
 
 const locationLabels: Record<Location, string> = { home: 'Casa', 'outdoor-small': 'Exterior reducido', club: 'Club' };
 const objectiveLabels: Record<SessionObjective, string> = { learn: 'Aprender', autonomy: 'Ganar autonomía', precision: 'Mejorar precisión', review: 'Repasar', side: 'Trabajar el otro lado' };
@@ -29,7 +30,7 @@ export function TrainPage() {
     </div>
     <div className="list">
       {uniqueSignals.map((signal, index) => { const item = firstBySignal.get(signal.id); const defaultSide = signal.trainingSideMode === 'right-only' ? 'right' : signal.trainingSideMode === 'not-applicable' ? 'not-applicable' : 'left'; return <Link className="list-item train-choice" key={signal.id} to={`/train/prepare/${encodeURIComponent(signal.id)}?location=${location}&side=${item?.side ?? defaultSide}`}>
-        <span className="number number--small">{signal.officialNumber}</span><span><strong>{signal.name}</strong><small>{index === 0 && item ? `Recomendada · ${item.reason}` : item ? 'Disponible para elegir' : 'Elección manual · comprueba el material necesario'}</small></span><span aria-hidden="true">›</span>
+        <OfficialSignalSign signal={signal} compact /><span><strong>{signal.officialNumber} · {signal.name}</strong><small>{index === 0 && item ? `Recomendada · ${item.reason}` : item ? 'Disponible para elegir' : 'Elección manual · comprueba el material necesario'}</small></span><span aria-hidden="true">›</span>
       </Link>; })}
     </div>
   </>;
@@ -68,6 +69,7 @@ export function PreparePage() {
   return <>
     <Link className="back-link" to="/train">‹ Cambiar señal</Link>
     <div className="detail-title"><span className="number">{signal.officialNumber}</span><div><p className="eyebrow">Preparar sesión</p><h1>{signal.name}</h1></div></div>
+    <OfficialSignalSign signal={signal} />
     <section className="card"><h2>Antes de empezar</h2><dl className="prep-list"><div><dt>Duración</dt><dd>15 minutos máximo</dd></div><div><dt>Espacio</dt><dd>{signal.space === 'static' ? 'Muy reducido' : 'Recorrido corto'}</dd></div><div><dt>Material</dt><dd>{usefulMaterials.length ? usefulMaterials.map((item) => materialLabels[item.id] ?? item.id).join(', ') : 'Nada especial'}</dd></div></dl></section>
     {signal.trainingSideMode === 'both' && <fieldset><legend>Lado</legend><div className="segmented"><button className={side === 'left' ? 'active' : ''} onClick={() => setSide('left')}>Izquierdo</button><button className={side === 'right' ? 'active' : ''} onClick={() => setSide('right')}>Derecho</button></div></fieldset>}
     <label>Objetivo<select value={objective} onChange={(event) => setObjective(event.target.value as SessionObjective)}>{(Object.keys(objectiveLabels) as SessionObjective[]).map((value) => <option key={value} value={value}>{objectiveLabels[value]}</option>)}</select></label>

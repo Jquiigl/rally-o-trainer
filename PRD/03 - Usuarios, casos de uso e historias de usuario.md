@@ -214,7 +214,7 @@ journey
 - copia y restauración.
 - recordatorio de copia;
 - instalación PWA guiada;
-- ilustraciones propias para todo el contenido publicado.
+- señales gráficas oficiales para todo el contenido publicado.
 
 #### 6.2 Should
 

@@ -4,6 +4,7 @@ import { getSignal } from '../content/signals';
 import { completeSession, db, recordAttempt, undoLastAttempt } from '../data/db';
 import { useLiveData } from '../data/useLiveData';
 import type { PracticeResult, TrainingSession } from '../domain/types';
+import { OfficialSignalSign } from '../components/OfficialSignalSign';
 
 const MAX_SECONDS = 15 * 60;
 
@@ -57,6 +58,7 @@ export function SessionPage() {
 
   return <section className="active-session">
     <div className="session-head"><span className="number">{signal.officialNumber}</span><div><p className="eyebrow">{phase}</p><h1>{signal.name}</h1></div></div>
+    <OfficialSignalSign signal={signal} compact className="official-sign--session" />
     <div className="timer" role="timer" aria-label={`${Math.floor(remaining / 60)} minutos y ${remaining % 60} segundos restantes`}><strong>{String(Math.floor(remaining / 60)).padStart(2, '0')}:{String(remaining % 60).padStart(2, '0')}</strong><span>{remaining === 0 ? 'Puedes cerrar cuando quieras' : 'restantes'}</span></div>
     <p className="session-prompt">Registra cada intento con un solo toque.</p>
     <div className="attempt-buttons">

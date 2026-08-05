@@ -6,6 +6,7 @@ import { db, ensureSettings, getEvidence } from '../data/db';
 import { useLiveData } from '../data/useLiveData';
 import { calculateProgress } from '../domain/progress';
 import type { Side } from '../domain/types';
+import { OfficialSignalSign } from '../components/OfficialSignalSign';
 
 export function ProgressPage() {
   const settings = useLiveData(ensureSettings, [], undefined);
@@ -30,7 +31,7 @@ export function ProgressPage() {
     <h2 className="section-title">Por señal y lado</h2>
     <div className="list">
       {rows.map(({ signal, progress }) => <Link className="progress-item" key={signal.id} to={`/signals/${encodeURIComponent(signal.id)}`}>
-        <span className="number number--small">{signal.officialNumber}</span><span className="progress-main"><strong>{signal.name}</strong><span className="side-statuses">{progress.map((item) => <span key={item.side}><small>{item.side === 'left' ? 'Izq.' : item.side === 'right' ? 'Der.' : 'General'}</small><StatusBadge state={item.state} /></span>)}</span></span><span aria-hidden="true">›</span>
+        <OfficialSignalSign signal={signal} compact /><span className="progress-main"><strong>{signal.officialNumber} · {signal.name}</strong><span className="side-statuses">{progress.map((item) => <span key={item.side}><small>{item.side === 'left' ? 'Izq.' : item.side === 'right' ? 'Der.' : 'General'}</small><StatusBadge state={item.state} /></span>)}</span></span><span aria-hidden="true">›</span>
       </Link>)}
     </div>
     <h2 className="section-title">Últimas sesiones</h2>

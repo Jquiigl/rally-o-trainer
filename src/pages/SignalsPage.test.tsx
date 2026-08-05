@@ -23,7 +23,9 @@ describe('signal library', () => {
     expect(screen.getByText(/Redacción propia fiel al reglamento/)).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'En palabras sencillas' })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Consejo de entrenamiento' })).toBeInTheDocument();
-    expect(screen.getByRole('img', { name: /Esquema propio/ })).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: /Señal oficial FCI 101: Tumbado/ })).toHaveAttribute('src', expect.stringContaining('/signals/fci/101.webp'));
+    expect(screen.getByText('Señal oficial FCI')).toBeInTheDocument();
+    expect(screen.getByText(/página 5/)).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Errores frecuentes' })).toBeInTheDocument();
     expect(screen.getByText('Sentar al perro antes de pedir el tumbado.')).toBeInTheDocument();
   });

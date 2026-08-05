@@ -10,7 +10,7 @@ El incremento funcional P1 incluye:
 
 - instalación como PWA y funcionamiento sin conexión tras la primera carga;
 - perfiles locales de varios perros con nombre y raza;
-- biblioteca completa de Debutante: 22 señales FCI de Grupo 1 y 11 señales nacionales RSCE;
+- biblioteca completa de Debutante: 22 señales oficiales FCI de Grupo 1 y 11 señales oficiales nacionales RSCE, disponibles offline;
 - ficha con descripción reglamentaria de redacción propia, explicación sencilla y consejo positivo;
 - recomendación determinista y elección manual de cualquier señal;
 - preparación de sesiones individuales de hasta 15 minutos;
@@ -40,6 +40,8 @@ Comprobación integral:
 ```bash
 pnpm check
 ```
+
+Las señales gráficas se regeneran desde los PDF trazados en `Fuentes oficiales/` mediante `scripts/extract-official-signs.py`. El proceso requiere Python con Pillow y pypdf, además de Poppler (`pdftoppm`). La compilación valida que las 33 señales publicadas tengan su activo oficial y que esté incluido en la caché offline.
 
 ## Publicar en GitHub Pages
 

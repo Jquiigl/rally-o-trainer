@@ -336,7 +336,8 @@ El fondo de la sesión queda inerte. Atrás del sistema equivale a cerrar la hoj
 │ Debut.  G1  G2  G3      │
 │ Filtros (1)      Limpiar │
 │                          │
-│ 101 Nombre…      Repaso ›│
+│ [señal oficial] 101 Nombre│
+│                 Repaso  ›│
 │ 102 Nombre…  En progreso›│
 │ 103 Nombre… Sin practicar›
 ├──────────────────────────┤
@@ -353,7 +354,7 @@ Los chips de grado pueden convertirse en un selector si no caben a 320 px.
 ┌──────────────────────────┐
 │ ← 101 · Nombre     RSCE  │
 │ Estado: en progreso      │
-│ [ilustración propia]     │
+│ [señal oficial + fuente] │
 │                          │
 │ EN POCAS PALABRAS        │
 │ explicación…             │
@@ -519,7 +520,8 @@ Constructor:
 │ 12/12 · Grupo 2: 6/7     │
 │ Falta 1 señal del grupo 2│
 │ 1  START               ⋮ │
-│ 2  101 Nombre          ⋮ │
+│ 2 [señal oficial] 101    │
+│   Nombre              ⋮  │
 │ 3  204 Nombre          ⋮ │
 │ ...                      │
 │ [ Añadir señal ]         │
@@ -562,7 +564,7 @@ Pregunta:
 ```text
 ┌──────────────────────────┐
 │ Pregunta 2 de 5          │
-│ [ilustración propia]     │
+│ [señal oficial + fuente] │
 │ ¿Qué debe hacer el perro?│
 │ ( ) Respuesta A          │
 │ ( ) Respuesta B          │

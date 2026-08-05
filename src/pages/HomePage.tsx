@@ -4,6 +4,7 @@ import { db, ensureSettings, getEvidence } from '../data/db';
 import { useLiveData } from '../data/useLiveData';
 import { recommendSignals } from '../domain/planner';
 import { StatusBadge } from '../components/StatusBadge';
+import { OfficialSignalSign } from '../components/OfficialSignalSign';
 
 export function HomePage() {
   const settings = useLiveData(ensureSettings, [], undefined);
@@ -13,6 +14,7 @@ export function HomePage() {
   const activeSession = useLiveData(() => db.sessions.where('status').equals('active').first(), [], undefined);
   const activeBlock = useLiveData(async () => activeSession ? db.blocks.where('sessionId').equals(activeSession.id).first() : undefined, [activeSession?.id], undefined);
   const recommendation = recommendSignals(signals, evidence, settings?.preferredLocation ?? 'home', Date.now(), settings?.availableMaterialIds)[0];
+  const activeSignal = activeBlock ? signals.find((signal) => signal.id === activeBlock.signalId) : undefined;
 
   if (!dog || !recommendation) return null;
   return <>
@@ -21,10 +23,11 @@ export function HomePage() {
       <h1>¿Qué entrenamos?</h1>
       <p>Una sesión breve, clara y adaptada a tu progreso.</p>
     </section>
-    {activeSession && activeBlock && <section className="card active-reminder"><p className="eyebrow">Sesión en curso</p><h2>{signals.find((signal) => signal.id === activeBlock.signalId)?.name ?? 'Entrenamiento'}</h2><p>Continúa donde lo dejaste; el cronómetro conserva la hora de inicio.</p><Link className="button button--primary" to={`/session/${activeSession.id}`}>Continuar sesión</Link></section>}
+    {activeSession && activeBlock && activeSignal && <section className="card active-reminder"><p className="eyebrow">Sesión en curso</p><div className="signal-reference"><OfficialSignalSign signal={activeSignal} compact /><h2>{activeSignal.name}</h2></div><p>Continúa donde lo dejaste; el cronómetro conserva la hora de inicio.</p><Link className="button button--primary" to={`/session/${activeSession.id}`}>Continuar sesión</Link></section>}
     {completedSessions > 0 && (!settings?.lastBackupAt || Date.now() - settings.lastBackupAt >= 30 * 86_400_000) && <Link className="backup-reminder" to="/dogs"><strong>Guarda una copia de seguridad</strong><span>Protege tu historial con un archivo local.</span></Link>}
     <section className="card recommendation">
       <div className="card-row"><span className="number">{recommendation.signal.officialNumber}</span><StatusBadge state={recommendation.progress.state} /></div>
+      <OfficialSignalSign signal={recommendation.signal} className="official-sign--recommendation" />
       <h2>{recommendation.signal.name}</h2>
       <p>{recommendation.reason}</p>
       <p className="meta">Lado {recommendation.side === 'left' ? 'izquierdo' : recommendation.side === 'right' ? 'derecho' : 'no aplicable'} · 15 min máximo</p>
