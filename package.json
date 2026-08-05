@@ -1,0 +1,48 @@
+{
+  "name": "rally-o-trainer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --pretty false",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "content:extract": "node scripts/extract-fci-signals.mjs",
+    "content:build": "node scripts/build-debutante-content.mjs",
+    "content:build:advanced": "node scripts/build-advanced-content.mjs",
+    "content:build:published": "node scripts/build-published-content.mjs",
+    "content:validate": "node scripts/validate-content.mjs",
+    "sources:validate": "node scripts/validate-sources.mjs",
+    "pwa:validate": "node scripts/validate-build.mjs",
+    "pages:validate": "node scripts/validate-github-pages.mjs",
+    "check": "pnpm sources:validate && pnpm content:build && pnpm content:build:advanced && pnpm content:build:published && pnpm content:validate && pnpm pages:validate && pnpm typecheck && pnpm test && pnpm build && pnpm pwa:validate"
+  },
+  "dependencies": {
+    "dexie": "4.4.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-router-dom": "7.18.2",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "7.0.0",
+    "@testing-library/react": "16.3.2",
+    "@testing-library/user-event": "14.6.3",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "@vitejs/plugin-react": "6.0.5",
+    "jsdom": "30.0.1",
+    "sharp": "0.35.3",
+    "typescript": "7.0.2",
+    "vite": "8.2.0",
+    "vite-plugin-pwa": "1.3.0",
+    "vitest": "4.1.10"
+  },
+  "packageManager": "pnpm@11.9.0"
+}

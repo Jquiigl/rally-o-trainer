@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "retrievedAt": "2026-08-05",
+  "documents": [
+    {
+      "id": "fci-ro-2025",
+      "authority": "FCI",
+      "title": "Regulations and Rules for International FCI Rally Obedience Trials",
+      "effectiveFrom": "2025-02-01",
+      "file": "FCI-Rally-Obedience-Rules-2025.pdf",
+      "bytes": 1904783,
+      "sha256": "d21c38334617ca4ffd04b4ac054658b5814594ea816c5b31ab749814de87fa79",
+      "sourceUrl": "https://www.fci.be/medias/FCI-ROB-REG-2025-en-19918.pdf"
+    },
+    {
+      "id": "rsce-ro-2026",
+      "authority": "RSCE",
+      "title": "Reglamento de Pruebas de Rally Obedience de la RSCE",
+      "approvedAt": "2024-10-17",
+      "modifiedAt": "2025-12-09",
+      "file": "RSCE-Reglamento-Rally-Obedience-2026.pdf",
+      "bytes": 3089212,
+      "sha256": "2aef4762f8759ee8964bafd538f41f0c6235b3e79c8a1b223db9ea1c3bcf699e",
+      "sourceUrl": "https://www.rsce.es/documentacion/reglamento-de-rally-obedience/"
+    },
+    {
+      "id": "rsce-fci-signs-es",
+      "authority": "RSCE/FCI",
+      "title": "Señales de Rally Obedience FCI en español",
+      "file": "RSCE-Senales-FCI-Espanol.pdf",
+      "bytes": 1705163,
+      "sha256": "8b6225554a0e8b06580338403ba9d0b91a21ffa994f084397830b5e790855801",
+      "sourceUrl": "https://www.rsce.es/wp-content/uploads/2025/11/Senales-Rally-Obediencia-FCI-espanol.pdf"
+    }
+  ]
+}

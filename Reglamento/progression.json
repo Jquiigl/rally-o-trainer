@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "productPriority": ["RSCE", "FCI"],
+  "consultationAlwaysOpen": true,
+  "unlockMeaning": "recommended-progression-only",
+  "rulesets": [
+    {
+      "id": "rsce:debutante",
+      "authority": "RSCE",
+      "label": "Debutante",
+      "order": 1,
+      "sourceDocumentId": "rsce-ro-2026",
+      "sourcePages": [7, 8],
+      "signalSets": ["fci:group-1", "rsce:national"],
+      "course": { "exerciseMin": 8, "exerciseMax": 10, "startAndFinishAdditional": true },
+      "leash": "optional",
+      "redoMaximum": 2,
+      "trainingNote": "La aplicación admite ayudas durante el aprendizaje; distingue siempre ayuda de autonomía."
+    },
+    {
+      "id": "rsce:grade-1",
+      "authority": "RSCE",
+      "label": "Grado 1",
+      "order": 2,
+      "sourceDocumentId": "rsce-ro-2026",
+      "sourcePages": [8, 9],
+      "signalSets": ["fci:group-1", "fci:group-2", "rsce:national"],
+      "course": { "exerciseMin": 10, "exerciseMax": 12, "minimumByGroup": { "2": 7 }, "startAndFinishAdditional": true },
+      "leash": "optional",
+      "redoMaximum": 1
+    },
+    {
+      "id": "rsce:grade-2",
+      "authority": "RSCE",
+      "label": "Grado 2",
+      "order": 3,
+      "sourceDocumentId": "rsce-ro-2026",
+      "sourcePages": [9],
+      "signalSets": ["fci:group-1", "fci:group-2", "fci:group-3", "rsce:national"],
+      "course": { "exerciseMin": 13, "exerciseMax": 16, "minimumByGroup": { "2": 5, "3": 7 }, "startAndFinishAdditional": true },
+      "leash": "not-allowed-in-ring",
+      "redoMaximum": 0,
+      "startSide": "left"
+    },
+    {
+      "id": "rsce:grade-3",
+      "authority": "RSCE",
+      "label": "Grado 3",
+      "order": 4,
+      "sourceDocumentId": "rsce-ro-2026",
+      "sourcePages": [9, 13],
+      "signalSets": ["fci:group-1", "fci:group-2", "fci:group-3", "fci:group-4"],
+      "course": { "exerciseMin": 18, "exerciseMax": 20, "minimumByGroup": { "3": 5, "4": 7 }, "startAndFinishAdditional": true, "sameSignalMaximum": 2 },
+      "leash": "not-allowed-in-ring",
+      "startSide": "defined-by-course",
+      "sideExceptions": { "417": "left-only", "418": "right-only" },
+      "distanceBetweenExercisesMeters": { "approxMin": 3, "approxMax": 5 }
+    },
+    {
+      "id": "fci:international",
+      "authority": "FCI",
+      "label": "Clase internacional FCI",
+      "order": 5,
+      "sourceDocumentId": "fci-ro-2025",
+      "sourcePages": [10, 16, 17, 18],
+      "signalSets": ["fci:group-1", "fci:group-2", "fci:group-3", "fci:group-4"],
+      "course": { "exerciseMin": 18, "exerciseMax": 20, "minimumByGroup": { "3": 5, "4": 7 }, "startAndFinishAdditional": true, "sameSignalMaximum": 2 },
+      "leash": "not-allowed-in-ring",
+      "startSide": "defined-by-course",
+      "sideExceptions": { "417": "left-only", "418": "right-only" }
+    }
+  ],
+  "recommendationUnlocks": [
+    { "from": "rsce:debutante", "to": "rsce:grade-1", "condition": "fundamental-skills-ready-per-dog" },
+    { "from": "rsce:grade-1", "to": "rsce:grade-2", "condition": "fundamental-skills-ready-per-dog" },
+    { "from": "rsce:grade-2", "to": "rsce:grade-3", "condition": "fundamental-skills-ready-per-dog" },
+    { "from": "rsce:grade-3", "to": "fci:international", "condition": "fundamental-skills-ready-per-dog" }
+  ]
+}

@@ -1,0 +1,925 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "authority": "FCI",
+    "title": "Regulations and Rules for International FCI Rally Obedience Trials",
+    "effectiveFrom": "2025-02-01",
+    "language": "en",
+    "localFile": "Fuentes oficiales/FCI-Rally-Obedience-Rules-2025.pdf",
+    "sha256": "d21c38334617ca4ffd04b4ac054658b5814594ea816c5b31ab749814de87fa79",
+    "extractionNote": "Mechanical text extraction for editorial comparison; visual review remains mandatory."
+  },
+  "count": 91,
+  "signals": [
+    {
+      "code": "START",
+      "group": "system",
+      "exerciseArea": "A",
+      "officialNameEn": "START",
+      "sourceDescriptionEn": "The dog sits at the handler's left or right side, as instructed in the drawing of the course. When completed, the team moves forward.",
+      "sideMode": "not-applicable",
+      "role": "start",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "FINISH",
+      "group": "system",
+      "exerciseArea": "A",
+      "officialNameEn": "FINISH",
+      "sourceDescriptionEn": "The course is finished when the team has passed this sign. The team leaves the competition area at a normal pace.",
+      "sideMode": "not-applicable",
+      "role": "finish",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "101",
+      "group": 1,
+      "exerciseArea": "A",
+      "officialNameEn": "DOWN",
+      "sourceDescriptionEn": "The handler stops and the dog lies down directly beside the handler. The dog stays down until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "102",
+      "group": 1,
+      "exerciseArea": "A",
+      "officialNameEn": "STOP, DOWN",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to a down position. The dog stays down until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "103",
+      "group": 1,
+      "exerciseArea": "A",
+      "officialNameEn": "STOP, WALK AROUND",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. While the dog remains sitting, the handler walks forward around the dog, back to the side of the dog, and makes a stop. The dog remains sitting until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "104",
+      "group": 1,
+      "exerciseArea": "A",
+      "officialNameEn": "STOP, DOWN, WALK AROUND",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to a down position. While the dog remains lying, the handler walks forward around the dog, back to the side of the dog, and makes a stop. The dog stays down until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "105",
+      "group": 1,
+      "exerciseArea": "B",
+      "officialNameEn": "ABOUT TURN RIGHT",
+      "sourceDescriptionEn": "Together the team does a tight 180° turn to the right and moves in the opposite direction.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "106",
+      "group": 1,
+      "exerciseArea": "B",
+      "officialNameEn": "ABOUT TURN LEFT",
+      "sourceDescriptionEn": "Together the team does a tight 180° turn to the left and moves in the opposite direction.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "107",
+      "group": 1,
+      "exerciseArea": "B",
+      "officialNameEn": "LOOP RIGHT",
+      "sourceDescriptionEn": "Together the team does a tight turn to the right (Loop) crossing the original path. The angle of the turn must be between 180° and 270°.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "108",
+      "group": 1,
+      "exerciseArea": "B",
+      "officialNameEn": "LOOP LEFT",
+      "sourceDescriptionEn": "Together the team does a tight turn to the left (Loop) crossing the original path. The angle of the turn must be between 180° and 270°.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "109",
+      "group": 1,
+      "exerciseArea": "B",
+      "officialNameEn": "270° RIGHT",
+      "sourceDescriptionEn": "Together the team does a tight 270° turn to the right. The new direction is 90° left to the original path.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "110",
+      "group": 1,
+      "exerciseArea": "B",
+      "officialNameEn": "270° LEFT",
+      "sourceDescriptionEn": "Together the team does a tight 270° turn to the left. The new direction is 90° right to the original path.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "111",
+      "group": 1,
+      "exerciseArea": "A",
+      "officialNameEn": "360° RIGHT",
+      "sourceDescriptionEn": "Together the team does a tight 360° turn to the right. The team keeps the original direction.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "112",
+      "group": 1,
+      "exerciseArea": "A",
+      "officialNameEn": "360° LEFT",
+      "sourceDescriptionEn": "Together the team does a tight 360° turn to the left. The team keeps the original direction.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "113",
+      "group": 1,
+      "exerciseArea": "B",
+      "officialNameEn": "TURN AROUND DOG BEHIND",
+      "sourceDescriptionEn": "The handler does an about turn to the side, where the dog is, while the dog turns to the side, where the handler is. The dog is moving around behind the handler and back to its initial heel position to continue moving with the handler in the opposite direction.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "114",
+      "group": 1,
+      "exerciseArea": "B",
+      "officialNameEn": "STOP, 90° RIGHT TURN, STOP",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The handler does a 90° turn to the right on the spot and stops. The dog moves simultaneously with the handler and resumes a sit when the handler stops. The dog remains sitting until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "115",
+      "group": 1,
+      "exerciseArea": "B",
+      "officialNameEn": "STOP, 90° LEFT TURN, STOP",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The handler does a 90° turn to the left on the spot and stops. The dog moves simultaneously with the handler and resumes a sit when the handler stops. The dog remains sitting until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "116",
+      "group": 1,
+      "exerciseArea": "A",
+      "officialNameEn": "SLOW PACE",
+      "sourceDescriptionEn": "The team must slow down noticeably. The slow pace must be kept, until a sign shows a new pace or the team has reached the finish sign.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "117",
+      "group": 1,
+      "exerciseArea": "A",
+      "officialNameEn": "RUN",
+      "sourceDescriptionEn": "The team must speed up noticeably. The fast pace must be kept, until a sign shows a new pace or the team has reached the finish sign.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "118",
+      "group": 1,
+      "exerciseArea": "A",
+      "officialNameEn": "NORMAL PACE",
+      "sourceDescriptionEn": "The team returns to normal pace.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "119",
+      "group": 1,
+      "exerciseArea": "B",
+      "officialNameEn": "SPIRAL RIGHT",
+      "sourceDescriptionEn": "Three cones are placed in a straight line with spaces between them of 1.5 to 2 m. The team first rounds three cones on the left side, then the nearest two, then the first one.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "120",
+      "group": 1,
+      "exerciseArea": "B",
+      "officialNameEn": "SPIRAL LEFT",
+      "sourceDescriptionEn": "Three cones are placed in a straight line with spaces between them of 1.5 to 2 m. The team first rounds three cones on the right side, then the nearest two, then the first one.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "121",
+      "group": 1,
+      "exerciseArea": "B",
+      "officialNameEn": "SINGLE SLALOM",
+      "sourceDescriptionEn": "Four cones are placed in a straight line with spaces between them of 1.5 to 2 m. The team must enter the exercise with the first cone on its left and weaves through the four cones.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "122",
+      "group": 1,
+      "exerciseArea": "B",
+      "officialNameEn": "DOUBLE SLALOM",
+      "sourceDescriptionEn": "Four cones are placed in a straight line with spaces between them of 1.5 to 2 m. The team must enter the exercise with the first cone on its left, weaves through the four cones, rounds the end cone and weaves back.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "201",
+      "group": 2,
+      "exerciseArea": "A",
+      "officialNameEn": "2 x TURN AROUND DOG BEHIND",
+      "sourceDescriptionEn": "The handler does an about turn to the side, where the dog is, while the dog turns to the side, where the handler is. The dog is moving around behind the handler and back to its initial heel position to continue moving with the handler in the opposite direction. After 1 to 2 m the handler does again an about turn to the side, where the dog is, while the dog turns again to the side, where the handler is. The dog is moving again around behind the handler back to its initial heel position to continue moving with the handler in the same direction as before the exercise.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "202",
+      "group": 2,
+      "exerciseArea": "A",
+      "officialNameEn": "DOUBLE 180° TURN, RIGHT THEN LEFT",
+      "sourceDescriptionEn": "Together the team does a tight 180° turn to the right and moves in the opposite direction. After 1 to 2 m the team does together a tight 180° turn to the left and moves in the same direction as before the exercise.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "203",
+      "group": 2,
+      "exerciseArea": "A",
+      "officialNameEn": "DOUBLE 180° TURN, LEFT THEN RIGHT",
+      "sourceDescriptionEn": "Together the team does a tight 180° turn to the left and moves in the opposite direction. After 1 to 2 m the team does together a tight 180° turn to the right and moves in the same direction as before the exercise.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "204",
+      "group": 2,
+      "exerciseArea": "A",
+      "officialNameEn": "STOP, DOWN, SIT",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to a down position, followed by a sit position. The dog remains sitting until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "205",
+      "group": 2,
+      "exerciseArea": "A",
+      "officialNameEn": "STOP, STAND",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to a stand position. The dog remains standing until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "206",
+      "group": 2,
+      "exerciseArea": "A",
+      "officialNameEn": "STOP, STAND, SIT",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to a stand position, followed by a sit position. The dog remains sitting until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "207",
+      "group": 2,
+      "exerciseArea": "A",
+      "officialNameEn": "STOP, STAND, DOWN",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to a stand position, followed by a down position. The dog stays down until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "208",
+      "group": 2,
+      "exerciseArea": "A",
+      "officialNameEn": "STOP, STAND, WALK AROUND",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to a stand position. While the dog remains standing, the handler walks forward around the dog, back to the side of the dog, and makes a stop. The dog remains standing until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "209",
+      "group": 2,
+      "exerciseArea": "A",
+      "officialNameEn": "STOP, CALL FRONT STOP, RIGHT TO LEFT, STOP",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to sit in front of the handler. The dog is then directed to move to the handler's right and behind the handler to the left side. The dog sits before the team moves forward. Return to left handling.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "210",
+      "group": 2,
+      "exerciseArea": "A",
+      "officialNameEn": "STOP, CALL FRONT STOP, LEFT TO LEFT, STOP",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to sit in front of the handler. The dog is then directed to move directly to the handler's left side. The dog sits before the team moves forward. Return to left handling.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "211",
+      "group": 2,
+      "exerciseArea": "B",
+      "officialNameEn": "STOP, 1 STEP FORWARD, 90° RIGHT TURN 1 STEP, CALL, STOP",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The dog remains sitting while the handler takes one step forward, stops and thereafter does a 90° turn to the right, again takes one step in the new direction and again stops. The step to the right can either be taken directly or the handler can turn on the spot and then take the step. After that the dog is called to sit at the handler's side (no change of the heeling side). The dog remains sitting until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "212",
+      "group": 2,
+      "exerciseArea": "B",
+      "officialNameEn": "STOP, 1 STEP FORWARD, 90° LEFT TURN 1 STEP, CALL, STOP",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The dog remains sitting while the handler takes one step forward, stops and thereafter does a 90° turn to the left, again takes one step in the new direction and again stops. The step to the left can either be taken directly or the handler can turn on the spot and then take the step. After that the dog is called to sit at the handler's side (no change of the heeling side). The dog remains sitting until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "213",
+      "group": 2,
+      "exerciseArea": "B",
+      "officialNameEn": "STOP, 180° RIGHT TURN, FORWARD",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. Together the team does a tight 180° turn to the right on the spot and continues forward, in the opposite direction.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "214",
+      "group": 2,
+      "exerciseArea": "B",
+      "officialNameEn": "STOP, 180° LEFT TURN, FORWARD",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. Together the team does a tight 180° turn to the left on the spot and continues forward, in the opposite direction.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "215",
+      "group": 2,
+      "exerciseArea": "B",
+      "officialNameEn": "STOP, 180° RIGHT TURN, STOP",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. Together the team does a tight 180° turn to the right on the spot, stops and the dog is directed to a sit position. The dog remains sitting until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "216",
+      "group": 2,
+      "exerciseArea": "B",
+      "officialNameEn": "STOP, 180° LEFT TURN, STOP",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. Together the team does a tight 180° turn to the left on the spot, stops and the dog is directed to a sit position. The dog remains sitting until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "217",
+      "group": 2,
+      "exerciseArea": "B",
+      "officialNameEn": "STOP, 90° RIGHT TURN 1 STEP, STOP",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The handler does a 90° turn to the right, takes one step and stops. The step can either be taken directly or the handler can turn on the spot and then take the step. The dog moves simultaneously with the handler and resumes a sit when the handler stops. The dog remains sitting until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "218",
+      "group": 2,
+      "exerciseArea": "B",
+      "officialNameEn": "STOP, 90° LEFT TURN 1 STEP, STOP",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The handler does a 90° turn to the left, takes one step and stops. The step can either be taken directly or the handler can turn on the spot and then take the step. The dog moves simultaneously with the handler and resumes a sit when the handler stops. The dog remains sitting until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "219",
+      "group": 2,
+      "exerciseArea": "A",
+      "officialNameEn": "STOP, 1 STEP STAND, 2 STEPS STOP, 3 STEPS DOWN",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the handler takes one step forward and stops. The dog moves simultaneously with the handler and resumes a stand when the handler stops. The handler then takes two steps forward and stops. The dog moves simultaneously with the handler and resumes a sit when the handler stops. Thereafter the handler takes three steps forward and stops. The dog moves simultaneously with the handler and resumes a down when the handler stops. The dog stays down until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "220",
+      "group": 2,
+      "exerciseArea": "A",
+      "officialNameEn": "SPIN",
+      "sourceDescriptionEn": "While the team is moving, the dog spins a circle forward, alongside and in the direction away from the handler.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "221",
+      "group": 2,
+      "exerciseArea": "B",
+      "officialNameEn": "DISTRACTIONS",
+      "sourceDescriptionEn": "Two cones are placed 2.5 to 3 m apart. The distance between the other two markings (distractions) is 1.5 to 2 m. The team must enter the exercise as decided by the judge and performs a complete figure 8 around the cones, crossing the line between the distractions three times. Toys, treats or both may be used as distractions.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "222",
+      "group": 2,
+      "exerciseArea": "D",
+      "officialNameEn": "SEND OVER JUMP",
+      "sourceDescriptionEn": "The dog is sent over the jump at the earliest next to the sign that is two meters before the jump. At the same time the handler continues alongside the jump. The handler may increase the pace to catch up with the dog.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "301",
+      "group": 3,
+      "exerciseArea": "B",
+      "officialNameEn": "SIDE STEP RIGHT",
+      "sourceDescriptionEn": "While moving, the handler takes one step to the right and the dog follows simultaneously aligned with and parallel to the handler. The team continues on the right side of the sign.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "302",
+      "group": 3,
+      "exerciseArea": "B",
+      "officialNameEn": "SIDE STEP LEFT",
+      "sourceDescriptionEn": "While moving, the handler takes one step to the left and the dog follows simultaneously aligned with and parallel to the handler.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "303",
+      "group": 3,
+      "exerciseArea": "B",
+      "officialNameEn": "STOP, SIDE STEP RIGHT, STOP",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The handler takes one step to the right and stops. The dog moves simultaneously aligned with and parallel to the handler and resumes a sit when the handler stops. The dog remains sitting until the team moves forward. The team continues on the right side of the sign.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "304",
+      "group": 3,
+      "exerciseArea": "B",
+      "officialNameEn": "STOP, SIDE STEP LEFT, STOP",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The handler takes one step to the left and stops. The dog moves simultaneously aligned with and parallel to the handler and resumes a sit when the handler stops. The dog remains sitting until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "305",
+      "group": 3,
+      "exerciseArea": "A",
+      "officialNameEn": "STOP, 1 STEP BACK STOP, 2 STEPS BACK STOP",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the handler takes one step backwards and stops. The dog moves simultaneously and aligned with and parallel to the handler and resumes a sit when the handler stops. Then the handler takes two steps backwards and stops. The dog moves simultaneously with and parallel to the handler and resumes again a sit when the handler stops. The dog remains sitting until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "306",
+      "group": 3,
+      "exerciseArea": "A",
+      "officialNameEn": "CALL FRONT STOP, 1 STEP BACK STAND, 2 STEPS BACK STOP, 3 STEPS BACK DOWN",
+      "sourceDescriptionEn": "The handler stops and the dog is directed to sit in front of the handler. After that the handler takes one step backwards and stops. The dog moves simultaneously with the handler and resumes a stand in front of the handler when the handler stops. The handler then takes two steps backwards and stops. The dog moves simultaneously with the handler and resumes a sit in front of the handler when the handler stops. Thereafter the handler takes three steps backwards and stops. The dog moves simultaneously with the handler and resumes a down in front of the handler when the handler stops. The dog is then directed to the handler's left side and the dog sits beside the handler. The dog remains sitting until the team moves forward. Return to left handling.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "307",
+      "group": 3,
+      "exerciseArea": "B",
+      "officialNameEn": "STAND, 180° RIGHT TURN, STAND",
+      "sourceDescriptionEn": "The handler stops and the dog stands beside the handler. Together the team does a tight 180° turn to the right on the spot, stops and the dog is directed to a stand position. The dog remains standing until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "308",
+      "group": 3,
+      "exerciseArea": "B",
+      "officialNameEn": "STAND, 180° LEFT TURN, STAND",
+      "sourceDescriptionEn": "The handler stops and the dog stands beside the handler. Together the team does a tight 180° turn to the left on the spot, stops and the dog is directed to a stand position. The dog remains standing until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "309",
+      "group": 3,
+      "exerciseArea": "A",
+      "officialNameEn": "STAND, CIRCLE AROUND HANDLER, STAND",
+      "sourceDescriptionEn": "The handler stops and the dog stands beside the handler. After that the handler directs the dog to circle forward around the handler. Thereafter the dog resumes again a stand at the handler's side. The dog remains standing until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "310",
+      "group": 3,
+      "exerciseArea": "B",
+      "officialNameEn": "TURN TOWARD",
+      "sourceDescriptionEn": "While moving, the team does a tight and simultaneous 180° turn toward each other and continues in the opposite direction. The heeling side is changed.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "311",
+      "group": 3,
+      "exerciseArea": "A",
+      "officialNameEn": "SIDE SHIFT BEHIND",
+      "sourceDescriptionEn": "While moving, the dog makes a side shift behind the handler. The dog is not allowed to spin to make the shift. The heeling side is changed.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "312",
+      "group": 3,
+      "exerciseArea": "A",
+      "officialNameEn": "SIDE SHIFT BETWEEN LEGS",
+      "sourceDescriptionEn": "The dog makes a side shift between the handler's legs. The handler may stop when the dog performs the exercise. The handler is allowed to lift a leg to make the side shift fluently. The heeling side is changed.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "313",
+      "group": 3,
+      "exerciseArea": "B",
+      "officialNameEn": "BOTH ABOUT TURN RIGHT",
+      "sourceDescriptionEn": "While moving, both, the handler and the dog itself, do a tight and simultaneous 180° turn to the right and continue in the opposite direction. The heeling side is changed.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "314",
+      "group": 3,
+      "exerciseArea": "B",
+      "officialNameEn": "BOTH ABOUT TURN LEFT",
+      "sourceDescriptionEn": "While moving, both, the handler and the dog itself, do a tight and simultaneous 180° turn to the left and continue in the opposite direction. The heeling side is changed.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "315",
+      "group": 3,
+      "exerciseArea": "A",
+      "officialNameEn": "STOP, SIDE SHIFT BEHIND, STOP",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to make a side shift behind the handler and to resume a sit on the other side. The dog is not allowed to spin to make the shift. When completed, the team moves forward. The heeling side is changed.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "316",
+      "group": 3,
+      "exerciseArea": "A",
+      "officialNameEn": "STOP, SIDE SHIFT IN FRONT, STOP",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to make a side shift in front of the handler and to resume a sit on the other side. The dog must spin to make the shift. When completed, the team moves forward. The heeling side is changed.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "317",
+      "group": 3,
+      "exerciseArea": "A",
+      "officialNameEn": "MOVING STAND, WALK AROUND",
+      "sourceDescriptionEn": "While moving, the dog is directed to a stand position and the handler, without pausing, walks forward, then around the dog, back to the side of the dog and makes a stop. The dog remains standing until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "318",
+      "group": 3,
+      "exerciseArea": "A",
+      "officialNameEn": "MOVING DOWN, WALK AROUND",
+      "sourceDescriptionEn": "While moving, the dog is directed to a down position and the handler, without pausing, walks forward, then around the dog, back to the side of the dog and makes a stop. The dog stays down until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "319",
+      "group": 3,
+      "exerciseArea": "A",
+      "officialNameEn": "STOP, STAND, WALK FORWARD",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to a stand position. Thereafter the handler, without the dog, walks forward either to the recall cone (C) and recalls the dog (no change of the heeling side) or to the recall sign and follows the instructions on the recall sign. If no additional recall sign is placed, the recall cone and the recall itself are part of this exercise.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "320",
+      "group": 3,
+      "exerciseArea": "D",
+      "officialNameEn": "SEND OVER TWO JUMPS",
+      "sourceDescriptionEn": "The dog is sent over two jumps at the earliest next to the sign that is two meters before the first jump. The jumps can be in a straight line or in an angle up to 90°, but they must be 4 m apart from each other. At the same time the handler continues alongside the jumps.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "321",
+      "group": 3,
+      "exerciseArea": "B",
+      "officialNameEn": "TURN AROUND, RECALL",
+      "sourceDescriptionEn": "This sign can only be used after exercises 319, 408 and 409, instead of a recall cone, and must be placed 3 to 5 m from the previous sign. The handler turns around, stops and recalls the dog. The handler may stop before turning around. The dog is directed to go to the left heel position (without a sit). When reached, the team moves forward. Return to left handling.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "322",
+      "group": 3,
+      "exerciseArea": "B",
+      "officialNameEn": "TURN AROUND, RECALL FRONT STOP, RIGHT TO LEFT, STOP",
+      "sourceDescriptionEn": "This sign can only be used after exercises 319, 408 and 409, instead of a recall cone, and must be placed 3 to 5 m from the previous sign. The handler turns around, stops and recalls the dog. The handler may stop before turning around. The dog is directed to sit in front of the handler. The dog is then directed to move to the handler's right and behind the handler to the left side. The dog sits before the team moves forward. Return to left handling.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "323",
+      "group": 3,
+      "exerciseArea": "B",
+      "officialNameEn": "TURN AROUND, RECALL FRONT STOP, LEFT TO LEFT, STOP",
+      "sourceDescriptionEn": "This sign can only be used after exercises 319, 408 and 409, instead of a recall cone, and must be placed 3 to 5 m from the previous sign. The handler turns around, stops and recalls the dog. The handler may stop before turning around. The dog is directed to sit in front of the handler. The dog then is directed to move directly to the handler's left side. The dog sits before the team moves forward. Return to left handling.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "401",
+      "group": 4,
+      "exerciseArea": "B",
+      "officialNameEn": "2 SIDE STEPS RIGHT",
+      "sourceDescriptionEn": "While moving, the handler takes two steps to the right and the dog follows simultaneously aligned with and parallel to the handler. The team continues on the right side of the sign.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "402",
+      "group": 4,
+      "exerciseArea": "B",
+      "officialNameEn": "2 SIDE STEPS LEFT",
+      "sourceDescriptionEn": "While moving, the handler takes two steps to the left and the dog follows simultaneously aligned with and parallel to the handler.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "403",
+      "group": 4,
+      "exerciseArea": "B",
+      "officialNameEn": "STOP, 2 SIDE STEPS RIGHT, STOP",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The handler takes two steps to the right and stops. The dog moves simultaneously aligned with and parallel to the handler and resumes a sit when the handler stops. The team continues on the right side of the sign.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "404",
+      "group": 4,
+      "exerciseArea": "B",
+      "officialNameEn": "STOP, 2 SIDE STEPS LEFT, STOP",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The handler takes two steps to the left and stops. The dog moves simultaneously aligned with and parallel to the handler and resumes a sit when the handler stops.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "405",
+      "group": 4,
+      "exerciseArea": "B",
+      "officialNameEn": "TURN APART",
+      "sourceDescriptionEn": "While moving, the team does a tight and simultaneous 180° turn away from each other and continues in the opposite direction. The heeling side is changed.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "406",
+      "group": 4,
+      "exerciseArea": "A",
+      "officialNameEn": "SIDE SHIFT IN FRONT",
+      "sourceDescriptionEn": "While moving, the dog makes a side shift in front of the handler. The dog is not allowed to spin to make the shift. The heeling side is changed.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "407",
+      "group": 4,
+      "exerciseArea": "A",
+      "officialNameEn": "CIRCLE AROUND HANDLER",
+      "sourceDescriptionEn": "While the team is moving, the dog circles forward around the handler and returns to the initial heel position.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "408",
+      "group": 4,
+      "exerciseArea": "A",
+      "officialNameEn": "MOVING SIT, WALK FORWARD",
+      "sourceDescriptionEn": "While moving, the dog is directed to a sit position and the handler, without pausing and without the dog, walks forward either to the recall cone (C) and recalls the dog (no change of the heeling side) or to the recall sign and follows the instructions on the recall sign. If no additional recall sign is placed, the recall cone and the recall itself are part of this exercise.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "409",
+      "group": 4,
+      "exerciseArea": "A",
+      "officialNameEn": "MOVING DOWN, WALK FORWARD",
+      "sourceDescriptionEn": "While moving, the dog is directed to a down position and the handler, without pausing and without the dog, walks forward either to the recall cone (C) and recalls the dog (no change of the heeling side) or to the recall sign and follows the instructions on the recall sign. If no additional recall sign is placed, the recall cone and the recall itself are part of this exercise.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "410",
+      "group": 4,
+      "exerciseArea": "A",
+      "officialNameEn": "STOP, SEND AWAY, STAND, WALK FORWARD, RECALL",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The team is allowed to turn towards the cone when stopping. The cone is placed 3 to 5 m away in an angle up to 90° to the left or the right. The handler then sends the dog to a stand next to the cone (at least one paw must be within one meter of the cone). The dog remains standing at the cone while the handler walks forward to the recall cone (C) and recalls the dog (no change of the heeling side). The recall cone and the recall itself are part of this exercise. There must be at least 2 m between the cone and the recall cone.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "411",
+      "group": 4,
+      "exerciseArea": "A",
+      "officialNameEn": "CALL FRONT STAND, BACK AWAY, STAND, WALK FORWARD, RECALL",
+      "sourceDescriptionEn": "The handler stops and the dog is directed to stand in front of the handler. The dog is then directed to back away at least three dog lengths from the handler to a stand. While the dog remains standing, the handler walks forward next to the dog and then recalls the dog, without pausing, returning to left handling.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "412",
+      "group": 4,
+      "exerciseArea": "A",
+      "officialNameEn": "3 STEPS BACKWARDS",
+      "sourceDescriptionEn": "While moving, the handler takes at least three steps backwards. The dog moves simultaneously aligned with and parallel to the handler. When completed, the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "413",
+      "group": 4,
+      "exerciseArea": "A",
+      "officialNameEn": "STOP, 1 STEP BACK STAND, 2 STEPS BACK STOP, 3 STEPS BACK DOWN",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the handler takes one step backwards and stops. The dog moves simultaneously aligned with and parallel to the handler and resumes a stand when the handler stops. Then the handler takes two steps backwards and stops. The dog moves simultaneously aligned with and parallel to the handler and resumes a sit when the handler stops. Thereafter the handler takes three steps backwards and stops. The dog moves simultaneously aligned with and parallel to the handler and resumes a down when the handler stops. The dog stays down until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "414",
+      "group": 4,
+      "exerciseArea": "B",
+      "officialNameEn": "STOP, 90° RIGHT TURN STAND, 90° RIGHT TURN STOP, 90° RIGHT TURN DOWN",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the handler does a 90° turn to the right on the spot and stops. The dog moves simultaneously with the handler and resumes a stand when the handler stops. The handler then does again a 90° turn to the right on the spot and stops. The dog moves simultaneously with the handler and resumes a sit when the handler stops. Thereafter the handler does again a 90° turn to the right on the spot and stops. The dog moves simultaneously with the handler and resumes a down when the handler stops. The dog stays down until the team moves forward. The new direction is 90° left to the original one.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "415",
+      "group": 4,
+      "exerciseArea": "B",
+      "officialNameEn": "STOP, 90° LEFT TURN STAND, 90° LEFT TURN STOP, 90° LEFT TURN DOWN",
+      "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the handler does a 90° turn to the left on the spot and stops. The dog moves simultaneously with the handler and resumes a stand when the handler stops. The handler then does again a 90° turn to the left on the spot and stops. The dog moves simultaneously with the handler and resumes a sit when the handler stops. Thereafter the handler does again a 90° turn to the left on the spot and stops. The dog moves simultaneously with the handler and resumes a down when the handler stops. The dog stays down until the team moves forward. The new direction is 90° right to the original one.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "416",
+      "group": 4,
+      "exerciseArea": "A",
+      "officialNameEn": "CALL FRONT STOP, SIDE STEP LEFT STOP, SIDE STEP RIGHT STOP",
+      "sourceDescriptionEn": "The handler stops and the dog is directed to sit in front of the handler. After that the handler takes one side step to the left and stops. The dog moves simultaneously aligned with and parallel to the handler and resumes again a sit in front of the handler when the handler stops. Thereafter the handler takes one side step to the right and stops. The dog moves simultaneously aligned with and parallel to the handler and resumes again a sit in front of the handler when the handler stops. The dog is then directed to the handler's left side and resumes a sit beside the handler. The dog remains sitting until the team moves forward. Return to left handling.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "417",
+      "group": 4,
+      "exerciseArea": "A",
+      "officialNameEn": "90° LEFT TURN AROUND CONE",
+      "sourceDescriptionEn": "This exercise can only be set up, when the dog is in the beginning of the exercise on the handler's left side (left handling). While moving, before reaching the sign, the handler sends the dog around the cone, which is 1 to 2 m away from the back of the sign. The dog must clearly have started its approach to the cone before the handler reaches the sign. The dog circles the cone clockwise while the handler turns 90° left before reaching the cone. The handler can slow down while the dog is going around the cone. The exercise ends with the dog returning to the handler's right side. The heeling side is changed. Return to right handling.",
+      "sideMode": "left-only",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "418",
+      "group": 4,
+      "exerciseArea": "A",
+      "officialNameEn": "90° RIGHT TURN AROUND CONE",
+      "sourceDescriptionEn": "This exercise can only be set up, when the dog is in the beginning of the exercise on the handler's right side (right handling). While moving, before reaching the sign, the handler sends the dog around the cone, which is 1 to 2 m away from the back of the sign. The dog must clearly have started its approach to the cone before the handler reaches the sign. The dog circles the cone counterclockwise while the handler turns 90° right before reaching the cone. The handler can slow down while the dog is going around the cone. The exercise ends with the dog returning to the handler's left side. The heeling side is changed. Return to left handling.",
+      "sideMode": "right-only",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "419",
+      "group": 4,
+      "exerciseArea": "A",
+      "officialNameEn": "MOVING SIT, WALK AROUND",
+      "sourceDescriptionEn": "While moving, the dog is directed to a sit position and the handler, without pausing, walks forward, then around the dog, back to the side of the dog and makes a stop. The dog remains sitting until the team moves forward.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "420",
+      "group": 4,
+      "exerciseArea": "A",
+      "officialNameEn": "STOP, RECALL OVER JUMP",
+      "sourceDescriptionEn": "The handler stops next to the sign that is two meters before the jump and the dog sits beside the handler. After that the handler walks forward, without the dog, and recalls the dog after having passed the jump. The dog does the jump and returns to the initial heel side (no change of the heeling side). The handler may reduce the pace to catch up with the dog.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "421",
+      "group": 4,
+      "exerciseArea": "B",
+      "officialNameEn": "TURN AROUND, RECALL OVER JUMP WITH DIRECTIONS",
+      "sourceDescriptionEn": "This sign can only be used after exercises 319, 408 and 409, instead of a recall cone and must be placed 8 m from the previous sign. A jump is placed exactly halfway between this sign and the previous one, so that the nearest side of the jump is 2 m off-centre to either left or right. The handler turns around, stops and recalls the dog over the jump to the left heel position (without a sit). The handler may stop before turning around. The team then moves forward. Return to left handling.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    },
+    {
+      "code": "422",
+      "group": 4,
+      "exerciseArea": "B",
+      "officialNameEn": "TURN AROUND, BACK AWAY, SIT, DOWN, RECALL",
+      "sourceDescriptionEn": "This sign can only be used after exercises 319, 408 and 409, instead of a recall cone, and must be placed 3 to 5 m from the previous sign. The handler turns around, stops and directs the dog to back away at least one dog length. The handler may stop before turning around. After that the dog is directed to a sit and then to a down position. Thereafter the dog is recalled to the handler's left side. The dog sits before the team moves forward. Return to left handling.",
+      "sideMode": "both",
+      "role": "exercise",
+      "editorialStatus": "source-extracted"
+    }
+  ]
+}

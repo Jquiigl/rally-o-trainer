@@ -1,0 +1,1746 @@
+{
+  "schemaVersion": 1,
+  "packageId": "rally-o-trainer-published-es",
+  "packageVersion": "0.2.0",
+  "language": "es-ES",
+  "editorialStatus": "published-selection",
+  "signals": [
+    {
+      "id": "fci:signal:101",
+      "revisionId": "fci:signal:101:2025-02-01:es-1",
+      "officialNumber": "101",
+      "name": "Tumbado",
+      "exerciseGroup": 1,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El guía se detiene y el perro se tumba directamente a su lado, sin sentarse antes. El perro mantiene el tumbado hasta que ambos reanudan la marcha.",
+      "plainExplanation": "Al parar, pide a tu perro que se tumbe directamente junto a tu pierna. Espera un instante y salid juntos.",
+      "trainingAdvice": "Empieza desde una posición de junto tranquila. Refuerza primero el tumbado directo y, cuando sea fluido, añade el arranque conjunto. Retira poco a poco cualquier gesto amplio.",
+      "criteria": [
+        "Se tumba sin sentado intermedio",
+        "Permanece tumbado",
+        "Arranca junto al guía"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "static",
+      "skillIds": [
+        "heel-position",
+        "down",
+        "position-duration",
+        "joint-start"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-101-2025",
+      "editorialStatus": "reviewed"
+    },
+    {
+      "id": "fci:signal:102",
+      "revisionId": "fci:signal:102:2025-02-01:es-1",
+      "officialNumber": "102",
+      "name": "Pausa y tumbado",
+      "exerciseGroup": 1,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El guía se detiene; el perro se sienta a su lado y, a continuación, pasa a tumbado. Mantiene esa posición hasta que el binomio avanza.",
+      "plainExplanation": "Haz una parada con sentado, pide después el tumbado y salid juntos cuando esté estable.",
+      "trainingAdvice": "Entrena por separado una parada limpia y la transición de sentado a tumbado. Únelas cuando ambas sean fáciles y refuerza que espere a la señal de salida.",
+      "criteria": [
+        "Se sienta al detenerse",
+        "Pasa a tumbado",
+        "Espera hasta la salida"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "static",
+      "skillIds": [
+        "heel-position",
+        "sit",
+        "down",
+        "position-duration",
+        "joint-start"
+      ],
+      "prerequisiteSignalIds": [
+        "fci:signal:101"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-102-2025",
+      "editorialStatus": "reviewed"
+    },
+    {
+      "id": "fci:signal:103",
+      "revisionId": "fci:signal:103:2025-02-01:es-1",
+      "officialNumber": "103",
+      "name": "Pausa y rodear al perro",
+      "exerciseGroup": 1,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El guía se detiene y el perro se sienta a su lado. Mientras el perro permanece sentado, el guía avanza, lo rodea, vuelve a su lado y se detiene. El perro sigue sentado hasta que ambos avanzan.",
+      "plainExplanation": "Tu perro se queda sentado mientras das una vuelta completa a su alrededor y vuelves a la posición de junto.",
+      "trainingAdvice": "Construye la vuelta en pequeños arcos. Refuerza la inmovilidad desde distintos puntos y aumenta el recorrido solo cuando el perro permanezca relajado.",
+      "criteria": [
+        "Sentado inicial alineado",
+        "No mueve las patas al ser rodeado",
+        "Espera la salida"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [
+        "sit",
+        "position-duration",
+        "handler-circles-dog",
+        "joint-start"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-103-2025",
+      "editorialStatus": "reviewed"
+    },
+    {
+      "id": "fci:signal:104",
+      "revisionId": "fci:signal:104:2025-02-01:es-1",
+      "officialNumber": "104",
+      "name": "Pausa, tumbado y rodear",
+      "exerciseGroup": 1,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El guía se detiene y el perro se sienta a su lado; después se tumba. Mientras permanece tumbado, el guía avanza, lo rodea, vuelve a su lado y se detiene. El perro mantiene el tumbado hasta la salida.",
+      "plainExplanation": "Haz una parada, pide el tumbado y rodea a tu perro. Debe seguir tumbado hasta que vuelvas y salgáis juntos.",
+      "trainingAdvice": "Asegura primero el tumbado mientras te mueves cerca. Amplía el círculo gradualmente y recompensa la calma, no solo la inmovilidad tensa.",
+      "criteria": [
+        "Secuencia sentado-tumbado",
+        "Mantiene el tumbado al ser rodeado",
+        "Espera la salida"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [
+        "sit",
+        "down",
+        "position-duration",
+        "handler-circles-dog",
+        "joint-start"
+      ],
+      "prerequisiteSignalIds": [
+        "fci:signal:101",
+        "fci:signal:103"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-104-2025",
+      "editorialStatus": "reviewed"
+    },
+    {
+      "id": "fci:signal:105",
+      "revisionId": "fci:signal:105:2025-02-01:es-1",
+      "officialNumber": "105",
+      "name": "Media vuelta a la derecha",
+      "exerciseGroup": 1,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Sin detenerse, guía y perro realizan juntos un giro cerrado de 180 grados hacia la derecha y continúan en sentido contrario.",
+      "plainExplanation": "Girad juntos media vuelta a la derecha y seguid caminando, sin hacer una parada.",
+      "trainingAdvice": "Practica primero el giro con pocos pasos y una referencia en el suelo. Refuerza que el perro ajuste el paso sin separarse y reduce después tu gesto de ayuda.",
+      "criteria": [
+        "Giro fluido sin parada",
+        "Trayectoria compacta",
+        "Continúa alineado"
+      ],
+      "trainingSideMode": "both",
+      "materials": [
+        {
+          "id": "ground-marker",
+          "requiredForFinalExecution": false,
+          "usefulForLearning": true
+        }
+      ],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [
+        "heelwork",
+        "turn-180",
+        "handler-dog-synchrony"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-105-2025",
+      "editorialStatus": "reviewed"
+    },
+    {
+      "id": "fci:signal:106",
+      "revisionId": "fci:signal:106:2025-02-01:es-1",
+      "officialNumber": "106",
+      "name": "Media vuelta a la izquierda",
+      "exerciseGroup": 1,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Sin detenerse, guía y perro realizan juntos un giro cerrado de 180 grados hacia la izquierda y continúan en sentido contrario.",
+      "plainExplanation": "Girad juntos media vuelta a la izquierda y seguid caminando, sin hacer una parada.",
+      "trainingAdvice": "Empieza despacio para que el perro aprenda a recoger el movimiento interior. Refuerza la alineación y aumenta la fluidez antes de reducir tus ayudas.",
+      "criteria": [
+        "Giro fluido sin parada",
+        "Trayectoria compacta",
+        "Continúa alineado"
+      ],
+      "trainingSideMode": "both",
+      "materials": [
+        {
+          "id": "ground-marker",
+          "requiredForFinalExecution": false,
+          "usefulForLearning": true
+        }
+      ],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [
+        "heelwork",
+        "turn-180",
+        "handler-dog-synchrony"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-106-2025",
+      "editorialStatus": "reviewed"
+    },
+    {
+      "id": "fci:signal:107",
+      "revisionId": "fci:signal:107:2025-02-01:es-1",
+      "officialNumber": "107",
+      "name": "Bucle a la derecha",
+      "exerciseGroup": 1,
+      "exerciseArea": "B",
+      "regulatoryDescription": "En movimiento, el binomio traza un bucle cerrado hacia la derecha, cruza la trayectoria original y continúa. El cambio de dirección queda entre 180 y 270 grados.",
+      "plainExplanation": "Dibuja un bucle a la derecha, cruza la línea por la que veníais y sigue por la nueva dirección.",
+      "trainingAdvice": "Usa un cono o árbol como referencia exterior y camina un bucle amplio al principio. Hazlo más compacto cuando el perro mantenga el junto y la confianza.",
+      "criteria": [
+        "Cruza la trayectoria original",
+        "Ángulo entre 180° y 270°",
+        "Mantiene el junto"
+      ],
+      "trainingSideMode": "both",
+      "materials": [
+        {
+          "id": "cone",
+          "requiredForFinalExecution": false,
+          "usefulForLearning": true
+        }
+      ],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [
+        "heelwork",
+        "loop",
+        "handler-dog-synchrony"
+      ],
+      "prerequisiteSignalIds": [
+        "fci:signal:105"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-107-2025",
+      "editorialStatus": "reviewed"
+    },
+    {
+      "id": "fci:signal:108",
+      "revisionId": "fci:signal:108:2025-02-01:es-1",
+      "officialNumber": "108",
+      "name": "Bucle a la izquierda",
+      "exerciseGroup": 1,
+      "exerciseArea": "B",
+      "regulatoryDescription": "En movimiento, el binomio traza un bucle cerrado hacia la izquierda, cruza la trayectoria original y continúa. El cambio de dirección queda entre 180 y 270 grados.",
+      "plainExplanation": "Dibuja un bucle a la izquierda, cruza la línea por la que veníais y sigue por la nueva dirección.",
+      "trainingAdvice": "Usa una referencia segura para marcar la curva. Empieza con espacio suficiente y reduce el diámetro solo cuando el perro pueda mantener posición y ritmo.",
+      "criteria": [
+        "Cruza la trayectoria original",
+        "Ángulo entre 180° y 270°",
+        "Mantiene el junto"
+      ],
+      "trainingSideMode": "both",
+      "materials": [
+        {
+          "id": "cone",
+          "requiredForFinalExecution": false,
+          "usefulForLearning": true
+        }
+      ],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [
+        "heelwork",
+        "loop",
+        "handler-dog-synchrony"
+      ],
+      "prerequisiteSignalIds": [
+        "fci:signal:106"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-108-2025",
+      "editorialStatus": "reviewed"
+    },
+    {
+      "id": "fci:signal:109",
+      "revisionId": "fci:signal:109:2025-02-01:es-1",
+      "officialNumber": "109",
+      "name": "Giro de 270° a la derecha",
+      "exerciseGroup": 1,
+      "exerciseArea": "B",
+      "regulatoryDescription": "El binomio realiza en movimiento un giro cerrado de 270 grados hacia la derecha. Termina avanzando en una dirección situada 90 grados a la izquierda de la trayectoria inicial.",
+      "plainExplanation": "Girad tres cuartos de vuelta a la derecha; al terminar caminaréis hacia la izquierda respecto a la dirección de llegada.",
+      "trainingAdvice": "Marca en el suelo la dirección de entrada y salida. Divide el giro en pequeños pasos continuos y premia que el perro ajuste sin abrirse.",
+      "criteria": [
+        "Completa 270°",
+        "Giro compacto y fluido",
+        "Sale en la dirección correcta"
+      ],
+      "trainingSideMode": "both",
+      "materials": [
+        {
+          "id": "ground-marker",
+          "requiredForFinalExecution": false,
+          "usefulForLearning": true
+        }
+      ],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [
+        "heelwork",
+        "turn-270",
+        "handler-dog-synchrony"
+      ],
+      "prerequisiteSignalIds": [
+        "fci:signal:105"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-109-2025",
+      "editorialStatus": "reviewed"
+    },
+    {
+      "id": "fci:signal:110",
+      "revisionId": "fci:signal:110:2025-02-01:es-1",
+      "officialNumber": "110",
+      "name": "Giro de 270° a la izquierda",
+      "exerciseGroup": 1,
+      "exerciseArea": "B",
+      "regulatoryDescription": "El binomio realiza en movimiento un giro cerrado de 270 grados hacia la izquierda. Termina avanzando en una dirección situada 90 grados a la derecha de la trayectoria inicial.",
+      "plainExplanation": "Girad tres cuartos de vuelta a la izquierda; al terminar caminaréis hacia la derecha respecto a la dirección de llegada.",
+      "trainingAdvice": "Trabaja primero un giro amplio y continuo. Usa una marca para visualizar la salida y reduce el espacio al mejorar la coordinación del perro.",
+      "criteria": [
+        "Completa 270°",
+        "Giro compacto y fluido",
+        "Sale en la dirección correcta"
+      ],
+      "trainingSideMode": "both",
+      "materials": [
+        {
+          "id": "ground-marker",
+          "requiredForFinalExecution": false,
+          "usefulForLearning": true
+        }
+      ],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [
+        "heelwork",
+        "turn-270",
+        "handler-dog-synchrony"
+      ],
+      "prerequisiteSignalIds": [
+        "fci:signal:106"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-110-2025",
+      "editorialStatus": "reviewed"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "fci:signal:111",
+      "revisionId": "fci:signal:111:2025-02-01:es-1",
+      "officialNumber": "111",
+      "name": "Giro de 360° a la derecha",
+      "exerciseGroup": 1,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El binomio realiza un giro cerrado completo hacia la derecha y continúa en la dirección original.",
+      "plainExplanation": "Da una vuelta completa a la derecha sin detener la marcha.",
+      "trainingAdvice": "Empieza con un círculo amplio y redúcelo cuando el perro mantenga posición y ritmo.",
+      "criteria": [
+        "Giro completo fluido",
+        "Mantiene proximidad",
+        "Continúa en la dirección original"
+      ],
+      "space": "short",
+      "materials": [],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-111-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "fci:signal:112",
+      "revisionId": "fci:signal:112:2025-02-01:es-1",
+      "officialNumber": "112",
+      "name": "Giro de 360° a la izquierda",
+      "exerciseGroup": 1,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El binomio realiza un giro cerrado completo hacia la izquierda y continúa en la dirección original.",
+      "plainExplanation": "Da una vuelta completa a la izquierda sin detener la marcha.",
+      "trainingAdvice": "Trabaja despacio el movimiento interior y refuerza que el perro ajuste las patas sin perder alineación.",
+      "criteria": [
+        "Giro completo fluido",
+        "Mantiene proximidad",
+        "Continúa en la dirección original"
+      ],
+      "space": "short",
+      "materials": [],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-112-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "fci:signal:113",
+      "revisionId": "fci:signal:113:2025-02-01:es-1",
+      "officialNumber": "113",
+      "name": "Media vuelta, perro por detrás",
+      "exerciseGroup": 1,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Guía y perro cambian 180 grados; el perro rodea por detrás al guía y recupera su posición de junto en la dirección contraria.",
+      "plainExplanation": "Cambia de sentido mientras tu perro pasa por detrás de ti y vuelve al junto.",
+      "trainingAdvice": "Separa primero el rodeo y el reencuentro con la pierna; después añade el giro del guía.",
+      "criteria": [
+        "Rodea sin abrirse",
+        "Recupera la posición",
+        "Continúa sin parada"
+      ],
+      "space": "short",
+      "materials": [],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-113-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "fci:signal:114",
+      "revisionId": "fci:signal:114:2025-02-01:es-1",
+      "officialNumber": "114",
+      "name": "Parada, giro 90° derecha y parada",
+      "exerciseGroup": 1,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Tras una parada con sentado, el guía gira 90 grados a la derecha sobre el sitio; el perro se recoloca simultáneamente y vuelve a sentarse.",
+      "plainExplanation": "Para, gira un cuarto de vuelta a la derecha y termina con tu perro sentado a tu lado.",
+      "trainingAdvice": "Usa una referencia de pies y premia la recolocación simultánea antes de exigir precisión.",
+      "criteria": [
+        "Sentado inicial",
+        "Giro simultáneo",
+        "Sentado final alineado"
+      ],
+      "space": "static",
+      "materials": [
+        {
+          "id": "ground-marker",
+          "requiredForFinalExecution": false,
+          "usefulForLearning": true
+        }
+      ],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-114-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "fci:signal:115",
+      "revisionId": "fci:signal:115:2025-02-01:es-1",
+      "officialNumber": "115",
+      "name": "Parada, giro 90° izquierda y parada",
+      "exerciseGroup": 1,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Tras una parada con sentado, el guía gira 90 grados a la izquierda sobre el sitio; el perro se recoloca simultáneamente y vuelve a sentarse.",
+      "plainExplanation": "Para, gira un cuarto de vuelta a la izquierda y termina con tu perro sentado a tu lado.",
+      "trainingAdvice": "Entrena el ajuste de posteriores con un giro pequeño y refuerza una alineación cómoda.",
+      "criteria": [
+        "Sentado inicial",
+        "Giro simultáneo",
+        "Sentado final alineado"
+      ],
+      "space": "static",
+      "materials": [
+        {
+          "id": "ground-marker",
+          "requiredForFinalExecution": false,
+          "usefulForLearning": true
+        }
+      ],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-115-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "fci:signal:116",
+      "revisionId": "fci:signal:116:2025-02-01:es-1",
+      "officialNumber": "116",
+      "name": "Paso lento",
+      "exerciseGroup": 1,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El binomio reduce la velocidad de forma clara y mantiene el paso lento hasta otra señal de ritmo o el final.",
+      "plainExplanation": "Bajad claramente el ritmo y mantenedlo hasta que una señal indique otro.",
+      "trainingAdvice": "Refuerza pasos cortos con atención; evita frenar de golpe o mantener tensión en la correa.",
+      "criteria": [
+        "Cambio visible de ritmo",
+        "Mantiene el junto",
+        "Sostiene el ritmo indicado"
+      ],
+      "space": "short",
+      "materials": [],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-116-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "fci:signal:117",
+      "revisionId": "fci:signal:117:2025-02-01:es-1",
+      "officialNumber": "117",
+      "name": "Paso rápido",
+      "exerciseGroup": 1,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El binomio aumenta la velocidad de forma clara y mantiene el paso rápido hasta otra señal de ritmo o el final.",
+      "plainExplanation": "Aumentad claramente el ritmo y mantenedlo hasta que una señal indique otro.",
+      "trainingAdvice": "Haz aceleraciones muy breves y premia que el perro arranque contigo sin adelantarse.",
+      "criteria": [
+        "Cambio visible de ritmo",
+        "Arranque simultáneo",
+        "Sostiene el ritmo indicado"
+      ],
+      "space": "short",
+      "materials": [],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-117-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "fci:signal:118",
+      "revisionId": "fci:signal:118:2025-02-01:es-1",
+      "officialNumber": "118",
+      "name": "Paso normal",
+      "exerciseGroup": 1,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El binomio vuelve al paso normal desde el ritmo anterior.",
+      "plainExplanation": "Recuperad vuestro ritmo normal de marcha.",
+      "trainingAdvice": "Practica transiciones entre ritmos y usa siempre la misma señal verbal discreta.",
+      "criteria": [
+        "Cambio claro",
+        "Ritmo estable",
+        "Mantiene alineación"
+      ],
+      "space": "short",
+      "materials": [],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-118-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "fci:signal:119",
+      "revisionId": "fci:signal:119:2025-02-01:es-1",
+      "officialNumber": "119",
+      "name": "Espiral a la derecha",
+      "exerciseGroup": 1,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Con tres conos separados aproximadamente entre 1,5 y 2 m, el binomio rodea primero los tres por la izquierda, después los dos más próximos y finalmente el primero.",
+      "plainExplanation": "Haz una espiral que se va cerrando, con los conos a tu derecha.",
+      "trainingAdvice": "Camina primero el patrón sin perro; añade después al perro con trayectorias amplias y reduce la ayuda.",
+      "criteria": [
+        "Orden correcto de conos",
+        "Trayectoria continua",
+        "Mantiene el lado de junto"
+      ],
+      "space": "medium",
+      "materials": [
+        {
+          "id": "cone",
+          "requiredForFinalExecution": true,
+          "usefulForLearning": false
+        }
+      ],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-119-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "fci:signal:120",
+      "revisionId": "fci:signal:120:2025-02-01:es-1",
+      "officialNumber": "120",
+      "name": "Espiral a la izquierda",
+      "exerciseGroup": 1,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Con tres conos separados aproximadamente entre 1,5 y 2 m, el binomio rodea primero los tres por la derecha, después los dos más próximos y finalmente el primero.",
+      "plainExplanation": "Haz una espiral que se va cerrando, con los conos a tu izquierda.",
+      "trainingAdvice": "Memoriza el recorrido sin perro y refuerza los cambios de curvatura sin tirar del perro.",
+      "criteria": [
+        "Orden correcto de conos",
+        "Trayectoria continua",
+        "Mantiene el lado de junto"
+      ],
+      "space": "medium",
+      "materials": [
+        {
+          "id": "cone",
+          "requiredForFinalExecution": true,
+          "usefulForLearning": false
+        }
+      ],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-120-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "fci:signal:121",
+      "revisionId": "fci:signal:121:2025-02-01:es-1",
+      "officialNumber": "121",
+      "name": "Slalom simple",
+      "exerciseGroup": 1,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Cuatro conos se colocan en línea, separados aproximadamente entre 1,5 y 2 m. El binomio entra dejando el primer cono a su izquierda y zigzaguea entre los cuatro.",
+      "plainExplanation": "Entra con el primer cono a tu izquierda y recorre una sola vez el slalom.",
+      "trainingAdvice": "Empieza con conos separados y una marcha lenta; acerca la distancia cuando el perro siga tu trayectoria.",
+      "criteria": [
+        "Entrada correcta",
+        "Alterna todos los conos",
+        "Salida fluida"
+      ],
+      "space": "medium",
+      "materials": [
+        {
+          "id": "cone",
+          "requiredForFinalExecution": true,
+          "usefulForLearning": false
+        }
+      ],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-121-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "fci:signal:122",
+      "revisionId": "fci:signal:122:2025-02-01:es-1",
+      "officialNumber": "122",
+      "name": "Slalom doble",
+      "exerciseGroup": 1,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Cuatro conos se colocan en línea, separados aproximadamente entre 1,5 y 2 m. El binomio entra con el primero a su izquierda, zigzaguea, rodea el último y regresa por el slalom.",
+      "plainExplanation": "Recorre el slalom, rodea el último cono y vuelve zigzagueando.",
+      "trainingAdvice": "Construye primero ida y vuelta por separado; une ambas con un giro amplio alrededor del último cono.",
+      "criteria": [
+        "Entrada correcta",
+        "Rodea el cono final",
+        "Completa ida y vuelta"
+      ],
+      "space": "medium",
+      "materials": [
+        {
+          "id": "cone",
+          "requiredForFinalExecution": true,
+          "usefulForLearning": false
+        }
+      ],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-122-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "rsce:national:13",
+      "revisionId": "rsce:national:13:2025-12-09:es-1",
+      "officialNumber": "13",
+      "name": "Frente, regreso por detrás sin parada",
+      "exerciseGroup": 0,
+      "exerciseArea": "A",
+      "regulatoryDescription": "Desde el junto, el guía se detiene y coloca al perro sentado de frente. El perro vuelve al junto rodeando por la derecha y detrás del guía; ambos reinician la marcha sin sentado final.",
+      "plainExplanation": "Para, llama al frente y envía a tu perro por detrás para seguir caminando en junto.",
+      "trainingAdvice": "Refuerza por separado un frente centrado y el rodeo cercano. Une la salida solo cuando ambas partes sean fáciles.",
+      "criteria": [
+        "Frente sentado",
+        "Rodeo próximo",
+        "Salida sin sentado final"
+      ],
+      "space": "short",
+      "materials": [],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "left-only"
+        }
+      ],
+      "progressCompatibilityKey": "rsce-13-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "rsce:national:14",
+      "revisionId": "rsce:national:14:2025-12-09:es-1",
+      "officialNumber": "14",
+      "name": "Frente, regreso directo sin parada",
+      "exerciseGroup": 0,
+      "exerciseArea": "A",
+      "regulatoryDescription": "Desde el junto, el guía se detiene y coloca al perro sentado de frente. El perro vuelve directamente por la izquierda y ambos reinician la marcha sin sentado final.",
+      "plainExplanation": "Para, llama al frente y recoge al perro directamente por tu izquierda para continuar.",
+      "trainingAdvice": "Usa una referencia junto a la pierna y retírala pronto para que el perro busque la posición sin señuelo.",
+      "criteria": [
+        "Frente sentado",
+        "Entrada directa",
+        "Salida sin sentado final"
+      ],
+      "space": "short",
+      "materials": [],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "left-only"
+        }
+      ],
+      "progressCompatibilityKey": "rsce-14-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "rsce:national:15",
+      "revisionId": "rsce:national:15:2025-12-09:es-1",
+      "officialNumber": "15",
+      "name": "Frente, regreso por detrás con parada",
+      "exerciseGroup": 0,
+      "exerciseArea": "A",
+      "regulatoryDescription": "Desde el junto, el perro se sienta de frente, rodea al guía por detrás y se sienta en posición de junto. Tras una pausa, el binomio avanza.",
+      "plainExplanation": "Llama al frente, envía por detrás y termina sentado en junto antes de salir.",
+      "trainingAdvice": "Entrena la llegada final como un objetivo claro; premia alineación antes de añadir la salida.",
+      "criteria": [
+        "Frente sentado",
+        "Rodeo próximo",
+        "Sentado final y pausa"
+      ],
+      "space": "short",
+      "materials": [],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "left-only"
+        }
+      ],
+      "progressCompatibilityKey": "rsce-15-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "rsce:national:16",
+      "revisionId": "rsce:national:16:2025-12-09:es-1",
+      "officialNumber": "16",
+      "name": "Frente, regreso directo con parada",
+      "exerciseGroup": 0,
+      "exerciseArea": "A",
+      "regulatoryDescription": "Desde el junto, el perro se sienta de frente, vuelve directamente por la izquierda y se sienta en posición de junto. Tras una pausa, el binomio avanza.",
+      "plainExplanation": "Llama al frente y recoge directamente al perro hasta un sentado en junto.",
+      "trainingAdvice": "Practica entradas cortas y limpias. Reduce el gesto de mano antes de aumentar distancia.",
+      "criteria": [
+        "Frente sentado",
+        "Entrada directa",
+        "Sentado final y pausa"
+      ],
+      "space": "short",
+      "materials": [],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "left-only"
+        }
+      ],
+      "progressCompatibilityKey": "rsce-16-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "rsce:national:25",
+      "revisionId": "rsce:national:25:2025-12-09:es-1",
+      "officialNumber": "25",
+      "name": "Uno, dos y tres pasos con sentado",
+      "exerciseGroup": 0,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El binomio se detiene. Avanza uno, dos y tres pasos en tres tramos; después de cada tramo se detiene y el perro se sienta en junto.",
+      "plainExplanation": "Haz una parada después de uno, dos y tres pasos; el perro se sienta cada vez.",
+      "trainingAdvice": "Cuenta con ritmo estable y recompensa primero cada parada. Une los tres tramos cuando no haya anticipación.",
+      "criteria": [
+        "Número correcto de pasos",
+        "Tres sentados",
+        "Acompaña en junto"
+      ],
+      "space": "short",
+      "materials": [],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "left-only"
+        }
+      ],
+      "progressCompatibilityKey": "rsce-25-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "rsce:national:26",
+      "revisionId": "rsce:national:26:2025-12-09:es-1",
+      "officialNumber": "26",
+      "name": "Frente, uno, dos y tres pasos atrás",
+      "exerciseGroup": 0,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El perro se sienta frente al guía. El guía retrocede uno, dos y tres pasos; el perro acompaña y se sienta de frente tras cada tramo. Después vuelve al junto y salen sin sentado final.",
+      "plainExplanation": "Con el perro de frente, retrocede uno, dos y tres pasos y termina recuperando el junto.",
+      "trainingAdvice": "Ensaya pasos muy cortos para mantener el frente recto. Refuerza cada detención antes de encadenar.",
+      "criteria": [
+        "Mantiene el frente",
+        "Tres sentados",
+        "Regresa al junto"
+      ],
+      "space": "short",
+      "materials": [],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "left-only"
+        }
+      ],
+      "progressCompatibilityKey": "rsce-26-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "rsce:national:28",
+      "revisionId": "rsce:national:28:2025-12-09:es-1",
+      "officialNumber": "28",
+      "name": "Parada y paso rápido",
+      "exerciseGroup": 0,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El binomio se detiene en posición de junto y, tras la pausa, inicia paso rápido hasta una nueva señal de ritmo o el final.",
+      "plainExplanation": "Para y sal juntos a paso rápido, manteniéndolo hasta que cambie la indicación.",
+      "trainingAdvice": "Premia arranques simultáneos de uno o dos pasos antes de alargar el tramo rápido.",
+      "criteria": [
+        "Pausa completa",
+        "Arranque simultáneo",
+        "Mantiene paso rápido"
+      ],
+      "space": "short",
+      "materials": [],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "left-only"
+        }
+      ],
+      "progressCompatibilityKey": "rsce-28-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "rsce:national:33",
+      "revisionId": "rsce:national:33:2025-12-09:es-1",
+      "officialNumber": "33",
+      "name": "Parada y giro a la derecha",
+      "exerciseGroup": 0,
+      "exerciseArea": "B",
+      "regulatoryDescription": "El binomio se detiene en posición de junto, gira conjuntamente a la derecha y continúa hacia la siguiente señal.",
+      "plainExplanation": "Para, gira a la derecha con tu perro y seguid caminando.",
+      "trainingAdvice": "Marca una pausa breve y refuerza que el perro inicie el giro contigo, no después.",
+      "criteria": [
+        "Pausa completa",
+        "Giro simultáneo",
+        "Salida alineada"
+      ],
+      "space": "short",
+      "materials": [],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "left-only"
+        }
+      ],
+      "progressCompatibilityKey": "rsce-33-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "rsce:national:34",
+      "revisionId": "rsce:national:34:2025-12-09:es-1",
+      "officialNumber": "34",
+      "name": "Parada y giro a la izquierda",
+      "exerciseGroup": 0,
+      "exerciseArea": "B",
+      "regulatoryDescription": "El binomio se detiene en posición de junto, gira conjuntamente a la izquierda y continúa hacia la siguiente señal.",
+      "plainExplanation": "Para, gira a la izquierda con tu perro y seguid caminando.",
+      "trainingAdvice": "Trabaja el ajuste de posteriores sin prisa y recompensa una salida recta.",
+      "criteria": [
+        "Pausa completa",
+        "Giro simultáneo",
+        "Salida alineada"
+      ],
+      "space": "short",
+      "materials": [],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "left-only"
+        }
+      ],
+      "progressCompatibilityKey": "rsce-34-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "rsce:national:35",
+      "revisionId": "rsce:national:35:2025-12-09:es-1",
+      "officialNumber": "35",
+      "name": "Frente y rodear al perro",
+      "exerciseGroup": 0,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El perro se sienta frente al guía y permanece quieto mientras el guía lo rodea en sentido antihorario. Al quedar al lado derecho del perro, lo llama al junto y ambos continúan.",
+      "plainExplanation": "Coloca al perro de frente, rodéalo y salid cuando vuelvas a su lado.",
+      "trainingAdvice": "Construye el rodeo por pequeños arcos y refuerza la calma sin pedir rigidez.",
+      "criteria": [
+        "Frente sentado",
+        "Mantiene las patas",
+        "Salida al junto"
+      ],
+      "space": "short",
+      "materials": [],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "left-only"
+        }
+      ],
+      "progressCompatibilityKey": "rsce-35-2025"
+    },
+    {
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "trainingSideMode": "both",
+      "editorialStatus": "reviewed",
+      "id": "rsce:national:36",
+      "revisionId": "rsce:national:36:2025-12-09:es-1",
+      "officialNumber": "36",
+      "name": "Parada y paso lento",
+      "exerciseGroup": 0,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El binomio se detiene en posición de junto y, tras la pausa, inicia paso lento hasta una nueva señal de ritmo o el final.",
+      "plainExplanation": "Para y sal juntos a paso lento, manteniéndolo hasta que cambie la indicación.",
+      "trainingAdvice": "Ensaya arranques cortos y refuerza atención y posición antes de alargar el tramo.",
+      "criteria": [
+        "Pausa completa",
+        "Arranque simultáneo",
+        "Mantiene paso lento"
+      ],
+      "space": "short",
+      "materials": [],
+      "skillIds": [
+        "heelwork"
+      ],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:debutante",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "left-only"
+        }
+      ],
+      "progressCompatibilityKey": "rsce-36-2025"
+    }
+  ]
+}

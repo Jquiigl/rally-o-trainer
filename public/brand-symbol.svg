@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Rally O Trainer</title>
+  <rect width="128" height="128" rx="28" fill="#062E24"/>
+  <path d="M28 82c13 18 43 22 62 8 10-7 16-18 17-30" fill="none" stroke="#E8A916" stroke-width="12" stroke-linecap="round"/>
+  <path d="m94 47 16 13-18 9" fill="none" stroke="#E8A916" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="47" cy="48" r="20" fill="#FFF2D6"/>
+  <path d="M34 37 27 24c11 0 18 5 22 13m11 0 10-12c4 12 1 19-5 24" fill="#FFF2D6" stroke="#062E24" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="40" cy="47" r="3" fill="#062E24"/><circle cx="55" cy="47" r="3" fill="#062E24"/>
+  <path d="M43 57c4 4 8 4 12 0" fill="none" stroke="#062E24" stroke-width="3" stroke-linecap="round"/>
+</svg>

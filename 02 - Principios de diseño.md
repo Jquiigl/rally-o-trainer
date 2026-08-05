@@ -1,0 +1,23 @@
+# Principios
+
+- Mobile First; tableta y escritorio son plataformas secundarias.
+- Las tareas principales deben poder realizarse con una sola mano.
+- Menos de tres pulsaciones para acceder a cualquier función importante desde un punto de entrada razonable.
+- Las confirmaciones necesarias para prevenir pérdida de datos no están sujetas al límite de tres pulsaciones.
+- Sin publicidad.
+- Sin registro obligatorio.
+- Compatible con iPhone.
+- Compatible con Android.
+- Compatible con ordenador.
+- Modo oscuro.
+- Modo claro.
+- Funcionamiento offline de todas las tareas principales después de la primera carga completa.
+- Carga inferior a dos segundos bajo condiciones y dispositivos de referencia que deberán definirse.
+- Respuesta visual inmediata a las acciones realizadas durante el entrenamiento.
+- Exportación completa de los datos en un formato documentado.
+- Copia de seguridad y restauración verificables.
+- Toda la información personal permanecerá bajo control del usuario.
+- Las recomendaciones serán explicables, sustituibles y nunca obligatorias.
+- El bienestar del perro prevalecerá sobre rachas, métricas y objetivos de uso.
+- Los reglamentos, grados y señales tendrán fuente, versión y vigencia identificables.
+- El modelo admitirá varios perros aunque la interfaz inicial pueda simplificar su gestión.

@@ -1,0 +1,3258 @@
+{
+  "schemaVersion": 1,
+  "packageId": "rally-o-trainer-fci-advanced-es",
+  "packageVersion": "0.1.0",
+  "language": "es-ES",
+  "editorialStatus": "mixed",
+  "sourceDocumentId": "fci-ro-2025",
+  "signals": [
+    {
+      "id": "fci:signal:201",
+      "revisionId": "fci:signal:201:2025-02-01:es-draft-1",
+      "officialNumber": "201",
+      "name": "Dos medias vueltas, perro por detrás",
+      "exerciseGroup": 2,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El guía cambia 180 grados hacia el lado del perro mientras este rodea por detrás y recupera el junto. Tras avanzar entre 1 y 2 m, ambos repiten la acción y continúan en la dirección inicial.",
+      "plainExplanation": "La secuencia que debes practicar es «dos medias vueltas, perro por detrás». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:113"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-201-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler does an about turn to the side, where the dog is, while the dog turns to the side, where the handler is. The dog is moving around behind the handler and back to its initial heel position to continue moving with the handler in the opposite direction. After 1 to 2 m the handler does again an about turn to the side, where the dog is, while the dog turns again to the side, where the handler is. The dog is moving again around behind the handler back to its initial heel position to continue moving with the handler in the same direction as before the exercise."
+      }
+    },
+    {
+      "id": "fci:signal:202",
+      "revisionId": "fci:signal:202:2025-02-01:es-draft-1",
+      "officialNumber": "202",
+      "name": "Doble media vuelta: derecha e izquierda",
+      "exerciseGroup": 2,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El binomio gira 180 grados a la derecha y avanza entre 1 y 2 m; después gira 180 grados a la izquierda y continúa en la dirección inicial.",
+      "plainExplanation": "La secuencia que debes practicar es «doble media vuelta: derecha e izquierda». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:105",
+        "fci:signal:106"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-202-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "Together the team does a tight 180° turn to the right and moves in the opposite direction. After 1 to 2 m the team does together a tight 180° turn to the left and moves in the same direction as before the exercise."
+      }
+    },
+    {
+      "id": "fci:signal:203",
+      "revisionId": "fci:signal:203:2025-02-01:es-draft-1",
+      "officialNumber": "203",
+      "name": "Doble media vuelta: izquierda y derecha",
+      "exerciseGroup": 2,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El binomio gira 180 grados a la izquierda y avanza entre 1 y 2 m; después gira 180 grados a la derecha y continúa en la dirección inicial.",
+      "plainExplanation": "La secuencia que debes practicar es «doble media vuelta: izquierda y derecha». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:105",
+        "fci:signal:106"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-203-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "Together the team does a tight 180° turn to the left and moves in the opposite direction. After 1 to 2 m the team does together a tight 180° turn to the right and moves in the same direction as before the exercise."
+      }
+    },
+    {
+      "id": "fci:signal:204",
+      "revisionId": "fci:signal:204:2025-02-01:es-draft-1",
+      "officialNumber": "204",
+      "name": "Parada, tumbado y sentado",
+      "exerciseGroup": 2,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El guía se detiene, el perro se sienta a su lado, pasa a tumbado y después vuelve a sentado. Mantiene el sentado hasta reanudar la marcha.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, tumbado y sentado». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:101",
+        "fci:signal:102"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-204-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to a down position, followed by a sit position. The dog remains sitting until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:205",
+      "revisionId": "fci:signal:205:2025-02-01:es-draft-1",
+      "officialNumber": "205",
+      "name": "Parada y de pie",
+      "exerciseGroup": 2,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El guía se detiene y el perro se sienta a su lado; después adopta la posición de pie y la mantiene hasta que el binomio avanza.",
+      "plainExplanation": "La secuencia que debes practicar es «parada y de pie». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-205-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to a stand position. The dog remains standing until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:206",
+      "revisionId": "fci:signal:206:2025-02-01:es-draft-1",
+      "officialNumber": "206",
+      "name": "Parada, de pie y sentado",
+      "exerciseGroup": 2,
+      "exerciseArea": "A",
+      "regulatoryDescription": "Tras sentarse al detenerse el guía, el perro pasa a de pie y vuelve a sentado. Mantiene el sentado hasta la salida.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, de pie y sentado». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:205"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-206-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to a stand position, followed by a sit position. The dog remains sitting until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:207",
+      "revisionId": "fci:signal:207:2025-02-01:es-draft-1",
+      "officialNumber": "207",
+      "name": "Parada, de pie y tumbado",
+      "exerciseGroup": 2,
+      "exerciseArea": "A",
+      "regulatoryDescription": "Tras sentarse al detenerse el guía, el perro pasa a de pie y después a tumbado. Mantiene el tumbado hasta la salida.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, de pie y tumbado». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:205",
+        "fci:signal:101"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-207-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to a stand position, followed by a down position. The dog stays down until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:208",
+      "revisionId": "fci:signal:208:2025-02-01:es-draft-1",
+      "officialNumber": "208",
+      "name": "Parada, de pie y rodear",
+      "exerciseGroup": 2,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El perro se sienta al detenerse, pasa a de pie y permanece inmóvil mientras el guía lo rodea y vuelve a su lado. Mantiene la posición hasta avanzar.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, de pie y rodear». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:205",
+        "fci:signal:103"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-208-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to a stand position. While the dog remains standing, the handler walks forward around the dog, back to the side of the dog, and makes a stop. The dog remains standing until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:209",
+      "revisionId": "fci:signal:209:2025-02-01:es-draft-1",
+      "officialNumber": "209",
+      "name": "Parada, frente y regreso por detrás",
+      "exerciseGroup": 2,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El perro se sienta junto al guía, pasa a sentado de frente y vuelve al lado izquierdo rodeando por la derecha y detrás del guía. Se sienta antes de avanzar.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, frente y regreso por detrás». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "rsce:national:15"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-209-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to sit in front of the handler. The dog is then directed to move to the handler's right and behind the handler to the left side. The dog sits before the team moves forward. Return to left handling."
+      }
+    },
+    {
+      "id": "fci:signal:210",
+      "revisionId": "fci:signal:210:2025-02-01:es-draft-1",
+      "officialNumber": "210",
+      "name": "Parada, frente y regreso directo",
+      "exerciseGroup": 2,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El perro se sienta junto al guía, pasa a sentado de frente y vuelve directamente al lado izquierdo. Se sienta antes de avanzar.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, frente y regreso directo». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "rsce:national:16"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-210-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to sit in front of the handler. The dog is then directed to move directly to the handler's left side. The dog sits before the team moves forward. Return to left handling."
+      }
+    },
+    {
+      "id": "fci:signal:211",
+      "revisionId": "fci:signal:211:2025-02-01:es-draft-1",
+      "officialNumber": "211",
+      "name": "Parada, paso, giro derecho, paso y llamada",
+      "exerciseGroup": 2,
+      "exerciseArea": "B",
+      "regulatoryDescription": "El perro permanece sentado mientras el guía avanza un paso, gira 90 grados a la derecha y avanza otro. Después acude al mismo lado de junto y se sienta.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, paso, giro derecho, paso y llamada». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Entrena por separado permanencia, movimiento del guía y llamada. Une dos elementos cada vez y vuelve a una distancia fácil si aparece anticipación.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:103",
+        "fci:signal:114"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-211-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The dog remains sitting while the handler takes one step forward, stops and thereafter does a 90° turn to the right, again takes one step in the new direction and again stops. The step to the right can either be taken directly or the handler can turn on the spot and then take the step. After that the dog is called to sit at the handler's side (no change of the heeling side). The dog remains sitting until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:212",
+      "revisionId": "fci:signal:212:2025-02-01:es-draft-1",
+      "officialNumber": "212",
+      "name": "Parada, paso, giro izquierdo, paso y llamada",
+      "exerciseGroup": 2,
+      "exerciseArea": "B",
+      "regulatoryDescription": "El perro permanece sentado mientras el guía avanza un paso, gira 90 grados a la izquierda y avanza otro. Después acude al mismo lado de junto y se sienta.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, paso, giro izquierdo, paso y llamada». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Entrena por separado permanencia, movimiento del guía y llamada. Une dos elementos cada vez y vuelve a una distancia fácil si aparece anticipación.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:103",
+        "fci:signal:115"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-212-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The dog remains sitting while the handler takes one step forward, stops and thereafter does a 90° turn to the left, again takes one step in the new direction and again stops. The step to the left can either be taken directly or the handler can turn on the spot and then take the step. After that the dog is called to sit at the handler's side (no change of the heeling side). The dog remains sitting until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:213",
+      "revisionId": "fci:signal:213:2025-02-01:es-draft-1",
+      "officialNumber": "213",
+      "name": "Parada, media vuelta derecha y continuar",
+      "exerciseGroup": 2,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Tras una parada con sentado, guía y perro giran juntos 180 grados a la derecha sobre el sitio y continúan en dirección contraria.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, media vuelta derecha y continuar». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:114"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-213-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. Together the team does a tight 180° turn to the right on the spot and continues forward, in the opposite direction."
+      }
+    },
+    {
+      "id": "fci:signal:214",
+      "revisionId": "fci:signal:214:2025-02-01:es-draft-1",
+      "officialNumber": "214",
+      "name": "Parada, media vuelta izquierda y continuar",
+      "exerciseGroup": 2,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Tras una parada con sentado, guía y perro giran juntos 180 grados a la izquierda sobre el sitio y continúan en dirección contraria.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, media vuelta izquierda y continuar». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:115"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-214-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. Together the team does a tight 180° turn to the left on the spot and continues forward, in the opposite direction."
+      }
+    },
+    {
+      "id": "fci:signal:215",
+      "revisionId": "fci:signal:215:2025-02-01:es-draft-1",
+      "officialNumber": "215",
+      "name": "Parada, media vuelta derecha y parada",
+      "exerciseGroup": 2,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Tras una parada con sentado, el binomio gira 180 grados a la derecha sobre el sitio y vuelve a detenerse con el perro sentado.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, media vuelta derecha y parada». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:114"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-215-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. Together the team does a tight 180° turn to the right on the spot, stops and the dog is directed to a sit position. The dog remains sitting until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:216",
+      "revisionId": "fci:signal:216:2025-02-01:es-draft-1",
+      "officialNumber": "216",
+      "name": "Parada, media vuelta izquierda y parada",
+      "exerciseGroup": 2,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Tras una parada con sentado, el binomio gira 180 grados a la izquierda sobre el sitio y vuelve a detenerse con el perro sentado.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, media vuelta izquierda y parada». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:115"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-216-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. Together the team does a tight 180° turn to the left on the spot, stops and the dog is directed to a sit position. The dog remains sitting until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:217",
+      "revisionId": "fci:signal:217:2025-02-01:es-draft-1",
+      "officialNumber": "217",
+      "name": "Parada, giro derecho, un paso y parada",
+      "exerciseGroup": 2,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Tras sentarse al detenerse, el perro acompaña al guía en un giro de 90 grados a la derecha y un paso; vuelve a sentarse al parar.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, giro derecho, un paso y parada». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:114"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-217-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The handler does a 90° turn to the right, takes one step and stops. The step can either be taken directly or the handler can turn on the spot and then take the step. The dog moves simultaneously with the handler and resumes a sit when the handler stops. The dog remains sitting until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:218",
+      "revisionId": "fci:signal:218:2025-02-01:es-draft-1",
+      "officialNumber": "218",
+      "name": "Parada, giro izquierdo, un paso y parada",
+      "exerciseGroup": 2,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Tras sentarse al detenerse, el perro acompaña al guía en un giro de 90 grados a la izquierda y un paso; vuelve a sentarse al parar.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, giro izquierdo, un paso y parada». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:115"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-218-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The handler does a 90° turn to the left, takes one step and stops. The step can either be taken directly or the handler can turn on the spot and then take the step. The dog moves simultaneously with the handler and resumes a sit when the handler stops. The dog remains sitting until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:219",
+      "revisionId": "fci:signal:219:2025-02-01:es-draft-1",
+      "officialNumber": "219",
+      "name": "Parada: un paso de pie, dos sentado y tres tumbado",
+      "exerciseGroup": 2,
+      "exerciseArea": "A",
+      "regulatoryDescription": "Desde sentado en junto, el binomio avanza uno, dos y tres pasos. El perro termina respectivamente de pie, sentado y tumbado en cada parada.",
+      "plainExplanation": "La secuencia que debes practicar es «parada: un paso de pie, dos sentado y tres tumbado». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:102",
+        "fci:signal:205"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-219-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the handler takes one step forward and stops. The dog moves simultaneously with the handler and resumes a stand when the handler stops. The handler then takes two steps forward and stops. The dog moves simultaneously with the handler and resumes a sit when the handler stops. Thereafter the handler takes three steps forward and stops. The dog moves simultaneously with the handler and resumes a down when the handler stops. The dog stays down until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:220",
+      "revisionId": "fci:signal:220:2025-02-01:es-draft-1",
+      "officialNumber": "220",
+      "name": "Giro del perro",
+      "exerciseGroup": 2,
+      "exerciseArea": "A",
+      "regulatoryDescription": "Mientras el binomio avanza, el perro realiza un círculo hacia delante y alejándose del guía, y recupera el junto.",
+      "plainExplanation": "La secuencia que debes practicar es «giro del perro». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-220-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "While the team is moving, the dog spins a circle forward, alongside and in the direction away from the handler."
+      }
+    },
+    {
+      "id": "fci:signal:221",
+      "revisionId": "fci:signal:221:2025-02-01:es-draft-1",
+      "officialNumber": "221",
+      "name": "Ocho con distracciones",
+      "exerciseGroup": 2,
+      "exerciseArea": "B",
+      "regulatoryDescription": "El binomio completa un ocho alrededor de dos conos separados entre 2,5 y 3 m y cruza tres veces la línea entre dos distracciones situadas entre ellos.",
+      "plainExplanation": "La secuencia que debes practicar es «ocho con distracciones». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Presenta primero el patrón con referencias amplias y sin prisa. Refuerza la trayectoria correcta y reduce después gestos, distancia extra y ayudas visibles.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [
+        {
+          "id": "cone",
+          "requiredForFinalExecution": true,
+          "usefulForLearning": false
+        }
+      ],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:121"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-221-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "Two cones are placed 2.5 to 3 m apart. The distance between the other two markings (distractions) is 1.5 to 2 m. The team must enter the exercise as decided by the judge and performs a complete figure 8 around the cones, crossing the line between the distractions three times. Toys, treats or both may be used as distractions."
+      }
+    },
+    {
+      "id": "fci:signal:222",
+      "revisionId": "fci:signal:222:2025-02-01:es-draft-1",
+      "officialNumber": "222",
+      "name": "Envío al salto",
+      "exerciseGroup": 2,
+      "exerciseArea": "D",
+      "regulatoryDescription": "Desde la zona de la señal, situada 2 m antes del salto, el guía envía al perro por encima mientras continúa avanzando en paralelo y puede acelerar para reunirse con él.",
+      "plainExplanation": "La secuencia que debes practicar es «envío al salto». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Asegura primero un salto cómodo y seguro, con altura adecuada. Añade envío o llamada por separado y aumenta la distancia gradualmente, siempre con refuerzo positivo.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [
+        {
+          "id": "jump",
+          "requiredForFinalExecution": true,
+          "usefulForLearning": false
+        }
+      ],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-1",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-222-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The dog is sent over the jump at the earliest next to the sign that is two meters before the jump. At the same time the handler continues alongside the jump. The handler may increase the pace to catch up with the dog."
+      }
+    },
+    {
+      "id": "fci:signal:301",
+      "revisionId": "fci:signal:301:2025-02-01:es-draft-1",
+      "officialNumber": "301",
+      "name": "Un paso lateral a la derecha",
+      "exerciseGroup": 3,
+      "exerciseArea": "B",
+      "regulatoryDescription": "En movimiento, el guía da un paso lateral a la derecha y el perro se desplaza simultáneamente, alineado y paralelo. El binomio continúa por la derecha de la señal.",
+      "plainExplanation": "La secuencia que debes practicar es «un paso lateral a la derecha». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-301-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "While moving, the handler takes one step to the right and the dog follows simultaneously aligned with and parallel to the handler. The team continues on the right side of the sign."
+      }
+    },
+    {
+      "id": "fci:signal:302",
+      "revisionId": "fci:signal:302:2025-02-01:es-draft-1",
+      "officialNumber": "302",
+      "name": "Un paso lateral a la izquierda",
+      "exerciseGroup": 3,
+      "exerciseArea": "B",
+      "regulatoryDescription": "En movimiento, el guía da un paso lateral a la izquierda y el perro se desplaza simultáneamente, alineado y paralelo.",
+      "plainExplanation": "La secuencia que debes practicar es «un paso lateral a la izquierda». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-302-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "While moving, the handler takes one step to the left and the dog follows simultaneously aligned with and parallel to the handler."
+      }
+    },
+    {
+      "id": "fci:signal:303",
+      "revisionId": "fci:signal:303:2025-02-01:es-draft-1",
+      "officialNumber": "303",
+      "name": "Parada, paso lateral derecho y parada",
+      "exerciseGroup": 3,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Tras una parada con sentado, guía y perro dan un paso lateral a la derecha, alineados y en paralelo, y vuelven a detenerse con el perro sentado.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, paso lateral derecho y parada». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:301"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-303-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The handler takes one step to the right and stops. The dog moves simultaneously aligned with and parallel to the handler and resumes a sit when the handler stops. The dog remains sitting until the team moves forward. The team continues on the right side of the sign."
+      }
+    },
+    {
+      "id": "fci:signal:304",
+      "revisionId": "fci:signal:304:2025-02-01:es-draft-1",
+      "officialNumber": "304",
+      "name": "Parada, paso lateral izquierdo y parada",
+      "exerciseGroup": 3,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Tras una parada con sentado, guía y perro dan un paso lateral a la izquierda, alineados y en paralelo, y vuelven a detenerse con el perro sentado.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, paso lateral izquierdo y parada». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:302"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-304-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The handler takes one step to the left and stops. The dog moves simultaneously aligned with and parallel to the handler and resumes a sit when the handler stops. The dog remains sitting until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:305",
+      "revisionId": "fci:signal:305:2025-02-01:es-draft-1",
+      "officialNumber": "305",
+      "name": "Parada, uno y dos pasos atrás con parada",
+      "exerciseGroup": 3,
+      "exerciseArea": "A",
+      "regulatoryDescription": "Desde sentado en junto, guía y perro retroceden primero un paso y después dos, alineados y en paralelo. El perro se sienta tras cada tramo.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, uno y dos pasos atrás con parada». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "rsce:national:25"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-305-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the handler takes one step backwards and stops. The dog moves simultaneously and aligned with and parallel to the handler and resumes a sit when the handler stops. Then the handler takes two steps backwards and stops. The dog moves simultaneously with and parallel to the handler and resumes again a sit when the handler stops. The dog remains sitting until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:306",
+      "revisionId": "fci:signal:306:2025-02-01:es-draft-1",
+      "officialNumber": "306",
+      "name": "Frente: uno atrás de pie, dos sentado y tres tumbado",
+      "exerciseGroup": 3,
+      "exerciseArea": "A",
+      "regulatoryDescription": "Desde sentado de frente, el perro acompaña al guía hacia atrás uno, dos y tres pasos y termina respectivamente de pie, sentado y tumbado. Después vuelve sentado al lado izquierdo.",
+      "plainExplanation": "La secuencia que debes practicar es «frente: uno atrás de pie, dos sentado y tres tumbado». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "rsce:national:26"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-306-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog is directed to sit in front of the handler. After that the handler takes one step backwards and stops. The dog moves simultaneously with the handler and resumes a stand in front of the handler when the handler stops. The handler then takes two steps backwards and stops. The dog moves simultaneously with the handler and resumes a sit in front of the handler when the handler stops. Thereafter the handler takes three steps backwards and stops. The dog moves simultaneously with the handler and resumes a down in front of the handler when the handler stops. The dog is then directed to the handler's left side and the dog sits beside the handler. The dog remains sitting until the team moves forward. Return to left handling."
+      }
+    },
+    {
+      "id": "fci:signal:307",
+      "revisionId": "fci:signal:307:2025-02-01:es-draft-1",
+      "officialNumber": "307",
+      "name": "De pie, media vuelta derecha y de pie",
+      "exerciseGroup": 3,
+      "exerciseArea": "B",
+      "regulatoryDescription": "El guía se detiene con el perro de pie; ambos giran 180 grados a la derecha sobre el sitio y el perro termina de nuevo de pie.",
+      "plainExplanation": "La secuencia que debes practicar es «de pie, media vuelta derecha y de pie». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:205",
+        "fci:signal:213"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-307-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog stands beside the handler. Together the team does a tight 180° turn to the right on the spot, stops and the dog is directed to a stand position. The dog remains standing until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:308",
+      "revisionId": "fci:signal:308:2025-02-01:es-draft-1",
+      "officialNumber": "308",
+      "name": "De pie, media vuelta izquierda y de pie",
+      "exerciseGroup": 3,
+      "exerciseArea": "B",
+      "regulatoryDescription": "El guía se detiene con el perro de pie; ambos giran 180 grados a la izquierda sobre el sitio y el perro termina de nuevo de pie.",
+      "plainExplanation": "La secuencia que debes practicar es «de pie, media vuelta izquierda y de pie». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:205",
+        "fci:signal:214"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-308-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog stands beside the handler. Together the team does a tight 180° turn to the left on the spot, stops and the dog is directed to a stand position. The dog remains standing until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:309",
+      "revisionId": "fci:signal:309:2025-02-01:es-draft-1",
+      "officialNumber": "309",
+      "name": "De pie, rodear al guía y de pie",
+      "exerciseGroup": 3,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El perro queda de pie junto al guía, lo rodea hacia delante y vuelve a quedar de pie en el mismo lado hasta la salida.",
+      "plainExplanation": "La secuencia que debes practicar es «de pie, rodear al guía y de pie». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:205"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-309-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog stands beside the handler. After that the handler directs the dog to circle forward around the handler. Thereafter the dog resumes again a stand at the handler's side. The dog remains standing until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:310",
+      "revisionId": "fci:signal:310:2025-02-01:es-draft-1",
+      "officialNumber": "310",
+      "name": "Giro interior de ambos",
+      "exerciseGroup": 3,
+      "exerciseArea": "B",
+      "regulatoryDescription": "En movimiento, guía y perro giran simultáneamente 180 grados uno hacia el otro y continúan en dirección contraria, cambiando el lado de junto.",
+      "plainExplanation": "La secuencia que debes practicar es «giro interior de ambos». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:113"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-310-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "While moving, the team does a tight and simultaneous 180° turn toward each other and continues in the opposite direction. The heeling side is changed."
+      }
+    },
+    {
+      "id": "fci:signal:311",
+      "revisionId": "fci:signal:311:2025-02-01:es-draft-1",
+      "officialNumber": "311",
+      "name": "Cambio de lado por detrás",
+      "exerciseGroup": 3,
+      "exerciseArea": "A",
+      "regulatoryDescription": "En movimiento, el perro cambia de lado pasando por detrás del guía sin girar sobre sí mismo.",
+      "plainExplanation": "La secuencia que debes practicar es «cambio de lado por detrás». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-311-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "While moving, the dog makes a side shift behind the handler. The dog is not allowed to spin to make the shift. The heeling side is changed."
+      }
+    },
+    {
+      "id": "fci:signal:312",
+      "revisionId": "fci:signal:312:2025-02-01:es-draft-1",
+      "officialNumber": "312",
+      "name": "Cambio de lado entre las piernas",
+      "exerciseGroup": 3,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El perro cambia de lado pasando entre las piernas del guía. El guía puede detenerse y levantar una pierna para facilitar un movimiento fluido.",
+      "plainExplanation": "La secuencia que debes practicar es «cambio de lado entre las piernas». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-312-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The dog makes a side shift between the handler's legs. The handler may stop when the dog performs the exercise. The handler is allowed to lift a leg to make the side shift fluently. The heeling side is changed."
+      }
+    },
+    {
+      "id": "fci:signal:313",
+      "revisionId": "fci:signal:313:2025-02-01:es-draft-1",
+      "officialNumber": "313",
+      "name": "Media vuelta de ambos a la derecha",
+      "exerciseGroup": 3,
+      "exerciseArea": "B",
+      "regulatoryDescription": "En movimiento, guía y perro realizan cada uno un giro cerrado y simultáneo de 180 grados a la derecha, continúan en sentido contrario y cambian el lado de junto.",
+      "plainExplanation": "La secuencia que debes practicar es «media vuelta de ambos a la derecha». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:202"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-313-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "While moving, both, the handler and the dog itself, do a tight and simultaneous 180° turn to the right and continue in the opposite direction. The heeling side is changed."
+      }
+    },
+    {
+      "id": "fci:signal:314",
+      "revisionId": "fci:signal:314:2025-02-01:es-draft-1",
+      "officialNumber": "314",
+      "name": "Media vuelta de ambos a la izquierda",
+      "exerciseGroup": 3,
+      "exerciseArea": "B",
+      "regulatoryDescription": "En movimiento, guía y perro realizan cada uno un giro cerrado y simultáneo de 180 grados a la izquierda, continúan en sentido contrario y cambian el lado de junto.",
+      "plainExplanation": "La secuencia que debes practicar es «media vuelta de ambos a la izquierda». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:203"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-314-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "While moving, both, the handler and the dog itself, do a tight and simultaneous 180° turn to the left and continue in the opposite direction. The heeling side is changed."
+      }
+    },
+    {
+      "id": "fci:signal:315",
+      "revisionId": "fci:signal:315:2025-02-01:es-draft-1",
+      "officialNumber": "315",
+      "name": "Parada y cambio de lado por detrás",
+      "exerciseGroup": 3,
+      "exerciseArea": "A",
+      "regulatoryDescription": "Tras sentarse junto al guía, el perro cambia al otro lado pasando por detrás sin girar sobre sí mismo y vuelve a sentarse antes de avanzar.",
+      "plainExplanation": "La secuencia que debes practicar es «parada y cambio de lado por detrás». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:311"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-315-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to make a side shift behind the handler and to resume a sit on the other side. The dog is not allowed to spin to make the shift. When completed, the team moves forward. The heeling side is changed."
+      }
+    },
+    {
+      "id": "fci:signal:316",
+      "revisionId": "fci:signal:316:2025-02-01:es-draft-1",
+      "officialNumber": "316",
+      "name": "Parada y cambio de lado por delante",
+      "exerciseGroup": 3,
+      "exerciseArea": "A",
+      "regulatoryDescription": "Tras sentarse junto al guía, el perro cambia al otro lado por delante, girando para completar el cambio, y vuelve a sentarse antes de avanzar.",
+      "plainExplanation": "La secuencia que debes practicar es «parada y cambio de lado por delante». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:312"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-316-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to make a side shift in front of the handler and to resume a sit on the other side. The dog must spin to make the shift. When completed, the team moves forward. The heeling side is changed."
+      }
+    },
+    {
+      "id": "fci:signal:317",
+      "revisionId": "fci:signal:317:2025-02-01:es-draft-1",
+      "officialNumber": "317",
+      "name": "De pie en marcha y rodear",
+      "exerciseGroup": 3,
+      "exerciseArea": "A",
+      "regulatoryDescription": "En movimiento, el perro queda de pie mientras el guía continúa sin pausa, lo rodea, vuelve a su lado y se detiene. El perro mantiene la posición hasta salir.",
+      "plainExplanation": "La secuencia que debes practicar es «de pie en marcha y rodear». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Entrena por separado permanencia, movimiento del guía y llamada. Une dos elementos cada vez y vuelve a una distancia fácil si aparece anticipación.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:208"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-317-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "While moving, the dog is directed to a stand position and the handler, without pausing, walks forward, then around the dog, back to the side of the dog and makes a stop. The dog remains standing until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:318",
+      "revisionId": "fci:signal:318:2025-02-01:es-draft-1",
+      "officialNumber": "318",
+      "name": "Tumbado en marcha y rodear",
+      "exerciseGroup": 3,
+      "exerciseArea": "A",
+      "regulatoryDescription": "En movimiento, el perro se tumba mientras el guía continúa sin pausa, lo rodea, vuelve a su lado y se detiene. El perro mantiene la posición hasta salir.",
+      "plainExplanation": "La secuencia que debes practicar es «tumbado en marcha y rodear». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Entrena por separado permanencia, movimiento del guía y llamada. Une dos elementos cada vez y vuelve a una distancia fácil si aparece anticipación.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:104"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-318-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "While moving, the dog is directed to a down position and the handler, without pausing, walks forward, then around the dog, back to the side of the dog and makes a stop. The dog stays down until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:319",
+      "revisionId": "fci:signal:319:2025-02-01:es-draft-1",
+      "officialNumber": "319",
+      "name": "Parada, de pie y avanzar sin el perro",
+      "exerciseGroup": 3,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El perro se sienta al detenerse y pasa a de pie. El guía avanza solo hacia el cono o la señal de llamada; la llamada correspondiente completa la secuencia.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, de pie y avanzar sin el perro». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Entrena por separado permanencia, movimiento del guía y llamada. Une dos elementos cada vez y vuelve a una distancia fácil si aparece anticipación.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:208"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-319-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the dog is directed to a stand position. Thereafter the handler, without the dog, walks forward either to the recall cone (C) and recalls the dog (no change of the heeling side) or to the recall sign and follows the instructions on the recall sign. If no additional recall sign is placed, the recall cone and the recall itself are part of this exercise."
+      }
+    },
+    {
+      "id": "fci:signal:320",
+      "revisionId": "fci:signal:320:2025-02-01:es-draft-1",
+      "officialNumber": "320",
+      "name": "Envío a dos saltos",
+      "exerciseGroup": 3,
+      "exerciseArea": "D",
+      "regulatoryDescription": "Desde la señal situada 2 m antes del primer salto, el guía envía al perro sobre dos saltos separados 4 m, en línea o con un ángulo máximo de 90 grados, mientras avanza en paralelo.",
+      "plainExplanation": "La secuencia que debes practicar es «envío a dos saltos». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Asegura primero un salto cómodo y seguro, con altura adecuada. Añade envío o llamada por separado y aumenta la distancia gradualmente, siempre con refuerzo positivo.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [
+        {
+          "id": "jump",
+          "requiredForFinalExecution": true,
+          "usefulForLearning": false
+        }
+      ],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:222"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-320-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The dog is sent over two jumps at the earliest next to the sign that is two meters before the first jump. The jumps can be in a straight line or in an angle up to 90°, but they must be 4 m apart from each other. At the same time the handler continues alongside the jumps."
+      }
+    },
+    {
+      "id": "fci:signal:321",
+      "revisionId": "fci:signal:321:2025-02-01:es-draft-1",
+      "officialNumber": "321",
+      "name": "Giro y llamada al junto",
+      "exerciseGroup": 3,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Esta llamada se sitúa entre 3 y 5 m después de 319, 408 o 409. El guía gira, se detiene y llama al perro directamente al lado izquierdo sin sentado; al llegar, ambos avanzan.",
+      "plainExplanation": "La secuencia que debes practicar es «giro y llamada al junto». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Entrena por separado permanencia, movimiento del guía y llamada. Une dos elementos cada vez y vuelve a una distancia fácil si aparece anticipación.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:319"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-321-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "This sign can only be used after exercises 319, 408 and 409, instead of a recall cone, and must be placed 3 to 5 m from the previous sign. The handler turns around, stops and recalls the dog. The handler may stop before turning around. The dog is directed to go to the left heel position (without a sit). When reached, the team moves forward. Return to left handling."
+      }
+    },
+    {
+      "id": "fci:signal:322",
+      "revisionId": "fci:signal:322:2025-02-01:es-draft-1",
+      "officialNumber": "322",
+      "name": "Giro, llamada al frente y regreso por detrás",
+      "exerciseGroup": 3,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Esta llamada se sitúa entre 3 y 5 m después de 319, 408 o 409. El guía gira, llama al perro a sentado de frente y este vuelve al lado izquierdo rodeando por detrás y se sienta antes de avanzar.",
+      "plainExplanation": "La secuencia que debes practicar es «giro, llamada al frente y regreso por detrás». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Entrena por separado permanencia, movimiento del guía y llamada. Une dos elementos cada vez y vuelve a una distancia fácil si aparece anticipación.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:319",
+        "fci:signal:209"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-322-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "This sign can only be used after exercises 319, 408 and 409, instead of a recall cone, and must be placed 3 to 5 m from the previous sign. The handler turns around, stops and recalls the dog. The handler may stop before turning around. The dog is directed to sit in front of the handler. The dog is then directed to move to the handler's right and behind the handler to the left side. The dog sits before the team moves forward. Return to left handling."
+      }
+    },
+    {
+      "id": "fci:signal:323",
+      "revisionId": "fci:signal:323:2025-02-01:es-draft-1",
+      "officialNumber": "323",
+      "name": "Giro, llamada al frente y regreso directo",
+      "exerciseGroup": 3,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Esta llamada se sitúa entre 3 y 5 m después de 319, 408 o 409. El guía gira, llama al perro a sentado de frente y este vuelve directamente al lado izquierdo y se sienta antes de avanzar.",
+      "plainExplanation": "La secuencia que debes practicar es «giro, llamada al frente y regreso directo». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Entrena por separado permanencia, movimiento del guía y llamada. Une dos elementos cada vez y vuelve a una distancia fácil si aparece anticipación.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:319",
+        "fci:signal:210"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-2",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-323-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "This sign can only be used after exercises 319, 408 and 409, instead of a recall cone, and must be placed 3 to 5 m from the previous sign. The handler turns around, stops and recalls the dog. The handler may stop before turning around. The dog is directed to sit in front of the handler. The dog then is directed to move directly to the handler's left side. The dog sits before the team moves forward. Return to left handling."
+      }
+    },
+    {
+      "id": "fci:signal:401",
+      "revisionId": "fci:signal:401:2025-02-01:es-draft-1",
+      "officialNumber": "401",
+      "name": "Dos pasos laterales a la derecha",
+      "exerciseGroup": 4,
+      "exerciseArea": "B",
+      "regulatoryDescription": "En movimiento, el guía da dos pasos laterales a la derecha y el perro se desplaza simultáneamente, alineado y paralelo. El binomio continúa por la derecha de la señal.",
+      "plainExplanation": "La secuencia que debes practicar es «dos pasos laterales a la derecha». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:301"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-401-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "While moving, the handler takes two steps to the right and the dog follows simultaneously aligned with and parallel to the handler. The team continues on the right side of the sign."
+      }
+    },
+    {
+      "id": "fci:signal:402",
+      "revisionId": "fci:signal:402:2025-02-01:es-draft-1",
+      "officialNumber": "402",
+      "name": "Dos pasos laterales a la izquierda",
+      "exerciseGroup": 4,
+      "exerciseArea": "B",
+      "regulatoryDescription": "En movimiento, el guía da dos pasos laterales a la izquierda y el perro se desplaza simultáneamente, alineado y paralelo.",
+      "plainExplanation": "La secuencia que debes practicar es «dos pasos laterales a la izquierda». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:302"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-402-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "While moving, the handler takes two steps to the left and the dog follows simultaneously aligned with and parallel to the handler."
+      }
+    },
+    {
+      "id": "fci:signal:403",
+      "revisionId": "fci:signal:403:2025-02-01:es-draft-1",
+      "officialNumber": "403",
+      "name": "Parada, dos pasos laterales derechos y parada",
+      "exerciseGroup": 4,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Tras una parada con sentado, guía y perro dan dos pasos laterales a la derecha, alineados y en paralelo, y el perro vuelve a sentarse.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, dos pasos laterales derechos y parada». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:303"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-403-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The handler takes two steps to the right and stops. The dog moves simultaneously aligned with and parallel to the handler and resumes a sit when the handler stops. The team continues on the right side of the sign."
+      }
+    },
+    {
+      "id": "fci:signal:404",
+      "revisionId": "fci:signal:404:2025-02-01:es-draft-1",
+      "officialNumber": "404",
+      "name": "Parada, dos pasos laterales izquierdos y parada",
+      "exerciseGroup": 4,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Tras una parada con sentado, guía y perro dan dos pasos laterales a la izquierda, alineados y en paralelo, y el perro vuelve a sentarse.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, dos pasos laterales izquierdos y parada». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:304"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-404-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The handler takes two steps to the left and stops. The dog moves simultaneously aligned with and parallel to the handler and resumes a sit when the handler stops."
+      }
+    },
+    {
+      "id": "fci:signal:405",
+      "revisionId": "fci:signal:405:2025-02-01:es-draft-1",
+      "officialNumber": "405",
+      "name": "Giro exterior de ambos",
+      "exerciseGroup": 4,
+      "exerciseArea": "B",
+      "regulatoryDescription": "En movimiento, guía y perro giran simultáneamente 180 grados alejándose uno del otro, continúan en dirección contraria y cambian el lado de junto.",
+      "plainExplanation": "La secuencia que debes practicar es «giro exterior de ambos». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:310"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-405-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "While moving, the team does a tight and simultaneous 180° turn away from each other and continues in the opposite direction. The heeling side is changed."
+      }
+    },
+    {
+      "id": "fci:signal:406",
+      "revisionId": "fci:signal:406:2025-02-01:es-draft-1",
+      "officialNumber": "406",
+      "name": "Cambio de lado por delante",
+      "exerciseGroup": 4,
+      "exerciseArea": "A",
+      "regulatoryDescription": "En movimiento, el perro cambia de lado pasando por delante del guía sin girar sobre sí mismo.",
+      "plainExplanation": "La secuencia que debes practicar es «cambio de lado por delante». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:311"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-406-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "While moving, the dog makes a side shift in front of the handler. The dog is not allowed to spin to make the shift. The heeling side is changed."
+      }
+    },
+    {
+      "id": "fci:signal:407",
+      "revisionId": "fci:signal:407:2025-02-01:es-draft-1",
+      "officialNumber": "407",
+      "name": "Rodear al guía",
+      "exerciseGroup": 4,
+      "exerciseArea": "A",
+      "regulatoryDescription": "Mientras el binomio avanza, el perro rodea al guía hacia delante y recupera el lado de junto inicial.",
+      "plainExplanation": "La secuencia que debes practicar es «rodear al guía». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:309"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-407-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "While the team is moving, the dog circles forward around the handler and returns to the initial heel position."
+      }
+    },
+    {
+      "id": "fci:signal:408",
+      "revisionId": "fci:signal:408:2025-02-01:es-draft-1",
+      "officialNumber": "408",
+      "name": "Sentado en marcha y avanzar",
+      "exerciseGroup": 4,
+      "exerciseArea": "A",
+      "regulatoryDescription": "En movimiento, el perro se sienta mientras el guía continúa sin pausa hacia el cono o la señal de llamada; la llamada correspondiente completa la secuencia.",
+      "plainExplanation": "La secuencia que debes practicar es «sentado en marcha y avanzar». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Entrena por separado permanencia, movimiento del guía y llamada. Une dos elementos cada vez y vuelve a una distancia fácil si aparece anticipación.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:317"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-408-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "While moving, the dog is directed to a sit position and the handler, without pausing and without the dog, walks forward either to the recall cone (C) and recalls the dog (no change of the heeling side) or to the recall sign and follows the instructions on the recall sign. If no additional recall sign is placed, the recall cone and the recall itself are part of this exercise."
+      }
+    },
+    {
+      "id": "fci:signal:409",
+      "revisionId": "fci:signal:409:2025-02-01:es-draft-1",
+      "officialNumber": "409",
+      "name": "Tumbado en marcha y avanzar",
+      "exerciseGroup": 4,
+      "exerciseArea": "A",
+      "regulatoryDescription": "En movimiento, el perro se tumba mientras el guía continúa sin pausa hacia el cono o la señal de llamada; la llamada correspondiente completa la secuencia.",
+      "plainExplanation": "La secuencia que debes practicar es «tumbado en marcha y avanzar». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Entrena por separado permanencia, movimiento del guía y llamada. Une dos elementos cada vez y vuelve a una distancia fácil si aparece anticipación.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:318"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-409-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "While moving, the dog is directed to a down position and the handler, without pausing and without the dog, walks forward either to the recall cone (C) and recalls the dog (no change of the heeling side) or to the recall sign and follows the instructions on the recall sign. If no additional recall sign is placed, the recall cone and the recall itself are part of this exercise."
+      }
+    },
+    {
+      "id": "fci:signal:410",
+      "revisionId": "fci:signal:410:2025-02-01:es-draft-1",
+      "officialNumber": "410",
+      "name": "Parada, envío al cono de pie y llamada",
+      "exerciseGroup": 4,
+      "exerciseArea": "A",
+      "regulatoryDescription": "Tras una parada, el guía envía al perro a quedar de pie junto a un cono situado entre 3 y 5 m y hasta 90 grados; al menos una pata queda a menos de 1 m. El guía avanza a un punto de llamada separado al menos 2 m del cono y lo llama al mismo lado.",
+      "plainExplanation": "La secuencia que debes practicar es «parada, envío al cono de pie y llamada». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Presenta primero el patrón con referencias amplias y sin prisa. Refuerza la trayectoria correcta y reduce después gestos, distancia extra y ayudas visibles.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [
+        {
+          "id": "cone",
+          "requiredForFinalExecution": true,
+          "usefulForLearning": false
+        }
+      ],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:319"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-410-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. The team is allowed to turn towards the cone when stopping. The cone is placed 3 to 5 m away in an angle up to 90° to the left or the right. The handler then sends the dog to a stand next to the cone (at least one paw must be within one meter of the cone). The dog remains standing at the cone while the handler walks forward to the recall cone (C) and recalls the dog (no change of the heeling side). The recall cone and the recall itself are part of this exercise. There must be at least 2 m between the cone and the recall cone."
+      }
+    },
+    {
+      "id": "fci:signal:411",
+      "revisionId": "fci:signal:411:2025-02-01:es-draft-1",
+      "officialNumber": "411",
+      "name": "Frente de pie, alejarse hacia atrás y llamada",
+      "exerciseGroup": 4,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El perro queda de pie frente al guía, retrocede al menos tres longitudes y vuelve a quedar de pie. El guía avanza junto a él y lo llama sin detenerse al lado izquierdo.",
+      "plainExplanation": "La secuencia que debes practicar es «frente de pie, alejarse hacia atrás y llamada». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:306"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-411-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog is directed to stand in front of the handler. The dog is then directed to back away at least three dog lengths from the handler to a stand. While the dog remains standing, the handler walks forward next to the dog and then recalls the dog, without pausing, returning to left handling."
+      }
+    },
+    {
+      "id": "fci:signal:412",
+      "revisionId": "fci:signal:412:2025-02-01:es-draft-1",
+      "officialNumber": "412",
+      "name": "Tres pasos hacia atrás",
+      "exerciseGroup": 4,
+      "exerciseArea": "A",
+      "regulatoryDescription": "En movimiento, el guía da al menos tres pasos hacia atrás y el perro lo acompaña simultáneamente, alineado y paralelo; después ambos avanzan.",
+      "plainExplanation": "La secuencia que debes practicar es «tres pasos hacia atrás». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:305"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-412-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "While moving, the handler takes at least three steps backwards. The dog moves simultaneously aligned with and parallel to the handler. When completed, the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:413",
+      "revisionId": "fci:signal:413:2025-02-01:es-draft-1",
+      "officialNumber": "413",
+      "name": "Parada: uno atrás de pie, dos sentado y tres tumbado",
+      "exerciseGroup": 4,
+      "exerciseArea": "A",
+      "regulatoryDescription": "Desde sentado en junto, guía y perro retroceden uno, dos y tres pasos y el perro termina respectivamente de pie, sentado y tumbado.",
+      "plainExplanation": "La secuencia que debes practicar es «parada: uno atrás de pie, dos sentado y tres tumbado». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:305",
+        "fci:signal:219"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-413-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the handler takes one step backwards and stops. The dog moves simultaneously aligned with and parallel to the handler and resumes a stand when the handler stops. Then the handler takes two steps backwards and stops. The dog moves simultaneously aligned with and parallel to the handler and resumes a sit when the handler stops. Thereafter the handler takes three steps backwards and stops. The dog moves simultaneously aligned with and parallel to the handler and resumes a down when the handler stops. The dog stays down until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:414",
+      "revisionId": "fci:signal:414:2025-02-01:es-draft-1",
+      "officialNumber": "414",
+      "name": "Tres giros derechos con de pie, sentado y tumbado",
+      "exerciseGroup": 4,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Desde una parada, el binomio hace tres giros sucesivos de 90 grados a la derecha. El perro termina de pie, sentado y tumbado respectivamente; la dirección final queda 90 grados a la izquierda de la inicial.",
+      "plainExplanation": "La secuencia que debes practicar es «tres giros derechos con de pie, sentado y tumbado». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:307",
+        "fci:signal:204"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-414-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the handler does a 90° turn to the right on the spot and stops. The dog moves simultaneously with the handler and resumes a stand when the handler stops. The handler then does again a 90° turn to the right on the spot and stops. The dog moves simultaneously with the handler and resumes a sit when the handler stops. Thereafter the handler does again a 90° turn to the right on the spot and stops. The dog moves simultaneously with the handler and resumes a down when the handler stops. The dog stays down until the team moves forward. The new direction is 90° left to the original one."
+      }
+    },
+    {
+      "id": "fci:signal:415",
+      "revisionId": "fci:signal:415:2025-02-01:es-draft-1",
+      "officialNumber": "415",
+      "name": "Tres giros izquierdos con de pie, sentado y tumbado",
+      "exerciseGroup": 4,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Desde una parada, el binomio hace tres giros sucesivos de 90 grados a la izquierda. El perro termina de pie, sentado y tumbado respectivamente; la dirección final queda 90 grados a la derecha de la inicial.",
+      "plainExplanation": "La secuencia que debes practicar es «tres giros izquierdos con de pie, sentado y tumbado». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Divide la secuencia en posiciones y transiciones breves. Refuerza cada parte autónoma y encadénalas solo cuando el perro responda con fluidez y sin ayudas adicionales.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:308",
+        "fci:signal:204"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-415-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog sits beside the handler. After that the handler does a 90° turn to the left on the spot and stops. The dog moves simultaneously with the handler and resumes a stand when the handler stops. The handler then does again a 90° turn to the left on the spot and stops. The dog moves simultaneously with the handler and resumes a sit when the handler stops. Thereafter the handler does again a 90° turn to the left on the spot and stops. The dog moves simultaneously with the handler and resumes a down when the handler stops. The dog stays down until the team moves forward. The new direction is 90° right to the original one."
+      }
+    },
+    {
+      "id": "fci:signal:416",
+      "revisionId": "fci:signal:416:2025-02-01:es-draft-1",
+      "officialNumber": "416",
+      "name": "Frente y pasos laterales izquierda-derecha",
+      "exerciseGroup": 4,
+      "exerciseArea": "A",
+      "regulatoryDescription": "Desde sentado de frente, el perro acompaña un paso lateral del guía a la izquierda y otro a la derecha, sentándose tras cada uno. Después vuelve sentado al lado izquierdo.",
+      "plainExplanation": "La secuencia que debes practicar es «frente y pasos laterales izquierda-derecha». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Construye el desplazamiento en pasos muy cortos y premia que hombros y cadera permanezcan alineados. Aumenta distancia solo cuando el movimiento sea fluido.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:306"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-416-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops and the dog is directed to sit in front of the handler. After that the handler takes one side step to the left and stops. The dog moves simultaneously aligned with and parallel to the handler and resumes again a sit in front of the handler when the handler stops. Thereafter the handler takes one side step to the right and stops. The dog moves simultaneously aligned with and parallel to the handler and resumes again a sit in front of the handler when the handler stops. The dog is then directed to the handler's left side and resumes a sit beside the handler. The dog remains sitting until the team moves forward. Return to left handling."
+      }
+    },
+    {
+      "id": "fci:signal:417",
+      "revisionId": "fci:signal:417:2025-02-01:es-draft-1",
+      "officialNumber": "417",
+      "name": "Giro izquierdo de 90° alrededor del cono",
+      "exerciseGroup": 4,
+      "exerciseArea": "A",
+      "regulatoryDescription": "Con el perro inicialmente a la izquierda, el guía lo envía en movimiento a rodear en sentido horario un cono situado 1–2 m tras la señal. El perro inicia claramente el envío antes de que el guía alcance la señal; el guía gira 90 grados a la izquierda y termina con el perro a la derecha.",
+      "plainExplanation": "La secuencia que debes practicar es «giro izquierdo de 90° alrededor del cono». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Presenta primero el patrón con referencias amplias y sin prisa. Refuerza la trayectoria correcta y reduce después gestos, distancia extra y ayudas visibles.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "left-only",
+      "materials": [
+        {
+          "id": "cone",
+          "requiredForFinalExecution": true,
+          "usefulForLearning": false
+        }
+      ],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:311"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "left-only"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "left-only"
+        }
+      ],
+      "progressCompatibilityKey": "fci-417-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "This exercise can only be set up, when the dog is in the beginning of the exercise on the handler's left side (left handling). While moving, before reaching the sign, the handler sends the dog around the cone, which is 1 to 2 m away from the back of the sign. The dog must clearly have started its approach to the cone before the handler reaches the sign. The dog circles the cone clockwise while the handler turns 90° left before reaching the cone. The handler can slow down while the dog is going around the cone. The exercise ends with the dog returning to the handler's right side. The heeling side is changed. Return to right handling."
+      }
+    },
+    {
+      "id": "fci:signal:418",
+      "revisionId": "fci:signal:418:2025-02-01:es-draft-1",
+      "officialNumber": "418",
+      "name": "Giro derecho de 90° alrededor del cono",
+      "exerciseGroup": 4,
+      "exerciseArea": "A",
+      "regulatoryDescription": "Con el perro inicialmente a la derecha, el guía lo envía en movimiento a rodear en sentido antihorario un cono situado 1–2 m tras la señal. El perro inicia claramente el envío antes de que el guía alcance la señal; el guía gira 90 grados a la derecha y termina con el perro a la izquierda.",
+      "plainExplanation": "La secuencia que debes practicar es «giro derecho de 90° alrededor del cono». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Presenta primero el patrón con referencias amplias y sin prisa. Refuerza la trayectoria correcta y reduce después gestos, distancia extra y ayudas visibles.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "right-only",
+      "materials": [
+        {
+          "id": "cone",
+          "requiredForFinalExecution": true,
+          "usefulForLearning": false
+        }
+      ],
+      "locations": [
+        "home",
+        "outdoor-small",
+        "club"
+      ],
+      "space": "short",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:311"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "right-only"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "right-only"
+        }
+      ],
+      "progressCompatibilityKey": "fci-418-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "This exercise can only be set up, when the dog is in the beginning of the exercise on the handler's right side (right handling). While moving, before reaching the sign, the handler sends the dog around the cone, which is 1 to 2 m away from the back of the sign. The dog must clearly have started its approach to the cone before the handler reaches the sign. The dog circles the cone counterclockwise while the handler turns 90° right before reaching the cone. The handler can slow down while the dog is going around the cone. The exercise ends with the dog returning to the handler's left side. The heeling side is changed. Return to left handling."
+      }
+    },
+    {
+      "id": "fci:signal:419",
+      "revisionId": "fci:signal:419:2025-02-01:es-draft-1",
+      "officialNumber": "419",
+      "name": "Sentado en marcha y rodear",
+      "exerciseGroup": 4,
+      "exerciseArea": "A",
+      "regulatoryDescription": "En movimiento, el perro se sienta mientras el guía continúa sin pausa, lo rodea, vuelve a su lado y se detiene. El perro permanece sentado hasta la salida.",
+      "plainExplanation": "La secuencia que debes practicar es «sentado en marcha y rodear». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Entrena por separado permanencia, movimiento del guía y llamada. Une dos elementos cada vez y vuelve a una distancia fácil si aparece anticipación.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:408"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-419-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "While moving, the dog is directed to a sit position and the handler, without pausing, walks forward, then around the dog, back to the side of the dog and makes a stop. The dog remains sitting until the team moves forward."
+      }
+    },
+    {
+      "id": "fci:signal:420",
+      "revisionId": "fci:signal:420:2025-02-01:es-draft-1",
+      "officialNumber": "420",
+      "name": "Parada y llamada sobre el salto",
+      "exerciseGroup": 4,
+      "exerciseArea": "A",
+      "regulatoryDescription": "El perro se sienta junto a la señal situada 2 m antes del salto. El guía avanza solo, pasa el salto y llama al perro para que salte y vuelva al mismo lado de junto.",
+      "plainExplanation": "La secuencia que debes practicar es «parada y llamada sobre el salto». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Asegura primero un salto cómodo y seguro, con altura adecuada. Añade envío o llamada por separado y aumenta la distancia gradualmente, siempre con refuerzo positivo.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [
+        {
+          "id": "jump",
+          "requiredForFinalExecution": true,
+          "usefulForLearning": false
+        }
+      ],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:222",
+        "fci:signal:319"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-420-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "The handler stops next to the sign that is two meters before the jump and the dog sits beside the handler. After that the handler walks forward, without the dog, and recalls the dog after having passed the jump. The dog does the jump and returns to the initial heel side (no change of the heeling side). The handler may reduce the pace to catch up with the dog."
+      }
+    },
+    {
+      "id": "fci:signal:421",
+      "revisionId": "fci:signal:421:2025-02-01:es-draft-1",
+      "officialNumber": "421",
+      "name": "Giro y llamada dirigida sobre el salto",
+      "exerciseGroup": 4,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Esta señal se coloca 8 m después de 319, 408 o 409. El salto queda a mitad, desplazado 2 m a izquierda o derecha. El guía gira y llama al perro sobre el salto al lado izquierdo sin sentado; después ambos avanzan.",
+      "plainExplanation": "La secuencia que debes practicar es «giro y llamada dirigida sobre el salto». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Asegura primero un salto cómodo y seguro, con altura adecuada. Añade envío o llamada por separado y aumenta la distancia gradualmente, siempre con refuerzo positivo.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [
+        {
+          "id": "jump",
+          "requiredForFinalExecution": true,
+          "usefulForLearning": false
+        }
+      ],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:320",
+        "fci:signal:321"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-421-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "This sign can only be used after exercises 319, 408 and 409, instead of a recall cone and must be placed 8 m from the previous sign. A jump is placed exactly halfway between this sign and the previous one, so that the nearest side of the jump is 2 m off-centre to either left or right. The handler turns around, stops and recalls the dog over the jump to the left heel position (without a sit). The handler may stop before turning around. The team then moves forward. Return to left handling."
+      }
+    },
+    {
+      "id": "fci:signal:422",
+      "revisionId": "fci:signal:422:2025-02-01:es-draft-1",
+      "officialNumber": "422",
+      "name": "Giro, alejarse, sentado, tumbado y llamada",
+      "exerciseGroup": 4,
+      "exerciseArea": "B",
+      "regulatoryDescription": "Esta señal se sitúa entre 3 y 5 m después de 319, 408 o 409. El guía gira y pide al perro retroceder al menos una longitud, sentarse y tumbarse; después lo llama al lado izquierdo, donde se sienta.",
+      "plainExplanation": "La secuencia que debes practicar es «giro, alejarse, sentado, tumbado y llamada». Trabájala por partes y comprueba que cada posición o cambio ocurre en el orden indicado.",
+      "trainingAdvice": "Entrena por separado permanencia, movimiento del guía y llamada. Une dos elementos cada vez y vuelve a una distancia fácil si aparece anticipación.",
+      "criteria": [
+        "Orden y posiciones correctos",
+        "Movimiento coordinado y controlado",
+        "Final estable antes de continuar"
+      ],
+      "trainingSideMode": "both",
+      "materials": [],
+      "locations": [
+        "outdoor-small",
+        "club"
+      ],
+      "space": "medium",
+      "skillIds": [],
+      "prerequisiteSignalIds": [
+        "fci:signal:321",
+        "fci:signal:411"
+      ],
+      "assignments": [
+        {
+          "regulationId": "rsce:grade-3",
+          "regulatorySideMode": "both"
+        },
+        {
+          "regulationId": "fci:international",
+          "regulatorySideMode": "both"
+        }
+      ],
+      "progressCompatibilityKey": "fci-422-2025",
+      "editorialStatus": "draft",
+      "editorialReview": {
+        "ownerReviewRequired": true,
+        "sourceDescriptionEn": "This sign can only be used after exercises 319, 408 and 409, instead of a recall cone, and must be placed 3 to 5 m from the previous sign. The handler turns around, stops and directs the dog to back away at least one dog length. The handler may stop before turning around. After that the dog is directed to a sit and then to a down position. Thereafter the dog is recalled to the handler's left side. The dog sits before the team moves forward. Return to left handling."
+      }
+    }
+  ]
+}
