@@ -75,7 +75,29 @@ input:focus, select:focus, button:focus-visible, a:focus-visible { outline: 3px 
 .list-item, .progress-item { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; min-height: 68px; padding: 10px 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 15px; }
 .list-item > span:nth-child(2), .progress-main { min-width: 0; }
 .list-item strong, .list-item small { display: block; }
-.list-item small { margin-top: .2rem; overflow: hidden; color: var(--muted); font-size: .78rem; line-height: 1.3; text-overflow: ellipsis; }
+.list-item small { margin-top: .2rem; color: var(--muted); font-size: .78rem; line-height: 1.3; }
+.list-cta { display: block; margin-top: .35rem; color: var(--forest-2); font-size: .72rem; font-weight: 800; }
+:root[data-theme="dark"] .list-cta { color: var(--gold); }
+@media (prefers-color-scheme: dark) { :root[data-theme="system"] .list-cta { color: var(--gold); } }
+.signal-diagram { margin: 0 0 16px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); }
+.signal-diagram svg { display: block; width: 100%; height: auto; }
+.signal-diagram figcaption { padding: 8px 12px 10px; color: var(--muted); font-size: .72rem; text-align: center; }
+.signal-diagram--compact { width: 82px; margin: 0; border-radius: 12px; box-shadow: none; }
+.signal-diagram--compact figcaption { display: none; }
+.diagram-board { fill: color-mix(in srgb, var(--forest), var(--surface) 7%); stroke: color-mix(in srgb, var(--gold), transparent 40%); stroke-width: 3; }
+.diagram-code { fill: var(--gold); font-size: 25px; font-weight: 900; }
+.diagram-handler { fill: #fff3d8; }
+.diagram-handler-line { fill: none; stroke: #fff3d8; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+.diagram-dog { fill: #171d1b; stroke: #f1bd65; stroke-width: 3; }
+.diagram-dog-head { fill: #fff3d8; stroke: #171d1b; stroke-width: 3; }
+.diagram-dog-line { fill: none; stroke: #f1bd65; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.diagram-path { fill: none; stroke: var(--gold); stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+.diagram-path--dash { stroke-dasharray: 10 9; }
+.diagram-arrow-head, .diagram-cone { fill: var(--gold); }
+.diagram-direction { fill: #fff3d8; font-size: 32px; font-weight: 900; }
+.diagram-speed { stroke: #fff3d8; stroke-width: 5; stroke-linecap: round; }
+.diagram-step { fill: #fff3d8; }
+.diagram-step-text { fill: var(--forest); font-size: 15px; font-weight: 900; }
 .train-choice small { white-space: normal; }
 .back-link { display: inline-block; min-height: 44px; margin-bottom: 8px; color: var(--forest-2); font-weight: 800; }
 .detail-title, .session-head { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }

@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { commonSignalErrors, SignalDiagram } from '../components/SignalDiagram';
 import { getSignal, signals } from '../content/signals';
 
 export function SignalsPage() {
@@ -22,7 +23,7 @@ export function SignalsPage() {
     <label className="search"><span className="sr-only">Buscar señal</span><input type="search" placeholder="Número o nombre" value={query} onChange={(event) => setQuery(event.target.value)} /></label>
     <div className="list">
       {filtered.map((signal) => <Link className="list-item" key={signal.id} to={`/signals/${encodeURIComponent(signal.id)}`}>
-        <span className="number number--small">{signal.officialNumber}</span><span><strong>{signal.name}</strong><small>Grupo {signal.exerciseGroup} · Área {signal.exerciseArea}</small></span><span aria-hidden="true">›</span>
+        <SignalDiagram signal={signal} compact /><span><strong>{signal.officialNumber} · {signal.name}</strong><small>{signal.plainExplanation}</small><span className="list-cta">Ver esquema, descripción y errores</span></span><span aria-hidden="true">›</span>
       </Link>)}
     </div>
   </>;
@@ -34,10 +35,12 @@ export function SignalDetailPage() {
   return <article>
     <Link className="back-link" to="/signals">‹ Señales</Link>
     <div className="detail-title"><span className="number">{signal.officialNumber}</span><div><p className="eyebrow">Grupo {signal.exerciseGroup} · Área {signal.exerciseArea}</p><h1>{signal.name}</h1></div></div>
-    <section className="card"><h2>Descripción reglamentaria</h2><p>{signal.regulatoryDescription}</p><p className="source-note">Redacción propia fiel al reglamento. No sustituye la fuente oficial.</p></section>
+    <SignalDiagram signal={signal} />
     <section className="card"><h2>En palabras sencillas</h2><p>{signal.plainExplanation}</p></section>
+    <section className="card"><h2>Descripción reglamentaria</h2><p>{signal.regulatoryDescription}</p><p className="source-note">Redacción propia fiel al reglamento. No sustituye la fuente oficial.</p></section>
     <section className="card card--accent"><h2>Consejo de entrenamiento</h2><p>{signal.trainingAdvice}</p></section>
     <section className="card"><h2>Qué observar</h2><ul>{signal.criteria.map((criterion) => <li key={criterion}>{criterion}</li>)}</ul></section>
-    <Link className="button button--primary sticky-action" to={`/train/prepare/${encodeURIComponent(signal.id)}`}>Entrenar esta señal</Link>
+    <section className="card"><h2>Errores frecuentes</h2><ul>{commonSignalErrors(signal).map((error) => <li key={error}>{error}</li>)}</ul></section>
+    <Link className="button button--primary" to={`/train/prepare/${encodeURIComponent(signal.id)}`}>Entrenar esta señal</Link>
   </article>;
 }
