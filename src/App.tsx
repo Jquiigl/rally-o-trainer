@@ -22,7 +22,7 @@ function RoutedApp() {
     root.dataset.theme = settings?.theme ?? 'system';
   }, [settings?.theme]);
 
-  if (dogs === -1) return <div className="splash"><img src="./brand-symbol.svg" alt="" /><span>Rally O Trainer</span></div>;
+  if (dogs === -1) return <div className="splash"><img src="./brand-symbol.png" alt="" /><span>Rally O Trainer</span></div>;
   if (dogs === 0) return <Routes><Route path="*" element={<SetupPage />} /></Routes>;
   return <Routes>
     <Route element={<AppShell />}>

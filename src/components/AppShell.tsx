@@ -11,7 +11,7 @@ export function AppShell() {
   return <div className="app-shell">
     <header className="topbar">
       <NavLink to="/" className="brand" aria-label="Rally O Trainer, inicio">
-        <img src="./brand-symbol.svg" alt="" />
+        <img src="./brand-symbol.png" alt="" />
         <span>Rally O Trainer</span>
       </NavLink>
       <NavLink to="/dogs" className="icon-button" aria-label="Perros y configuración">●</NavLink>

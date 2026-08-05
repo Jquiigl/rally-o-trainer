@@ -17,7 +17,7 @@ export function SetupPage() {
   }
 
   return <section className="center-card setup">
-    <img className="setup-logo" src="./brand-symbol.svg" alt="" />
+    <img className="setup-logo" src="./brand-symbol.png" alt="" />
     <p className="eyebrow">Tu entrenador personal</p>
     <h1>Empecemos por tu perro</h1>
     <p>Solo necesitamos dos datos. Permanecerán en este dispositivo.</p>
