@@ -155,6 +155,6 @@ checklist.push('## Cierre del lote','',
   '- [ ] Saltos, conos y distancias coinciden con la fuente.',
   '- [ ] Se han corregido falsos amigos y términos no naturales en español.',
   '- [ ] Cada código aprobado se ha añadido a `advanced-review.json`.',
-  '- [ ] `pnpm check` confirma que el paquete publicado no contiene borradores.','');
+  '- [ ] `pnpm check` confirma que el paquete publicado no contiene borradores.');
 await writeFile(new URL('../Contenido/REVISION-FCI-GRUPOS-2-4.md', import.meta.url), `${checklist.join('\n')}\n`);
 console.log(`Built ${signals.length} advanced Spanish signals: ${approvedCodes.size} reviewed and ${signals.length-approvedCodes.size} drafts.`);

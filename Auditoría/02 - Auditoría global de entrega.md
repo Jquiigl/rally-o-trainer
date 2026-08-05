@@ -81,7 +81,7 @@ Esta auditoría distingue entrega construida de validación externa. Un `check` 
 | iPhone 16 Pro | Requiere el dispositivo del propietario | Checklist manual |
 | Android | Modelo aún no elegido | Elegir uno antes del piloto |
 | Grupos 2–4 visibles | Falta aprobación editorial del propietario | Completar checklist y publicar nueva versión |
-| Alojamiento HTTPS | Repositorio público creado y flujo preparado; falta verificar el primer despliegue | Ejecutar el protocolo físico sobre la URL publicada |
+| Alojamiento HTTPS | Publicado y comprobado en navegador de escritorio | Ejecutar el protocolo físico sobre la URL publicada |
 | Ejecución guiada de pistas | No pertenece al primer constructor secuencial | Valorar después del piloto |
 | Sincronización y colaboración | Aumentan coste y contradicen objetivo inmediato | Mantener en roadmap |
 
@@ -106,5 +106,5 @@ La documentación profesional, la base completa de contenido y dos incrementos f
 
 - Aprobación editorial avanzada.
 - Resultado de controles iPhone/Android.
-- Primera publicación en GitHub Pages.
+- Resultado de las pruebas físicas sobre GitHub Pages.
 - Prioridad del tercer incremento tras uso real.

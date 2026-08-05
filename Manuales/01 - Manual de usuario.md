@@ -141,4 +141,4 @@ Conviene exportar al menos una vez al mes y guardar el archivo en una ubicación
 ## Decisiones pendientes
 
 - Validar los textos de instalación en al menos un Android real antes del piloto del club.
-- Completar la primera publicación en `https://jquiigl.github.io/rally-o-trainer/`.
+- Validar instalación, modo avión y restauración desde `https://jquiigl.github.io/rally-o-trainer/` en los dispositivos físicos.

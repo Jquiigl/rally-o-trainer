@@ -138,6 +138,6 @@ La arquitectura base no requiere servicios de pago. No añadas SDK de analítica
 
 ## Decisiones pendientes
 
-- Realizar y verificar la primera publicación de `Jquiigl/rally-o-trainer`.
+- Completar la validación física de la versión publicada en iPhone 16 Pro y Android.
 - Elegir el dispositivo Android de referencia del club.
 - Definir la política de firma y publicación de paquetes de contenido.

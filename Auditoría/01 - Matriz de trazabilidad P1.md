@@ -62,4 +62,4 @@ La entrega debe considerarse técnicamente válida solo si `pnpm check` finaliza
 
 - Resultado de las pruebas físicas en iPhone 16 Pro y Android.
 - Aprobación editorial final del lote Debutante.
-- Primera publicación en GitHub Pages cuando exista la cuenta.
+- Prueba física de la publicación de GitHub Pages.

@@ -604,11 +604,11 @@ flowchart LR
     PAGES --> USERS["iOS, Android y escritorio"]
 ```
 
-GitHub Pages queda elegido como alojamiento. El usuario aún debe crear o confirmar su cuenta, por lo que:
+GitHub Pages queda elegido y activo como alojamiento desde la cuenta `Jquiigl`, por lo que:
 
-1. el proyecto podrá desarrollarse y probarse localmente;
-2. crear cuenta y repositorio será un paso explícito posterior;
-3. el flujo de despliegue se prepara localmente y se activará con el primer envío;
+1. el proyecto puede desarrollarse y probarse localmente;
+2. el repositorio público conserva código y documentación;
+3. cada envío a `main` activa el flujo de despliegue;
 4. el build permanecerá portable a cualquier host estático HTTPS.
 
 No se comprará dominio en el MVP. Si se adopta posteriormente, no cambiará arquitectura ni datos locales.
@@ -756,5 +756,5 @@ El usuario podrá consultar y descargar este diagnóstico. Borrar datos lo elimi
 | DP-06-006 | Estrategia final de ilustraciones: SVG, raster o combinación | Afecta precaché, accesibilidad y diseño. | Sistema de diseño y base de señales |
 | DP-06-007 | GitHub Pages tiene cabeceras limitadas; mantener seguridad sin depender de CSP configurable | Resuelto para el MVP. | Antes del despliegue |
 | DP-06-008 | Dispositivo Android físico | Sigue sin identificarse. | Antes de distribución al club |
-| DP-06-009 | Verificar el primer despliegue del repositorio público `Jquiigl/rally-o-trainer` | Repositorio ya creado. | Antes de la prueba física |
+| DP-06-009 | Despliegue del repositorio público `Jquiigl/rally-o-trainer` | Resuelto: publicado por GitHub Pages. | Completado |
 | DP-06-010 | Umbral para introducir Web Worker o caché persistida de progreso | Debe basarse en mediciones, no anticipación. | Pruebas de rendimiento |

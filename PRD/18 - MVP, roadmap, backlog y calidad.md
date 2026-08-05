@@ -457,6 +457,6 @@ flowchart LR
 |---|---|---|
 | DP-18-001 | Seleccionar las 10 señales del corte P1 | Tras cerrar inventario Debutante |
 | DP-18-002 | Confirmar una persona/dispositivo Android | Antes de P3 |
-| DP-18-003 | Ejecutar la primera publicación en el GitHub Pages ya elegido | Antes de primera instalación externa |
+| DP-18-003 | Publicación en GitHub Pages | Resuelta; falta validación física |
 | DP-18-004 | Incluir consolidación en MVP o activarla tras piloto | Antes de P2 |
 | DP-18-005 | Incluir registro agregado en P1 o P2 | Antes de implementar sesión |

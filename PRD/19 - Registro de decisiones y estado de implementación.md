@@ -48,7 +48,7 @@ El estado de implementación distingue cuatro términos:
 | D-017 | Material e inventario opcionales; nunca bloquean elección manual | Aprobada e implementada |
 | D-018 | Constructor primero como secuencia, no como plano libre | Aprobada e implementada para entrenamiento Debutante |
 | D-019 | Modo examen separado del progreso práctico | Aprobada e implementada |
-| D-020 | Repositorio público `Jquiigl/rally-o-trainer` y alojamiento gratuito mediante GitHub Actions y GitHub Pages | Aprobada, creada y configurada; falta verificar la primera publicación |
+| D-020 | Repositorio público `Jquiigl/rally-o-trainer` y alojamiento gratuito mediante GitHub Actions y GitHub Pages | Aprobada, implementada y publicada |
 | D-020 | Copia JSON completa, recordatorio a 30 días y restauración validada | Aprobada e implementada |
 | D-021 | Borrado total con doble confirmación | Aprobada e implementada |
 | D-022 | Sin imágenes oficiales; descripción propia fiel, explicación sencilla y consejo positivo | Aprobada e implementada en Debutante; preparada en Grupos 2–4 |
@@ -100,7 +100,7 @@ No están implementadas todavía la ejecución guiada de recorridos, el construc
 - recorrido completo en iPhone 16 Pro;
 - elección y prueba de un Android físico;
 - prueba real de instalación y modo avión;
-- primera publicación en GitHub Pages cuando exista la cuenta;
+- validación física de la publicación de GitHub Pages;
 - prueba con aproximadamente cinco personas del club.
 
 ## Riesgos
@@ -120,6 +120,6 @@ No están implementadas todavía la ejecución guiada de recorridos, el construc
 | ID | Decisión | Responsable |
 |---|---|---|
 | DP-19-001 | Aprobar o corregir las 67 fichas avanzadas | Propietario |
-| DP-19-002 | Verificar la primera publicación de `Jquiigl/rally-o-trainer`; repositorio y GitHub Pages ya están confirmados | Propietario |
+| DP-19-002 | Validar instalación y modo avión desde GitHub Pages en iPhone y Android | Propietario |
 | DP-19-003 | Elegir dispositivo Android de referencia | Propietario/club |
 | DP-19-004 | Decidir si el siguiente incremento prioriza ejecución de pistas o contenido avanzado publicado | Propietario tras piloto |

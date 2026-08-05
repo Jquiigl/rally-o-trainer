@@ -2,6 +2,8 @@
 
 PWA local-first para planificar y registrar entrenamientos de Rally Obedience con prioridad RSCE y referencia FCI.
 
+Aplicación publicada: [https://jquiigl.github.io/rally-o-trainer/](https://jquiigl.github.io/rally-o-trainer/)
+
 ## Estado actual
 
 El incremento funcional P1 incluye:

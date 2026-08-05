@@ -2,7 +2,9 @@
 
 ## 1. Decisión adoptada
 
-Rally O Trainer se publicará en GitHub Pages desde un repositorio público. Esta opción mantiene el coste de infraestructura en cero, proporciona HTTPS y permite desplegar una aplicación estática sin crear un servidor ni una base de datos remota.
+Rally O Trainer está publicado en GitHub Pages desde el repositorio público `Jquiigl/rally-o-trainer`. Esta opción mantiene el coste de infraestructura en cero, proporciona HTTPS y permite desplegar una aplicación estática sin crear un servidor ni una base de datos remota.
+
+URL pública: [https://jquiigl.github.io/rally-o-trainer/](https://jquiigl.github.io/rally-o-trainer/)
 
 GitHub solo aloja el código y la distribución compilada. Los datos de perros y entrenamientos permanecen en IndexedDB dentro de cada navegador.
 
@@ -91,6 +93,6 @@ Una nueva publicación no borra IndexedDB. Aun así, antes de cambios de esquema
 
 ## Decisiones pendientes
 
-- Primer despliegue completado y comprobado en dispositivos físicos.
+- Instalación, modo avión y restauración comprobados en dispositivos físicos.
 - Dispositivo Android físico de referencia.
 - Momento de apertura del piloto a las cinco personas del club.
