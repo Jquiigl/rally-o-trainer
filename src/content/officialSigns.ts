@@ -14,10 +14,12 @@ const rscePages: Record<string, number> = {
 
 export function getOfficialSignSource(signal: SignalContent): OfficialSignSource {
   if (signal.id.startsWith('fci:signal:')) {
+    const code = Number(signal.officialNumber);
+    const page = code >= 401 ? code - 326 : code >= 301 ? code - 250 : code >= 201 ? code - 173 : code - 96;
     return {
       authority: 'FCI',
       document: 'Señales Rally Obedience FCI - español',
-      page: Number(signal.officialNumber) - 96,
+      page,
       imagePath: `${import.meta.env.BASE_URL}signals/fci/${signal.officialNumber}.webp`
     };
   }

@@ -51,7 +51,7 @@ El estado de implementación distingue cuatro términos:
 | D-020 | Repositorio público `Jquiigl/rally-o-trainer` y alojamiento gratuito mediante GitHub Actions y GitHub Pages | Aprobada, implementada y publicada |
 | D-020 | Copia JSON completa, recordatorio a 30 días y restauración validada | Aprobada e implementada |
 | D-021 | Borrado total con doble confirmación | Aprobada e implementada |
-| D-022 | Toda referencia visible muestra la señal oficial RSCE o FCI; descripción reglamentaria propia, explicación sencilla y consejo positivo permanecen separadas | Aprobada e implementada para las 33 señales publicadas; sustituye la decisión anterior |
+| D-022 | Toda referencia visible muestra la señal oficial RSCE o FCI; descripción reglamentaria propia, explicación sencilla y consejo positivo permanecen separadas | Aprobada e implementada para las 100 señales publicadas; sustituye la decisión anterior |
 | D-023 | React, TypeScript, Vite, Dexie, Zod, CSS local, Vitest y PWA `generateSW` | Aprobada e implementada |
 | D-024 | Colores verde bosque, dorado y marfil; icono simplificado sin texto | Aprobada e implementada |
 
@@ -61,14 +61,14 @@ El estado de implementación distingue cuatro términos:
 |---|---:|---|
 | FCI Grupo 1 | 22 | Revisado y visible |
 | Señales nacionales RSCE | 11 | Revisado y visible |
-| FCI Grupo 2 | 22 | Borrador español completo; revisión del propietario pendiente |
-| FCI Grupo 3 | 23 | Borrador español completo; revisión del propietario pendiente |
-| FCI Grupo 4 | 22 | Borrador español completo; revisión del propietario pendiente |
+| FCI Grupo 2 | 22 | Revisado y visible |
+| FCI Grupo 3 | 23 | Revisado y visible |
+| FCI Grupo 4 | 22 | Revisado y visible |
 | START y FINISH | 2 | Inventario fuente; no se tratan como ejercicio de entrenamiento individual |
 
-La aplicación muestra el número real de fichas revisadas por grado y nunca presenta los borradores como oficiales o terminados.
+La aplicación muestra el número real de fichas revisadas por grado. Los 67 registros avanzados fueron aprobados por el propietario el 6 de agosto de 2026 conforme a los PDF facilitados.
 
-Las 33 fichas publicadas incluyen su señal gráfica oficial local: 22 extraídas del PDF español de señales FCI (páginas 5–26) y 11 del reglamento RSCE 2026 (páginas 8–9). Los activos se validan en cada build y funcionan offline.
+Las 100 fichas publicadas incluyen su señal gráfica oficial local: 89 extraídas del PDF español de señales FCI (páginas 5–26, 28–49, 51–73 y 75–96) y 11 del reglamento RSCE 2026 (páginas 8–9). Los activos se validan en cada build y funcionan offline.
 
 ### 3. Alcance ejecutable actual
 
@@ -98,7 +98,6 @@ No están implementadas todavía la ejecución guiada de recorridos, el construc
 
 ### 5. Pendientes externas antes del piloto
 
-- revisión y aprobación editorial de las 67 fichas de Grupos 2–4;
 - recorrido completo en iPhone 16 Pro;
 - elección y prueba de un Android físico;
 - prueba real de instalación y modo avión;
@@ -107,7 +106,7 @@ No están implementadas todavía la ejecución guiada de recorridos, el construc
 
 ## Riesgos
 
-- Confundir “base preparada” con “contenido publicado” podría difundir una traducción no aprobada.
+- Una futura actualización reglamentaria podría dejar desactualizada una ficha publicada.
 - Las decisiones históricas dentro de capítulos pueden leerse sin consultar este registro.
 - Un incremento posterior puede ampliar alcance sin actualizar el registro.
 
@@ -121,7 +120,6 @@ No están implementadas todavía la ejecución guiada de recorridos, el construc
 
 | ID | Decisión | Responsable |
 |---|---|---|
-| DP-19-001 | Aprobar o corregir las 67 fichas avanzadas | Propietario |
 | DP-19-002 | Validar instalación y modo avión desde GitHub Pages en iPhone y Android | Propietario |
 | DP-19-003 | Elegir dispositivo Android de referencia | Propietario/club |
 | DP-19-004 | Decidir si el siguiente incremento prioriza ejecución de pistas o contenido avanzado publicado | Propietario tras piloto |

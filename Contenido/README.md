@@ -10,7 +10,7 @@ Esta carpeta separa material fuente, contenido editorial y datos publicables.
 | `fci-signals.source.json` | Extracción mecánica de la sección 5 FCI | No |
 | `p1-signals.es.json` | Primer lote editorial en español | Sí, tras validación |
 | `debutante-signals.es.json` | Paquete revisado de las 22 señales FCI de Grupo 1 y las 11 nacionales RSCE | Sí, tras validación |
-| `fci-groups-2-4.draft.es.json` | Borrador español completo de los Grupos 2–4 con el texto inglés de comparación | No, hasta revisión del propietario |
+| `fci-groups-2-4.draft.es.json` | Fuente editorial generada de los Grupos 2–4; el nombre histórico se conserva, pero sus 67 registros están revisados | Sí, únicamente mediante la selección publicada |
 | `advanced-review.json` | Lista explícita de códigos avanzados aprobados por el propietario | No |
 | `published-signals.es.json` | Selección generada que la PWA puede mostrar y recomendar | Sí |
 | `rsce-national-signals.source.md` | Inventario y localización de señales nacionales | No |
@@ -42,4 +42,4 @@ Total: 91 entradas, 89 de ellas ejercicios.
 
 Para regenerar todos los paquetes y comprobarlos: `pnpm content:build`, `pnpm content:build:advanced`, `pnpm content:build:published` y `pnpm content:validate`.
 
-La progresión avanzada no requiere cambiar código: tras revisar una ficha, se añade su código a `advanced-review.json`; el paquete publicado la incorpora en la siguiente compilación. Sus prerrequisitos determinan por perro si el planificador puede recomendarla, mientras la biblioteca continúa siendo consultable.
+Los 67 códigos avanzados están aprobados en `advanced-review.json` desde el 6 de agosto de 2026. Sus prerrequisitos determinan por perro si el planificador puede recomendarlos, mientras la biblioteca completa continúa siendo consultable.

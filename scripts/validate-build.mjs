@@ -39,16 +39,21 @@ for (const match of index.matchAll(/(?:src|href)="\.\/(assets\/[^"?]+)"/g)) asse
 assert(!files.some((file) => file.endsWith('.pdf')), 'Official PDF sources must not be shipped in the PWA');
 assert(!files.some((file) => /draft|source/i.test(file)), 'Draft or source content must not be shipped as a standalone asset');
 const officialSigns = files.filter((file) => /^signals\/(?:fci|rsce)\/\d+\.webp$/.test(file));
-assert(officialSigns.length === 33, `Expected 33 official sign images, found ${officialSigns.length}`);
-for (let code = 101; code <= 122; code += 1) assert(officialSigns.includes(`signals/fci/${code}.webp`), `Official FCI sign ${code} is missing`);
+assert(officialSigns.length === 100, `Expected 100 official sign images, found ${officialSigns.length}`);
+for (const [first, last] of [[101,122],[201,222],[301,323],[401,422]]) {
+  for (let code = first; code <= last; code += 1) assert(officialSigns.includes(`signals/fci/${code}.webp`), `Official FCI sign ${code} is missing`);
+}
 for (const code of ['13','14','15','16','25','26','28','33','34','35','36']) assert(officialSigns.includes(`signals/rsce/${code}.webp`), `Official RSCE sign ${code} is missing`);
 const javascript = (await Promise.all(files.filter((file) => file.endsWith('.js') && file.startsWith('assets/')).map((file) => readFile(new URL(file, dist), 'utf8')))).join('\n');
 assert(javascript.includes('Frente, regreso por detrás sin parada'), 'Reviewed RSCE content is missing from the bundle');
-assert(!javascript.includes('Dos medias vueltas, perro por detrás'), 'Unapproved advanced content leaked into the bundle');
+assert(javascript.includes('Dos medias vueltas, perro por detrás'), 'Reviewed FCI Group 2 content is missing from the bundle');
+assert(javascript.includes('Un paso lateral a la derecha'), 'Reviewed FCI Group 3 content is missing from the bundle');
+assert(javascript.includes('Dos pasos laterales a la derecha'), 'Reviewed FCI Group 4 content is missing from the bundle');
+assert(!javascript.includes('"editorialStatus":"draft"'), 'Draft content leaked into the bundle');
 
 let totalBytes = 0;
 for (const file of files) totalBytes += (await stat(new URL(file, dist))).size;
-assert(totalBytes < 3_500_000, `PWA distribution is unexpectedly large: ${totalBytes} bytes`);
+assert(totalBytes < 7_500_000, `PWA distribution is unexpectedly large: ${totalBytes} bytes`);
 
 if (errors.length) {
   console.error(errors.map((error) => `- ${error}`).join('\n'));

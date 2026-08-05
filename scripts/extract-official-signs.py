@@ -45,6 +45,14 @@ def save_webp(image: Image.Image, target: Path, *, lossless: bool = False) -> No
     image.convert("RGB").save(target, "WEBP", quality=92, method=6, lossless=lossless)
 
 
+FCI_PAGE_RANGES = (
+    (range(101, 123), 5, 26),
+    (range(201, 223), 28, 49),
+    (range(301, 324), 51, 73),
+    (range(401, 423), 75, 96),
+)
+
+
 def extract_fci() -> None:
     pdftoppm = shutil.which("pdftoppm")
     if not pdftoppm:
@@ -52,25 +60,31 @@ def extract_fci() -> None:
 
     with tempfile.TemporaryDirectory(prefix="rally-signs-") as temporary:
         temporary_path = Path(temporary)
-        subprocess.run(
-            [
-                pdftoppm,
-                "-f", "5", "-l", "26", "-r", "140", "-png",
-                str(FCI_PDF), str(temporary_path / "fci"),
-            ],
-            check=True,
-        )
-        rendered = sorted(temporary_path.glob("fci-*.png"))
-        if len(rendered) != 22:
-            raise SystemExit(f"Expected 22 FCI signs, found {len(rendered)}")
+        total = 0
+        for codes, first_page, last_page in FCI_PAGE_RANGES:
+            prefix = temporary_path / f"fci-{first_page}"
+            subprocess.run(
+                [
+                    pdftoppm,
+                    "-f", str(first_page), "-l", str(last_page), "-r", "140", "-png",
+                    str(FCI_PDF), str(prefix),
+                ],
+                check=True,
+            )
+            rendered = sorted(temporary_path.glob(f"{prefix.name}-*.png"))
+            expected = len(codes)
+            if len(rendered) != expected:
+                raise SystemExit(f"Expected {expected} FCI signs on pages {first_page}-{last_page}, found {len(rendered)}")
 
-        for code, source in zip(range(101, 123), rendered, strict=True):
-            with Image.open(source) as page:
-                # Keep the official number and complete sign, excluding only the
-                # two institutional footer logos and excess page whitespace.
-                width, height = page.size
-                crop = page.crop((int(width * .05), int(height * .025), int(width * .95), int(height * .85)))
-                save_webp(crop, OUTPUT / "fci" / f"{code}.webp")
+            for code, source in zip(codes, rendered, strict=True):
+                with Image.open(source) as page:
+                    # Preserve the complete official page. Some advanced signs use
+                    # nearly the full page height, so a generic crop can remove
+                    # essential text, arrows or pause markers.
+                    save_webp(page, OUTPUT / "fci" / f"{code}.webp")
+                total += 1
+        if total != 89:
+            raise SystemExit(f"Expected 89 FCI signs, extracted {total}")
 
 
 def extract_rsce() -> None:
@@ -87,7 +101,7 @@ def main() -> None:
     require(RSCE_PDF)
     extract_fci()
     extract_rsce()
-    print("Extracted 22 FCI and 11 RSCE official signs")
+    print("Extracted 89 FCI and 11 RSCE official signs")
 
 
 if __name__ == "__main__":

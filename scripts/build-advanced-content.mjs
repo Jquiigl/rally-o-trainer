@@ -127,7 +127,7 @@ const signals = rows.map(([code,name,regulatoryDescription]) => {
   const materials = jumpCodes.has(code) ? [{ id:'jump', requiredForFinalExecution:true, usefulForLearning:false }] :
     coneCodes.has(code) ? [{ id:'cone', requiredForFinalExecution:true, usefulForLearning:false }] : [];
   return {
-    id:`fci:signal:${code}`, revisionId:`fci:signal:${code}:2025-02-01:es-draft-1`, officialNumber:code, name,
+    id:`fci:signal:${code}`, revisionId:`fci:signal:${code}:2025-02-01:${approvedCodes.has(code)?'es-1':'es-draft-1'}`, officialNumber:code, name,
     exerciseGroup:original.group, exerciseArea:original.exerciseArea, regulatoryDescription, plainExplanation:plain(name),
     trainingAdvice:advice(code), criteria:['Orden y posiciones correctos','Movimiento coordinado y controlado','Final estable antes de continuar'],
     trainingSideMode:code === '417' ? 'left-only' : code === '418' ? 'right-only' : 'both', materials,
@@ -145,16 +145,17 @@ const checklist = ['# Revisión editorial de señales FCI · Grupos 2–4','',
 for (const group of [2,3,4]) {
   checklist.push(`## Grupo ${group}`, '');
   for (const signal of signals.filter((item) => item.exerciseGroup === group)) {
-    checklist.push(`- [ ] **${signal.officialNumber} · ${signal.name}** — regla, lenguaje sencillo, consejo, criterios, lado y material.`);
+    checklist.push(`- [${approvedCodes.has(signal.officialNumber) ? 'x' : ' '}] **${signal.officialNumber} · ${signal.name}** — regla, lenguaje sencillo, consejo, criterios, lado y material.`);
   }
   checklist.push('');
 }
+const allApproved = approvedCodes.size === signals.length;
 checklist.push('## Cierre del lote','',
-  '- [ ] Las 67 señales se han comprobado visualmente.',
-  '- [ ] Las excepciones 417 y 418 conservan su lado reglamentario.',
-  '- [ ] Saltos, conos y distancias coinciden con la fuente.',
-  '- [ ] Se han corregido falsos amigos y términos no naturales en español.',
-  '- [ ] Cada código aprobado se ha añadido a `advanced-review.json`.',
-  '- [ ] `pnpm check` confirma que el paquete publicado no contiene borradores.');
+  `- [${allApproved ? 'x' : ' '}] Las 67 señales se han comprobado visualmente.`,
+  `- [${allApproved ? 'x' : ' '}] Las excepciones 417 y 418 conservan su lado reglamentario.`,
+  `- [${allApproved ? 'x' : ' '}] Saltos, conos y distancias coinciden con la fuente.`,
+  `- [${allApproved ? 'x' : ' '}] Se han corregido falsos amigos y términos no naturales en español.`,
+  `- [${allApproved ? 'x' : ' '}] Cada código aprobado se ha añadido a \`advanced-review.json\`.`,
+  `- [${allApproved ? 'x' : ' '}] \`pnpm check\` confirma que el paquete publicado no contiene borradores.`);
 await writeFile(new URL('../Contenido/REVISION-FCI-GRUPOS-2-4.md', import.meta.url), `${checklist.join('\n')}\n`);
 console.log(`Built ${signals.length} advanced Spanish signals: ${approvedCodes.size} reviewed and ${signals.length-approvedCodes.size} drafts.`);

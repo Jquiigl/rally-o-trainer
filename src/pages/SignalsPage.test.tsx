@@ -5,15 +5,15 @@ import { describe, expect, it } from 'vitest';
 import { SignalDetailPage, SignalsPage } from './SignalsPage';
 
 describe('signal library', () => {
-  it('separates RSCE levels and the FCI tab without exposing drafts', async () => {
+  it('separates the complete reviewed RSCE levels and FCI tab', async () => {
     const user = userEvent.setup();
     render(<MemoryRouter><SignalsPage /></MemoryRouter>);
     expect(screen.getByText(/33 de 33/)).toBeInTheDocument();
     expect(screen.getByText(/Frente, regreso por detrás sin parada/)).toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: 'Grado 1' }));
-    expect(screen.getByText(/33 de 55/)).toBeInTheDocument();
+    expect(screen.getByText(/55 de 55/)).toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: 'FCI internacional' }));
-    expect(screen.getByText(/22 de 89/)).toBeInTheDocument();
+    expect(screen.getByText(/89 de 89/)).toBeInTheDocument();
     expect(screen.queryByText(/Frente, regreso por detrás sin parada/)).not.toBeInTheDocument();
   });
 

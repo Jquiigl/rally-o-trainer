@@ -31,6 +31,7 @@ export function CourseBuilderPage() {
     }
   }, [existing, existingItems, loadedId]);
   const effectiveSelected = selected;
+  const debutanteSignals = signals.filter((signal) => signal.assignments.some((assignment) => assignment.regulationId === 'rsce:debutante'));
 
   function add(signalId: string) {
     if (effectiveSelected.length >= 10) return setError('Este incremento admite un máximo de 10 señales.');
@@ -56,7 +57,7 @@ export function CourseBuilderPage() {
     <ol className="course-sequence">{effectiveSelected.map((signalId, index) => { const signal = getSignal(signalId); return <li key={`${signalId}-${index}`}><OfficialSignalSign signal={signal} compact /><strong>{signal.officialNumber} · {signal.name}</strong><span className="reorder"><button aria-label="Subir" onClick={() => move(index, -1)}>↑</button><button aria-label="Bajar" onClick={() => move(index, 1)}>↓</button><button aria-label="Quitar" onClick={() => setSelected(effectiveSelected.filter((_, itemIndex) => itemIndex !== index))}>×</button></span></li>; })}</ol>
     {error && <p className="notice" role="alert">{error}</p>}
     <h2 className="section-title">Añadir señal</h2>
-    <div className="signal-picker">{signals.map((signal) => <button key={signal.id} onClick={() => add(signal.id)}><OfficialSignalSign signal={signal} compact /><span><strong>{signal.officialNumber}</strong>{signal.name}</span></button>)}</div>
+    <div className="signal-picker">{debutanteSignals.map((signal) => <button key={signal.id} onClick={() => add(signal.id)}><OfficialSignalSign signal={signal} compact /><span><strong>{signal.officialNumber}</strong>{signal.name}</span></button>)}</div>
     <button className="button button--primary sticky-action" onClick={save}>Guardar pista</button>
   </>;
 }
