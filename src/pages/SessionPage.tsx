@@ -17,7 +17,7 @@ import {
   continueAfterRestNotice, startStructuredSession, undoLastAttempt, updateSessionImpressions, updateSignalNote
 } from '../data/db';
 import { useLiveData } from '../data/useLiveData';
-import { effectiveTrainingMs, getSessionStep, restDue, summarizeSession } from '../domain/trainingSession';
+import { effectiveTrainingMs, getSessionStep, restDue, shouldPauseBeforeNextSignal, summarizeSession } from '../domain/trainingSession';
 import { OfficialSignalSign } from '../components/OfficialSignalSign';
 
 const quickOptions = [
@@ -25,6 +25,8 @@ const quickOptions = [
   'Dificultad con la posición', 'Dificultad con el guía', 'Entorno con distracciones', 'Fatiga',
   'Mejor que la sesión anterior'
 ];
+
+type SignalTransition = { blockId: string; correctCount: number; incorrectCount: number };
 
 function formatDuration(milliseconds: number): string {
   const totalSeconds = Math.max(0, Math.floor(milliseconds / 1_000));
@@ -46,6 +48,7 @@ export function SessionPage() {
   const [summaryOpen, setSummaryOpen] = useState(false);
   const [notesOpen, setNotesOpen] = useState(false);
   const [note, setNote] = useState('');
+  const [signalTransition, setSignalTransition] = useState<SignalTransition | null>(null);
 
   useEffect(() => { const timer = window.setInterval(() => setNow(Date.now()), 1_000); return () => window.clearInterval(timer); }, []);
   useEffect(() => { if (session) setNote(session.note); }, [session?.id]);
@@ -65,6 +68,19 @@ export function SessionPage() {
 
   async function saveNotes(impressions = session?.quickImpressions ?? [], nextNote = note) {
     if (session) await updateSessionImpressions(session.id, impressions, nextNote);
+  }
+
+  async function recordAttempt(result: 'incorrect' | 'autonomous') {
+    if (!session || !step?.block) return;
+    const pauseBeforeNext = shouldPauseBeforeNextSignal(session.trainingMode, step, blocks.length, session.targetAttempts);
+    const completedId = step.block.id;
+    const completed = summaries.find((item) => item.block.id === completedId);
+    await recordStructuredAttempt(session.id, result);
+    if (pauseBeforeNext) setSignalTransition({
+      blockId: completedId,
+      correctCount: (completed?.correctCount ?? 0) + (result === 'autonomous' ? 1 : 0),
+      incorrectCount: (completed?.incorrectCount ?? 0) + (result === 'incorrect' ? 1 : 0)
+    });
   }
 
   function toggleImpression(value: string) {
@@ -118,6 +134,25 @@ export function SessionPage() {
     <button className="button button--ghost" disabled={busy} onClick={() => run(() => continueAfterRestNotice(session.id))}>Continuar sin descanso</button>
   </section>;
 
+  const completedBlock = signalTransition ? blocks.find((block) => block.id === signalTransition.blockId) : undefined;
+  const completedSignal = completedBlock ? getSignal(completedBlock.signalId) : undefined;
+  const nextBlock = completedBlock ? blocks.find((block) => block.sequence === completedBlock.sequence + 1) : undefined;
+  if (completedBlock && completedSignal && signalTransition && nextBlock) {
+    const nextSignal = getSignal(nextBlock.signalId);
+    return <section className="session-overlay signal-transition">
+      <p className="eyebrow">Señal {completedBlock.sequence} de {blocks.length} completada</p>
+      <h1>10/10</h1>
+      <p><strong>{completedSignal.officialNumber} · {completedSignal.name}</strong><br />{signalTransition.correctCount} correctas · {signalTransition.incorrectCount} incorrectas</p>
+      <div className="transition-next">
+        <OfficialSignalSign signal={nextSignal} compact />
+        <div><span>Siguiente señal</span><strong>{nextSignal.officialNumber} · {nextSignal.name}</strong></div>
+      </div>
+      <button className="button button--primary" disabled={busy} onClick={() => setSignalTransition(null)}>Siguiente señal</button>
+      <button className="button button--ghost" disabled={busy} onClick={() => run(async () => { await undoLastAttempt(session.id); setSignalTransition(null); })}>Deshacer último resultado</button>
+      <button className="text-button" onClick={() => setSummaryOpen(true)}>Finalizar sesión</button>
+    </section>;
+  }
+
   if (!step || !step.block || !currentSignal) return <section className="center-card"><p>No se pudo recuperar el siguiente intento.</p></section>;
   const currentSummary = summaries.find((item) => item.block.id === step.block?.id);
   const progress = step.totalAttempts ? Math.round(step.completedAttempts / step.totalAttempts * 100) : 0;
@@ -129,8 +164,8 @@ export function SessionPage() {
     <OfficialSignalSign signal={currentSignal} className="official-sign--session" />
     <p className="regulatory-prompt">{currentSignal.regulatoryDescription}</p>
     <div className="binary-attempts">
-      <button className="attempt attempt--wrong" disabled={busy} onClick={() => run(() => recordStructuredAttempt(session.id, 'incorrect'))}><span>×</span>Incorrecta <small>{currentSummary?.incorrectCount ?? 0}</small></button>
-      <button className="attempt attempt--good" disabled={busy} onClick={() => run(() => recordStructuredAttempt(session.id, 'autonomous'))}><span>✓</span>Correcta <small>{currentSummary?.correctCount ?? 0}</small></button>
+      <button className="attempt attempt--wrong" disabled={busy} onClick={() => run(() => recordAttempt('incorrect'))}><span>×</span>Incorrecta <small>{currentSummary?.incorrectCount ?? 0}</small></button>
+      <button className="attempt attempt--good" disabled={busy} onClick={() => run(() => recordAttempt('autonomous'))}><span>✓</span>Correcta <small>{currentSummary?.correctCount ?? 0}</small></button>
     </div>
     <button className="button button--ghost undo-button" disabled={busy || !records.length} onClick={() => run(() => undoLastAttempt(session.id))}>Deshacer último resultado</button>
     <button className="notes-toggle" onClick={() => setNotesOpen((value) => !value)}>Impresiones y notas {notesOpen ? '−' : '+'}</button>

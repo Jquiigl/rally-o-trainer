@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { PracticeBlock, PracticeRecord, TrainingSession } from './types';
-import { effectiveTrainingMs, findLastRecord, getSessionStep, restDue, summarizeSession } from './trainingSession';
+import { effectiveTrainingMs, findLastRecord, getSessionStep, restDue, shouldPauseBeforeNextSignal, summarizeSession } from './trainingSession';
 
 const blocks = ['a', 'b', 'c'].map((id, index) => ({ id, sessionId: 's', sequence: index + 1, signalId: id, signalRevisionId: `${id}:1`, progressCompatibilityKey: 'v1', side: 'left', practiceContext: 'individual', inputMode: 'attempt', dominantHelp: null, note: '' })) as PracticeBlock[];
 const record = (blockId: string, sequence: number, result: PracticeRecord['result'] = 'autonomous'): PracticeRecord => ({ id: `${blockId}-${sequence}`, blockId, sessionId: 's', sequence, result, recordedAt: sequence, localDate: '2026-08-06' });
@@ -8,8 +8,16 @@ const record = (blockId: string, sequence: number, result: PracticeRecord['resul
 describe('structured training session', () => {
   it('finishes ten repetitions before moving to the next signal', () => {
     const firstNine = Array.from({ length: 9 }, (_, index) => record('a', index + 1));
-    expect(getSessionStep('repetition', blocks, firstNine)).toMatchObject({ signalIndex: 0, repetition: 10 });
+    const tenthStep = getSessionStep('repetition', blocks, firstNine);
+    expect(tenthStep).toMatchObject({ signalIndex: 0, repetition: 10 });
+    expect(shouldPauseBeforeNextSignal('repetition', tenthStep, blocks.length)).toBe(true);
     expect(getSessionStep('repetition', blocks, [...firstNine, record('a', 10)])).toMatchObject({ signalIndex: 1, repetition: 1 });
+  });
+
+  it('does not pause after the last individual signal or between circuit attempts', () => {
+    const lastSignalStep = { ...getSessionStep('repetition', blocks, []), signalIndex: 2, repetition: 10 };
+    expect(shouldPauseBeforeNextSignal('repetition', lastSignalStep, blocks.length)).toBe(false);
+    expect(shouldPauseBeforeNextSignal('circuit', { ...lastSignalStep, signalIndex: 0 }, blocks.length)).toBe(false);
   });
 
   it('cycles through every signal for ten rounds', () => {

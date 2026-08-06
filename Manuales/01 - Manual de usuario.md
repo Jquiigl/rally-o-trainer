@@ -59,6 +59,8 @@ La pantalla activa muestra siempre la señal oficial y su descripción reglament
 
 La siguiente señal o repetición aparece automáticamente. Si pulsas por error, usa **Deshacer último resultado**. Puedes abrir **Impresiones y notas** para marcar observaciones rápidas, escribir una nota general o añadir un detalle de la señal actual.
 
+En **Entrenamiento individual**, después de registrar el intento 10/10 aparece el resultado de esa señal y una vista de la siguiente. Pulsa **Siguiente señal** para continuar. También puedes deshacer el décimo resultado o finalizar la sesión. En **Modo circuito** el avance continúa siendo automático para no interrumpir el recorrido.
+
 ## 7. Pausas y recordatorios
 
 Los 15 minutos no son un límite. Cada 15 minutos de trabajo activo aparece un recordatorio con dos opciones:

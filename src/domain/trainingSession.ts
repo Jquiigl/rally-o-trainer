@@ -64,6 +64,10 @@ export function getSessionStep(mode: TrainingMode, blocks: PracticeBlock[], reco
   return { complete: true, block: null, signalIndex: orderedBlocks.length - 1, repetition: target, circuitRound: target, completedAttempts, totalAttempts };
 }
 
+export function shouldPauseBeforeNextSignal(mode: TrainingMode, step: SessionStep, blockCount: number, target = ATTEMPTS_PER_SIGNAL): boolean {
+  return mode === 'repetition' && step.repetition === target && step.signalIndex < blockCount - 1;
+}
+
 export function summarizeSession(blocks: PracticeBlock[], records: PracticeRecord[]): SignalSessionSummary[] {
   return [...blocks].sort((a, b) => a.sequence - b.sequence).map((block) => {
     const attempts = records.filter((record) => record.blockId === block.id);

@@ -180,6 +180,12 @@ input:focus, select:focus, textarea:focus, button:focus-visible, a:focus-visible
 .session-overlay p { max-width: 520px; color: #d8e8e1; }
 .session-overlay .button { max-width: 440px; }
 .session-overlay .button--ghost { color: #fff; border-color: rgb(255 255 255 / .35); }
+.signal-transition h1 { margin-bottom: 2px; font-size: clamp(3.2rem, 18vw, 5rem); }
+.signal-transition > p strong { color: #fffaf0; }
+.transition-next { display: flex; align-items: center; gap: 12px; width: min(100%, 440px); margin: 8px 0 2px; padding: 10px; color: var(--ink); text-align: left; background: var(--surface); border-radius: 15px; }
+.transition-next > div { display: grid; gap: 3px; }
+.transition-next span { color: var(--muted); font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.signal-transition > .text-button { margin-top: 4px; color: var(--gold); }
 .break-icon { display: grid; place-items: center; width: 82px; height: 82px; margin-bottom: 10px; color: #062e24; background: var(--gold); border-radius: 50%; font-size: 2rem; font-weight: 900; }
 .session-summary { width: min(100%, 760px); min-height: 100dvh; margin: 0 auto; padding: max(24px, env(safe-area-inset-top)) 16px max(32px, env(safe-area-inset-bottom)); }
 .summary-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
