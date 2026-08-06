@@ -31,6 +31,7 @@ export function HomePage() {
         <span><strong>Configurar entrenamiento</strong><small>Elige señales y modalidad</small></span>
       </Link>
     </section>
+    <p className="home-tagline"><span aria-hidden="true">◆</span>Entrena con propósito,<br />progresa con cada repetición.</p>
     <section className="home-tools" aria-labelledby="home-tools-title">
       <h2 id="home-tools-title">Accesos rápidos</h2>
       <div>
