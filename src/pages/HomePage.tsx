@@ -20,10 +20,18 @@ export function HomePage() {
 
   if (!dog || !recommendation) return null;
   return <>
-    <section className="hero compact">
-      <p className="eyebrow">Hoy con {dog.name}</p>
-      <h1>¿Qué entrenamos?</h1>
-      <p>Entrena una o varias señales, con descansos cuando los necesitéis.</p>
+    <section className="welcome-visual" aria-labelledby="welcome-title">
+      <div className="sr-only">
+        <h1 id="welcome-title">Bienvenido a Rally O Trainer</h1>
+        <p>Tu aplicación para entrenar Rally Obedience de forma fácil, organizada y efectiva.</p>
+      </div>
+      <img src="./images/rally-obedience-home.webp" alt="Guía y perro entrenando juntos en una pista de Rally Obedience" />
+      <Link className="welcome-hotspot welcome-hotspot--instructions" to="/instructions">
+        <span className="sr-only">Abrir las instrucciones de uso</span>
+      </Link>
+      <Link className="welcome-hotspot welcome-hotspot--training" to="/train">
+        <span className="sr-only">Configurar un entrenamiento</span>
+      </Link>
     </section>
     {activeSession && activeBlock && activeSignal && <section className="card active-reminder"><p className="eyebrow">Sesión {activeSession.status === 'paused' ? 'pausada' : 'en curso'}</p><div className="signal-reference"><OfficialSignalSign signal={activeSignal} compact /><h2>{activeSignal.name}{(activeSession.trainingMode === 'circuit') ? ' · Circuito' : ''}</h2></div><p>Tienes {activeRecords} resultado{activeRecords === 1 ? '' : 's'} guardado{activeRecords === 1 ? '' : 's'}. Elige cómo continuar.</p><div className="active-reminder-actions"><Link className="button button--primary" to={`/session/${activeSession.id}`}>Continuar sesión</Link><button className="button button--secondary" onClick={async () => { await finishSession(activeSession.id, 'ended-from-home'); navigate('/progress'); }}>Finalizar y guardar</button><button className="danger-link" onClick={async () => { if (window.confirm('¿Descartar la sesión abierta? Sus resultados no contarán en el progreso.')) await discardSession(activeSession.id); }}>Descartar sesión</button></div></section>}
     {completedSessions > 0 && (!settings?.lastBackupAt || Date.now() - settings.lastBackupAt >= 30 * 86_400_000) && <Link className="backup-reminder" to="/dogs"><strong>Guarda una copia de seguridad</strong><span>Protege tu historial con un archivo local.</span></Link>}
@@ -36,10 +44,10 @@ export function HomePage() {
       <Link className="button button--primary" to={`/train?select=${encodeURIComponent(recommendation.signal.id)}&side=${recommendation.side}`}>Crear sesión</Link>
     </section>
     <div className="quick-grid">
-      <Link className="secondary-card" to="/train"><strong>Elegir señales</strong><span>Una sola o varias en la misma sesión</span></Link>
       <Link className="secondary-card" to="/progress"><strong>Ver progreso</strong><span>Resultados por señal y lado</span></Link>
-      <Link className="secondary-card" to="/courses"><strong>Construir pista</strong><span>Ordena una secuencia Debutante</span></Link>
       <Link className="secondary-card" to="/exam"><strong>Modo examen</strong><span>Comprueba si reconoces las señales</span></Link>
+      <Link className="secondary-card" to="/signals"><strong>Consultar señales</strong><span>Descripción, explicación y consejo</span></Link>
+      <Link className="secondary-card" to="/courses"><strong>Construir pista</strong><span>Ordena una secuencia Debutante</span></Link>
     </div>
   </>;
 }

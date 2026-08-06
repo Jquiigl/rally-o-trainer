@@ -24,6 +24,7 @@ import { PreparePage, TrainPage, TrainingModePage } from './pages/TrainPage';
 import { CourseBuilderPage, CourseDetailPage, CoursesPage } from './pages/CoursesPage';
 import { ExamPage } from './pages/ExamPage';
 import { AuthorshipPage } from './pages/AuthorshipPage';
+import { InstructionsPage } from './pages/InstructionsPage';
 
 function RoutedApp() {
   const settings = useLiveData(ensureSettings, [], undefined);
@@ -51,6 +52,7 @@ function RoutedApp() {
       <Route path="/courses/:courseId" element={<CourseDetailPage />} />
       <Route path="/courses/:courseId/edit" element={<CourseBuilderPage />} />
       <Route path="/exam" element={<ExamPage />} />
+      <Route path="/instructions" element={<InstructionsPage />} />
       <Route path="/authorship" element={<AuthorshipPage />} />
     </Route>
     <Route path="/session/:sessionId" element={<SessionPage />} />

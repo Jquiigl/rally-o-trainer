@@ -45,6 +45,13 @@ input:focus, select:focus, textarea:focus, button:focus-visible, a:focus-visible
 .hero h1 { color: #fffaf0; }
 .hero p { color: #d7e7df; }
 .hero .eyebrow { color: var(--gold); }
+.welcome-visual { position: relative; margin: -24px -16px 20px; overflow: hidden; background: #e9eadf; }
+.welcome-visual > img { display: block; width: 100%; height: auto; }
+.welcome-hotspot { position: absolute; z-index: 1; left: 54.2%; width: 39%; border-radius: 14px; }
+.welcome-hotspot--instructions { top: 49.5%; height: 10.5%; }
+.welcome-hotspot--training { top: 60.9%; height: 10.8%; }
+.welcome-hotspot:hover { background: rgb(255 255 255 / .08); }
+.welcome-hotspot:focus-visible { outline: 4px solid var(--gold); outline-offset: 2px; }
 .eyebrow { margin-bottom: .35rem; color: var(--forest-2); font-size: .76rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .page-heading { margin-bottom: 20px; }
 .page-heading p:last-child { margin-bottom: 0; }
@@ -204,6 +211,12 @@ input:focus, select:focus, textarea:focus, button:focus-visible, a:focus-visible
 .setup-legal { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); }
 .setup-legal p { margin-bottom: 6px; font-size: .68rem; }
 .setup-legal a { display: inline-flex; align-items: center; min-height: 44px; color: var(--forest-2); font-size: .75rem; font-weight: 800; text-decoration: underline; }
+.instructions-intro p:last-child, .instruction-block p:last-child, .responsible-use p:last-child { margin-bottom: 0; }
+.instruction-block { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; }
+.instruction-block h2 { margin-top: 4px; }
+.instruction-number { display: grid; place-items: center; width: 38px; height: 38px; color: #062e24; background: var(--gold); border-radius: 12px; font-weight: 900; }
+.capability-list { margin-bottom: 0; }
+.instruction-actions { display: grid; gap: 2px; }
 .form-stack { display: grid; gap: 14px; text-align: left; }
 .splash { display: grid; place-items: center; align-content: center; gap: 12px; min-height: 100dvh; color: #fffaf0; background: var(--forest); font-family: Georgia, serif; font-size: 1.4rem; }
 .splash img { width: 96px; border-radius: 22px; }
@@ -276,6 +289,7 @@ input:focus, select:focus, textarea:focus, button:focus-visible, a:focus-visible
 @media (min-width: 780px) {
   .page { padding-top: 36px; }
   .hero { margin: -36px calc((760px - 100vw) / 2) 26px; padding-left: max(calc((100vw - 760px) / 2 + 16px), 20px); padding-right: max(calc((100vw - 760px) / 2 + 16px), 20px); }
+  .welcome-visual { margin-top: -36px; border-radius: 0 0 22px 22px; }
   .bottom-nav { left: 50%; right: auto; width: min(520px, calc(100% - 32px)); bottom: 16px; transform: translateX(-50%); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); }
   .active-session { width: min(100%, 760px); margin: auto; }
   .mode-grid { grid-template-columns: 1fr 1fr; }

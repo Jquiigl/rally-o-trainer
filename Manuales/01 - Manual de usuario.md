@@ -35,9 +35,9 @@ La primera visita necesita conexión para descargar la aplicación. Después pue
 
 Desde **Inicio**:
 
-1. Pulsa **Crear sesión** en la recomendación o abre **Entrenar**.
+1. Pulsa **Configurar entrenamiento** en la portada, **Crear sesión** en la recomendación o abre **Entrenar**.
 2. Marca una o varias señales y pulsa **Continuar**.
-3. Elige **Por repetición** o **En circuito**.
+3. Elige **Entrenamiento individual** o **Modo circuito**.
 
 Puedes buscar por número o nombre y filtrar por grado o categoría. Cada fila muestra la señal oficial, número, nombre y nivel. La recomendación nunca bloquea la elección manual.
 
@@ -45,8 +45,8 @@ Puedes buscar por número o nombre y filtrar por grado o categoría. Cada fila m
 
 Cada señal tendrá diez intentos:
 
-- **Por repetición**: completa los diez intentos de una señal antes de avanzar a la siguiente.
-- **En circuito**: realiza cada señal una vez por vuelta y repite el conjunto durante diez vueltas.
+- **Entrenamiento individual**: completa los diez intentos de una señal antes de avanzar a la siguiente.
+- **Modo circuito**: realiza cada señal una vez por vuelta y repite el conjunto durante diez vueltas.
 
 Selecciona también el lugar y, cuando una señal se entrene por ambos lados, el lado correspondiente. Si eliges muchas señales, la aplicación avisa de que la sesión será larga, pero no impide continuar.
 
