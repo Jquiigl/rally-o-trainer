@@ -19,6 +19,7 @@ import {
 import { useLiveData } from '../data/useLiveData';
 import { effectiveTrainingMs, getSessionStep, restDue, shouldPauseBeforeNextSignal, summarizeSession } from '../domain/trainingSession';
 import { OfficialSignalSign } from '../components/OfficialSignalSign';
+import { commonSignalErrors, trainingSignalCriteria } from '../content/commonSignalErrors';
 
 const quickOptions = [
   'Muy concentrado', 'Buena motivación', 'Se distrae', 'Necesita ayuda', 'Responde con fluidez',
@@ -163,6 +164,10 @@ export function SessionPage() {
     <div className="session-signal-title"><span className="number">{currentSignal.officialNumber}</span><h1>{currentSignal.name}</h1></div>
     <OfficialSignalSign signal={currentSignal} className="official-sign--session" />
     <p className="regulatory-prompt">{currentSignal.regulatoryDescription}</p>
+    <section className="session-guidance" aria-label="Aspectos que conviene observar y errores frecuentes">
+      <div><h2>Qué observar</h2><ul>{trainingSignalCriteria(currentSignal).map((criterion) => <li key={criterion}>{criterion}</li>)}</ul></div>
+      <div><h2>Evita</h2><ul>{commonSignalErrors(currentSignal).map((error) => <li key={error}>{error}</li>)}</ul></div>
+    </section>
     <div className="binary-attempts">
       <button className="attempt attempt--wrong" disabled={busy} onClick={() => run(() => recordAttempt('incorrect'))}><span>×</span>Incorrecta <small>{currentSummary?.incorrectCount ?? 0}</small></button>
       <button className="attempt attempt--good" disabled={busy} onClick={() => run(() => recordAttempt('autonomous'))}><span>✓</span>Correcta <small>{currentSummary?.correctCount ?? 0}</small></button>

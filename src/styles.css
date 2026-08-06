@@ -173,15 +173,22 @@ input:focus, select:focus, textarea:focus, button:focus-visible, a:focus-visible
 .session-counters strong { color: #fffaf0; }
 .session-progress { height: 7px; margin-bottom: 14px; overflow: hidden; background: rgb(255 255 255 / .18); border-radius: 99px; }
 .session-progress span { display: block; height: 100%; background: var(--gold); border-radius: inherit; transition: width .18s ease; }
-.session-signal-title { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-.session-signal-title .number { min-width: 48px; height: 48px; border-radius: 12px; }
-.session-signal-title h1 { margin: 0; font-size: clamp(1.65rem, 7vw, 2.25rem); }
-.active-session .official-sign--session { width: min(100%, 390px); height: min(34dvh, 300px); margin: 0 auto 12px; background: #fff; }
+.session-signal-title { display: flex; align-items: center; gap: 10px; margin-bottom: 9px; }
+.session-signal-title .number { min-width: 43px; height: 43px; border-radius: 11px; }
+.session-signal-title h1 { margin: 0; font-size: clamp(1.4rem, 6vw, 1.9rem); }
+.active-session .official-sign--session { width: min(100%, 340px); height: min(25dvh, 215px); margin: 0 auto 8px; background: #fff; }
 .active-session .official-sign--session img { height: 100%; max-height: none; object-fit: contain; }
 .active-session .official-sign--session figcaption { display: none; }
-.regulatory-prompt { margin: 0 auto 12px; color: #d8e8e1; font-size: .83rem; text-align: center; }
+.regulatory-prompt { margin: 0 auto 9px; color: #d8e8e1; font-size: .78rem; line-height: 1.35; text-align: center; }
+.session-guidance { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; width: 100%; margin-bottom: 10px; padding: 9px 10px; background: rgb(255 255 255 / .08); border: 1px solid rgb(255 255 255 / .18); border-radius: 13px; }
+.session-guidance > div + div { padding-left: 9px; border-left: 1px solid rgb(255 255 255 / .18); }
+.session-guidance h2 { margin: 0 0 4px; color: var(--gold); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; }
+.session-guidance ul { margin: 0; padding-left: 14px; color: #e3eee9; font-size: .67rem; line-height: 1.28; }
+.session-guidance li + li { margin-top: 2px; }
 .binary-attempts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.binary-attempts .attempt { min-height: 132px; }
+.binary-attempts .attempt { min-height: 104px; }
+.binary-attempts .attempt > span { font-size: 2.25rem; }
+.binary-attempts .attempt small { width: 28px; height: 28px; }
 .undo-button { min-height: 46px; margin-top: 9px; }
 .notes-toggle { min-height: 44px; margin-top: 8px; padding: 6px 0; color: var(--gold); text-align: left; background: transparent; border: 0; font-weight: 800; }
 .session-notes { display: grid; gap: 14px; padding: 14px; color: var(--ink); background: var(--surface); border-radius: 16px; }

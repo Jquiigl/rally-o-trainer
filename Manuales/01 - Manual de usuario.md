@@ -57,6 +57,8 @@ La pantalla activa muestra siempre la señal oficial y su descripción reglament
 - **Incorrecta**: no completa el comportamiento acordado;
 - **Correcta**: completa el comportamiento que estabas evaluando.
 
+Debajo de la explicación aparecen dos ayudas breves: **Qué observar**, con los criterios principales de ejecución, y **Evita**, con errores frecuentes que conviene vigilar. Son una síntesis práctica basada en el reglamento y no sustituyen la consulta de la ficha completa.
+
 La siguiente señal o repetición aparece automáticamente. Si pulsas por error, usa **Deshacer último resultado**. Puedes abrir **Impresiones y notas** para marcar observaciones rápidas, escribir una nota general o añadir un detalle de la señal actual.
 
 En **Entrenamiento individual**, después de registrar el intento 10/10 aparece el resultado de esa señal y una vista de la siguiente. Pulsa **Siguiente señal** para continuar. También puedes deshacer el décimo resultado o finalizar la sesión. En **Modo circuito** el avance continúa siendo automático para no interrumpir el recorrido.
