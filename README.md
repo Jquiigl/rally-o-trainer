@@ -72,6 +72,15 @@ La publicación distribuye únicamente los archivos de la aplicación. Los perro
 - `Fuentes oficiales/`: copias locales de los PDF consultados.
 - `Manuales/`: guía de uso y guía de desarrollo.
 
+## Autoría y propiedad intelectual
+
+La concepción y los elementos originales de Rally O Trainer pertenecen a José María Quirós Iglesias. El código se distribuye bajo la licencia propietaria incluida en [LICENSE](LICENSE).
+
+Las señales, numeración, denominaciones, descripciones reglamentarias, reglamentos y demás materiales oficiales de Rally Obedience continúan perteneciendo a la RSCE, la FCI o sus respectivos titulares. La aplicación es un desarrollo independiente y no constituye un producto oficial de dichas entidades.
+
+- [Declaración de autoría](AUTHORSHIP.md)
+- [Avisos sobre materiales de terceros](THIRD_PARTY_NOTICES.md)
+
 ## Aviso
 
 Rally O Trainer es una herramienta independiente basada en fuentes oficiales RSCE/FCI. No está afiliada a dichas entidades y no sustituye sus reglamentos vigentes ni el criterio de un juez.

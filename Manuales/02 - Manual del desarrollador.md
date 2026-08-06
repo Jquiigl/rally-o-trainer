@@ -1,3 +1,5 @@
+<!-- Copyright © 2026 José María Quirós Iglesias. Todos los derechos reservados sobre la documentación original. Los materiales de terceros conservan su titularidad. Véanse LICENSE y THIRD_PARTY_NOTICES.md. -->
+
 # Manual del desarrollador de Rally O Trainer
 
 ## 1. Arquitectura ejecutable

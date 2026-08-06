@@ -1,3 +1,14 @@
+/**
+ * Rally Obedience Training Application
+ *
+ * Copyright © 2026 José María Quirós Iglesias
+ * All rights reserved.
+ *
+ * Official Rally Obedience signs, regulatory descriptions and
+ * third-party materials remain the property of their respective owners.
+ *
+ * See LICENSE and THIRD_PARTY_NOTICES.md.
+ */
 import { useEffect } from 'react';
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { AppShell } from './components/AppShell';
@@ -12,6 +23,7 @@ import { SignalDetailPage, SignalsPage } from './pages/SignalsPage';
 import { PreparePage, TrainPage, TrainingModePage } from './pages/TrainPage';
 import { CourseBuilderPage, CourseDetailPage, CoursesPage } from './pages/CoursesPage';
 import { ExamPage } from './pages/ExamPage';
+import { AuthorshipPage } from './pages/AuthorshipPage';
 
 function RoutedApp() {
   const settings = useLiveData(ensureSettings, [], undefined);
@@ -23,7 +35,7 @@ function RoutedApp() {
   }, [settings?.theme]);
 
   if (dogs === -1) return <div className="splash"><img src="./brand-symbol.png" alt="" /><span>Rally O Trainer</span></div>;
-  if (dogs === 0) return <Routes><Route path="*" element={<SetupPage />} /></Routes>;
+  if (dogs === 0) return <Routes><Route path="/authorship" element={<main className="page"><AuthorshipPage /></main>} /><Route path="*" element={<SetupPage />} /></Routes>;
   return <Routes>
     <Route element={<AppShell />}>
       <Route path="/" element={<HomePage />} />
@@ -39,6 +51,7 @@ function RoutedApp() {
       <Route path="/courses/:courseId" element={<CourseDetailPage />} />
       <Route path="/courses/:courseId/edit" element={<CourseBuilderPage />} />
       <Route path="/exam" element={<ExamPage />} />
+      <Route path="/authorship" element={<AuthorshipPage />} />
     </Route>
     <Route path="/session/:sessionId" element={<SessionPage />} />
     <Route path="*" element={<Navigate to="/" replace />} />

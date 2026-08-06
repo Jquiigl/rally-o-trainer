@@ -1,3 +1,14 @@
+/**
+ * Rally Obedience Training Application
+ *
+ * Copyright © 2026 José María Quirós Iglesias
+ * All rights reserved.
+ *
+ * Official Rally Obedience signs, regulatory descriptions and
+ * third-party materials remain the property of their respective owners.
+ *
+ * See LICENSE and THIRD_PARTY_NOTICES.md.
+ */
 import Dexie, { type EntityTable } from 'dexie';
 import type { AppSettings, Course, CourseItem, Dog, PracticeBlock, PracticeRecord, TrainingSession } from '../domain/types';
 import { validateCourseSignals } from '../domain/course';

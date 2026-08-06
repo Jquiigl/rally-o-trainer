@@ -144,6 +144,12 @@ Conviene exportar al menos una vez al mes y guardar el archivo en una ubicación
 - Consulta a un profesional veterinario o de comportamiento cuando corresponda.
 - Revisa siempre el reglamento oficial antes de competir.
 
+## 16. Autoría y materiales oficiales
+
+El pie de las pantallas principales y la sección **Información y autoría** de **Perros y ajustes** abren **Autoría y propiedad intelectual**.
+
+José María Quirós Iglesias es el autor y titular de los elementos originales de la aplicación. Las señales, numeración, denominaciones, descripciones reglamentarias, reglamentos, logotipos y demás materiales oficiales continúan perteneciendo a la RSCE, la FCI o sus respectivos titulares. Rally O Trainer es un desarrollo independiente y no constituye una aplicación oficial de dichas entidades.
+
 ## Riesgos
 
 - Los pasos de instalación pueden variar según la versión del sistema.

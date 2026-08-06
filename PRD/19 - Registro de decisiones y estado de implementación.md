@@ -57,6 +57,8 @@ El estado de implementación distingue cuatro términos:
 | D-026 | Modalidades por repetición y en circuito, con diez ejecuciones por señal | Aprobada e implementada |
 | D-027 | Pausa recuperable, tiempo activo separado y recordatorio de descanso cada 15 minutos | Aprobada e implementada |
 | D-028 | Resumen por señal con guardar, continuar, repetir pendientes o descartar | Aprobada e implementada |
+| D-029 | José María Quirós Iglesias es autor y titular de los elementos originales; los materiales oficiales conservan la titularidad de RSCE, FCI o terceros | Aprobada e implementada |
+| D-030 | Licencia propietaria, declaración de autoría y avisos de terceros separados y visibles desde la aplicación | Aprobada e implementada |
 
 ### 2. Alcance editorial actual
 
@@ -86,6 +88,7 @@ Las 100 fichas publicadas incluyen su señal gráfica oficial local: 89 extraíd
 - modo examen Debutante;
 - temas, material, copias, restauración y borrado total;
 - instalación y recursos offline generados en producción.
+- pantalla local de autoría, aviso de desarrollo independiente y versión centralizada.
 
 No están implementadas todavía la ejecución de pistas guardadas como sesión, el constructor geométrico, vídeo, comparación avanzada, compartir, sincronización, instructor ni colaboración. El modo circuito actual ejecuta cualquier selección ordenada, pero no modifica el constructor de pistas.
 

@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom';
+import { AppFooter } from './AppFooter';
 
 const items = [
   { to: '/', icon: '⌂', label: 'Inicio' },
@@ -16,7 +17,7 @@ export function AppShell() {
       </NavLink>
       <NavLink to="/dogs" className="icon-button" aria-label="Perros y configuración">●</NavLink>
     </header>
-    <main className="page"><Outlet /></main>
+    <main className="page"><Outlet /><AppFooter /></main>
     <nav className="bottom-nav" aria-label="Navegación principal">
       {items.map((item) => <NavLink key={item.to} to={item.to} end={item.to === '/'}>
         <span aria-hidden="true">{item.icon}</span><small>{item.label}</small>

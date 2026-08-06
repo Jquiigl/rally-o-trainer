@@ -201,6 +201,9 @@ input:focus, select:focus, textarea:focus, button:focus-visible, a:focus-visible
 .setup-logo { width: 112px; border-radius: 24px; }
 .setup-brand { margin: .5rem 0 .7rem; font-size: clamp(2rem, 9vw, 2.6rem); }
 .setup-question { margin: .2rem 0 .55rem; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.55rem, 7vw, 2rem); line-height: 1.05; letter-spacing: -.025em; }
+.setup-legal { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); }
+.setup-legal p { margin-bottom: 6px; font-size: .68rem; }
+.setup-legal a { display: inline-flex; align-items: center; min-height: 44px; color: var(--forest-2); font-size: .75rem; font-weight: 800; text-decoration: underline; }
 .form-stack { display: grid; gap: 14px; text-align: left; }
 .splash { display: grid; place-items: center; align-content: center; gap: 12px; min-height: 100dvh; color: #fffaf0; background: var(--forest); font-family: Georgia, serif; font-size: 1.4rem; }
 .splash img { width: 96px; border-radius: 22px; }
@@ -229,6 +232,18 @@ input:focus, select:focus, textarea:focus, button:focus-visible, a:focus-visible
 .check-list label { display: flex; align-items: center; gap: 10px; min-height: 44px; font-weight: 600; }
 .check-list input { width: 22px; min-height: 22px; accent-color: var(--forest-2); }
 .legal-note { font-size: .9rem; }
+.app-footer { margin-top: 36px; padding: 20px 8px 4px; text-align: center; border-top: 1px solid var(--line); }
+.app-footer p { max-width: 620px; margin: 0 auto 8px; font-size: .7rem; line-height: 1.45; }
+.app-footer a { display: inline-flex; align-items: center; min-height: 44px; color: var(--forest-2); font-size: .76rem; font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
+.authorship-intro { border-left: 5px solid var(--gold); }
+.authorship-intro p:last-child, .legal-block p:last-child { margin-bottom: 0; }
+.legal-block dl { margin: 0; }
+.legal-block dl > div { display: grid; grid-template-columns: minmax(110px, .7fr) 1.3fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.legal-block dl > div:last-child { border-bottom: 0; }
+.legal-block dt { color: var(--muted); font-size: .82rem; font-weight: 700; }
+.legal-block dd { margin: 0; font-weight: 800; }
+:root[data-theme="dark"] .app-footer a { color: var(--gold); }
+@media (prefers-color-scheme: dark) { :root[data-theme="system"] .app-footer a { color: var(--gold); } }
 .danger-zone { border-color: color-mix(in srgb, var(--danger), transparent 55%); }
 .button--danger { color: #fff; background: var(--danger); }
 .spaced-list { margin-top: 18px; }

@@ -2,6 +2,8 @@
   "name": "rally-o-trainer",
   "version": "0.1.0",
   "private": true,
+  "author": "José María Quirós Iglesias",
+  "license": "UNLICENSED",
   "type": "module",
   "engines": {
     "node": ">=22"

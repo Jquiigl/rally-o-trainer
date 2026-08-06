@@ -1,3 +1,14 @@
+/**
+ * Rally Obedience Training Application
+ *
+ * Copyright © 2026 José María Quirós Iglesias
+ * All rights reserved.
+ *
+ * Official Rally Obedience signs, regulatory descriptions and
+ * third-party materials remain the property of their respective owners.
+ *
+ * See LICENSE and THIRD_PARTY_NOTICES.md.
+ */
 import { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { getSignal } from '../content/signals';
