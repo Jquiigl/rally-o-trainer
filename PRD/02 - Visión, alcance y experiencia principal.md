@@ -22,7 +22,7 @@
 |---|---|---|
 | “Desbloquear” un grado debe impedir consultar su contenido. | Un bloqueo real dificulta aprender, comparar o preparar una sesión libre. También castiga al usuario cuando el algoritmo se equivoca. | Toda la biblioteca será consultable. El desbloqueo solo determinará qué contenido se recomienda como siguiente paso para cada perro. |
 | El MVP debe construirse completo antes de poder utilizarse. | Cargar y revisar RSCE hasta Grado 3 y el bloque FCI es un esfuerzo editorial grande para un proyecto personal sin presupuesto. Retrasaría la validación del entrenamiento diario. | Mantener el alcance reglamentario completo del MVP, pero incorporarlo mediante incrementos internos comenzando por Debutante. Cada incremento deberá ser utilizable. |
-| Una sesión inteligente necesita muchas preguntas previas. | Configurar tiempo, energía, objetivo, ubicación, material y dificultad antes de cada sesión contradice la rapidez buscada. | Fijar 15 minutos, recordar contexto anterior y pedir únicamente decisiones que alteren la recomendación. El resto utilizará valores predeterminados editables. |
+| Una sesión inteligente necesita muchas preguntas previas. | Configurar tiempo, energía, objetivo, material y dificultad antes de cada sesión contradice la rapidez buscada. | Pedir solo señales, modalidad y lugar; ofrecer pausas sin imponer duración. |
 | Cuantos más datos tenga el perfil del perro, mejores serán las recomendaciones. | Foto, sexo, peso o información extensa no mejoran necesariamente la decisión diaria y aumentan la fricción. | El perfil obligatorio contendrá solo nombre y raza. El progreso se calculará desde la práctica registrada. |
 | El progreso puede resumirse en un porcentaje general. | Mezcla lados, ayudas, días y contextos; un 70 % aislado puede producir una falsa sensación de dominio. | Evaluar por señal, perro, lado y contexto comparable, usando intentos recientes y consistencia entre días. |
 | Una señal no practicada durante 30 días debe perder su logro. | Confunde estado actual con historial y desmotiva. | Conservar el logro histórico y cambiar únicamente el estado operativo a “necesita repaso”. |
@@ -42,7 +42,7 @@ El producto debe decir qué conviene practicar, pero el guía conserva la decisi
 
 #### 2.3 Registro preciso frente a uso con una mano
 
-La planificación necesita conocer intentos, ayudas y lados; pedir todos esos datos en un formulario haría inviable el uso en pista. La captura principal se limita a tres resultados de un toque y deriva el contexto de la sesión. Los detalles serán opcionales o se solicitarán al cerrar el bloque.
+La planificación necesita conocer ejecuciones y contexto; pedir demasiados datos haría inviable el uso en pista. La captura principal se limita a Correcta o Incorrecta y deriva señal, modalidad, repetición y vuelta de la sesión. Impresiones y notas son opcionales.
 
 #### 2.4 Progresión reglamentaria frente a progresión de habilidades
 
@@ -78,7 +78,7 @@ El primer incremento deberá ser capaz de recomendar una señal de Debutante, ex
 
 #### 3.5 Hacer visible el motivo de una interrupción
 
-Finalizar antes de 15 minutos no se considerará abandono. El resumen permitirá indicar, con una sola elección, si la sesión terminó por objetivo cumplido, cansancio, distracción, falta de tiempo, dificultad, indisposición u otro motivo. Este dato evitará que el planificador interprete una interrupción como falta de compromiso o como fallo técnico.
+Finalizar con intentos incompletos no se considerará abandono. El resumen conserva los resultados válidos y marca la señal como pendiente si no alcanza diez intentos.
 
 ---
 
@@ -114,7 +114,7 @@ Cuando el usuario piensa “quiero entrenar, pero no sé qué conviene hacer hoy
 | 1 | Saber qué practicar hoy | La recomendación ocupa el centro del inicio. |
 | 2 | Poder practicarlo ahora | Se consideran ubicación y material disponible. |
 | 3 | Saber cómo practicarlo | La señal separa regla, explicación y consejo. |
-| 4 | Registrar sin distraerse | Tres resultados grandes de un toque. |
+| 4 | Registrar sin distraerse | Correcta o Incorrecta con botones grandes de un toque. |
 | 5 | Saber cuándo repetir | El repaso se calcula automáticamente y se explica. |
 | 6 | Consultar y explorar | Toda la biblioteca está disponible sin bloqueos reales. |
 
@@ -287,7 +287,7 @@ Antes de empezar se mostrará una confirmación compacta:
 | Dato | Comportamiento |
 |---|---|
 | Perro | Usa el activo; se puede cambiar. |
-| Duración | 15 minutos; no requiere selección. |
+| Duración | Sin máximo fijo; aviso de descanso cada 15 minutos activos. |
 | Objetivo | Recuerda el anterior; se puede cambiar. |
 | Ubicación | Recuerda la anterior; se puede cambiar. |
 | Material | Lista informativa antes de comenzar. |
@@ -339,7 +339,7 @@ El premio utilizado, la motivación, las notas y otros detalles serán opcionale
 
 #### 4.6 Finalización anticipada
 
-Finalizar antes de 15 minutos será una acción normal. Se solicitará un único motivo:
+Finalizar antes de completar los intentos será una acción normal. El motivo puede conservarse como dato opcional:
 
 - objetivo cumplido;
 - cansancio;
@@ -410,12 +410,12 @@ Cambiar a “necesita repaso” no borrará la fecha en que la señal fue aprend
 - contenido FCI relacionado y bloque internacional separado;
 - descripción reglamentaria propia, explicación sencilla y consejo positivo;
 - señales gráficas oficiales disponibles offline;
-- sesiones individuales de 15 minutos;
+- sesiones de una o varias señales, con recordatorio de descanso cada 15 minutos;
 - ubicaciones casa, exterior reducido y club/pista;
 - inventario de material opcional;
 - aviso de material necesario;
 - registro por intento y agregado;
-- tres resultados rápidos y deshacer;
+- dos resultados rápidos y deshacer;
 - progreso por perro, señal y lado;
 - repaso por tiempo y deterioro;
 - historial sencillo;
@@ -526,7 +526,7 @@ Estas métricas evaluarán el producto, no el rendimiento deportivo del perro. L
 | DE-02-005 | La progresión se calcula independientemente para cada perro. | Aprobada |
 | DE-02-006 | El perfil obligatorio contiene solo nombre y raza. | Aprobada |
 | DE-02-007 | El MVP trabaja inicialmente señal por señal. | Aprobada |
-| DE-02-008 | Las sesiones duran hasta 15 minutos y pueden finalizar antes. | Aprobada |
+| DE-02-008 | Las sesiones no tienen máximo fijo; cada 15 minutos activos se ofrece un descanso y siempre pueden finalizarse. | Aprobada e implementada; sustituye la decisión anterior |
 | DE-02-009 | El registro rápido utiliza incorrecta, correcta con ayuda y correcta autónoma. | Aprobada |
 | DE-02-010 | Aprendida exige 7/10 autónomas en dos días; consolidada exige un criterio reforzado. | Aprobada |
 | DE-02-011 | A los 30 días sin práctica o ante deterioro, una señal necesita repaso. | Aprobada |

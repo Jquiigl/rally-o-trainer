@@ -37,11 +37,11 @@ El estado de implementación distingue cuatro términos:
 | D-006 | Consulta abierta; progresión y prerrequisitos orientan, no bloquean selección manual | Aprobada e implementada |
 | D-007 | Progresión y evidencia independientes por perro y lado | Aprobada e implementada |
 | D-008 | Perfil mínimo: nombre y raza; varios perros | Aprobada e implementada |
-| D-009 | Sesión individual de máximo 15 min: 2 activación, 10–11 trabajo y 2–3 cierre | Aprobada e implementada |
+| D-009 | Sesión de una o varias señales; 15 minutos es un recordatorio recurrente de descanso, no un máximo | Aprobada e implementada; sustituye la decisión anterior |
 | D-010 | Una sola sesión activa por instalación y recuperación al volver | Aprobada e implementada |
-| D-011 | Registro principal con Incorrecta, Con ayuda y Autónoma | Aprobada e implementada |
-| D-012 | Ayudas: verbal adicional, gesto, señuelo, correa, posición u otra | Aprobada e implementada como dato opcional de cierre |
-| D-013 | Aprendida: 7 autónomas de las últimas 10, en al menos dos fechas | Aprobada e implementada |
+| D-011 | Registro activo binario con Incorrecta y Correcta; valores históricos se conservan | Aprobada e implementada; sustituye la captura de tres botones |
+| D-012 | Impresiones rápidas y notas general/por señal opcionales, sin interrumpir la captura | Aprobada e implementada |
+| D-013 | Superada en sesión: 7 correctas de 10; Aprendida estable: confirmación en al menos dos fechas | Aprobada e implementada |
 | D-014 | Consolidada: mantenimiento fuerte posterior, con 8/10, tres fechas y 14 días | Aprobada e implementada |
 | D-015 | Repaso por 30 días, dos errores, ayuda recurrente, regresión o cambio incompatible | Aprobada; todos salvo cambio reglamentario automatizado están implementados |
 | D-016 | Planificador por reglas explicables, sin IA remota | Aprobada e implementada |
@@ -49,11 +49,14 @@ El estado de implementación distingue cuatro términos:
 | D-018 | Constructor primero como secuencia, no como plano libre | Aprobada e implementada para entrenamiento Debutante |
 | D-019 | Modo examen separado del progreso práctico | Aprobada e implementada |
 | D-020 | Repositorio público `Jquiigl/rally-o-trainer` y alojamiento gratuito mediante GitHub Actions y GitHub Pages | Aprobada, implementada y publicada |
-| D-020 | Copia JSON completa, recordatorio a 30 días y restauración validada | Aprobada e implementada |
-| D-021 | Borrado total con doble confirmación | Aprobada e implementada |
-| D-022 | Toda referencia visible muestra la señal oficial RSCE o FCI; descripción reglamentaria propia, explicación sencilla y consejo positivo permanecen separadas | Aprobada e implementada para las 100 señales publicadas; sustituye la decisión anterior |
-| D-023 | React, TypeScript, Vite, Dexie, Zod, CSS local, Vitest y PWA `generateSW` | Aprobada e implementada |
-| D-024 | Colores verde bosque, dorado y marfil; icono simplificado sin texto | Aprobada e implementada |
+| D-021 | Copia JSON completa, recordatorio a 30 días y restauración validada | Aprobada e implementada; formatos v1 y v2 compatibles |
+| D-022 | Borrado total con doble confirmación | Aprobada e implementada |
+| D-023 | Toda referencia visible muestra la señal oficial RSCE o FCI; descripción reglamentaria propia, explicación sencilla y consejo positivo permanecen separadas | Aprobada e implementada para las 100 señales publicadas; sustituye la decisión anterior |
+| D-024 | React, TypeScript, Vite, Dexie, Zod, CSS local, Vitest y PWA `generateSW` | Aprobada e implementada |
+| D-025 | Colores verde bosque, dorado y marfil; icono simplificado sin texto | Aprobada e implementada |
+| D-026 | Modalidades por repetición y en circuito, con diez ejecuciones por señal | Aprobada e implementada |
+| D-027 | Pausa recuperable, tiempo activo separado y recordatorio de descanso cada 15 minutos | Aprobada e implementada |
+| D-028 | Resumen por señal con guardar, continuar, repetir pendientes o descartar | Aprobada e implementada |
 
 ### 2. Alcance editorial actual
 
@@ -75,7 +78,8 @@ Las 100 fichas publicadas incluyen su señal gráfica oficial local: 89 extraíd
 - incorporación y gestión de perros;
 - recomendación por progreso, lugar, material y prerrequisitos;
 - selección manual de cualquier señal revisada;
-- sesión individual, temporizador, deshacer y cierre anticipado;
+- sesiones multiseñal por repetición o circuito, registro binario, deshacer y cierre anticipado;
+- pausa, recordatorio recurrente, impresiones, notas y resumen por señal;
 - historial, progreso, repaso y estadística reciente;
 - biblioteca RSCE/FCI por grado;
 - constructor de secuencias Debutante;
@@ -83,7 +87,7 @@ Las 100 fichas publicadas incluyen su señal gráfica oficial local: 89 extraíd
 - temas, material, copias, restauración y borrado total;
 - instalación y recursos offline generados en producción.
 
-No están implementadas todavía la ejecución guiada de recorridos, el constructor geométrico, vídeo, comparación avanzada, compartir, sincronización, instructor ni colaboración. Se mantienen como versiones futuras porque no son necesarias para el objetivo inmediato de planificar prácticas individuales y su coste de complejidad no está validado.
+No están implementadas todavía la ejecución de pistas guardadas como sesión, el constructor geométrico, vídeo, comparación avanzada, compartir, sincronización, instructor ni colaboración. El modo circuito actual ejecuta cualquier selección ordenada, pero no modifica el constructor de pistas.
 
 ### 4. Decisiones sustituidas
 
@@ -95,6 +99,8 @@ No están implementadas todavía la ejecución guiada de recorridos, el construc
 | Constructor como plano visual inicial | Secuencia ordenada primero |
 | Siete destinos persistentes | Cuatro destinos móviles y accesos contextuales |
 | Un único bloque RSCE/FCI | Pestañas separadas con relaciones y prerrequisitos |
+| Sesión de una señal con máximo de 15 minutos | Sesión multiseñal; descanso sugerido cada 15 minutos |
+| Incorrecta, Con ayuda y Autónoma | Captura visible Correcta/Incorrecta; compatibilidad interna con historial |
 
 ### 5. Pendientes externas antes del piloto
 

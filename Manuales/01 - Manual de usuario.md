@@ -2,7 +2,7 @@
 
 ## 1. Qué hace la aplicación
 
-Rally O Trainer ayuda a elegir una señal, preparar una práctica breve, registrar el resultado sin interrumpir el entrenamiento y decidir cuándo conviene repetirla. Funciona con los datos guardados en el dispositivo y no exige una cuenta.
+Rally O Trainer ayuda a elegir una o varias señales, entrenarlas por repeticiones o en circuito, registrar resultados sin apartar la atención del perro y decidir cuándo conviene repetirlas. Funciona con los datos guardados en el dispositivo y no exige una cuenta.
 
 La aplicación es una ayuda de entrenamiento. Las descripciones son redacción propia basada en reglamentos RSCE/FCI y no sustituyen las fuentes oficiales.
 
@@ -31,51 +31,69 @@ No se solicita fotografía, correo, contraseña ni información de competición.
 
 La primera visita necesita conexión para descargar la aplicación. Después puede abrirse y usarse sin conexión.
 
-## 4. Entrenar en menos de tres pasos
+## 4. Crear una sesión
 
 Desde **Inicio**:
 
-1. Lee la recomendación y pulsa **Preparar sesión**.
-2. Comprueba material, lado, objetivo y lugar; pulsa **Empezar sesión**.
-3. Durante la práctica, registra cada intento con uno de tres botones.
+1. Pulsa **Crear sesión** en la recomendación o abre **Entrenar**.
+2. Marca una o varias señales y pulsa **Continuar**.
+3. Elige **Por repetición** o **En circuito**.
 
-También puedes abrir **Entrenar** y elegir cualquier señal. La recomendación nunca bloquea la elección manual.
+Puedes buscar por número o nombre y filtrar por grado o categoría. Cada fila muestra la señal oficial, número, nombre y nivel. La recomendación nunca bloquea la elección manual.
 
-## 5. Preparar la sesión
+## 5. Elegir la modalidad
 
-La preparación muestra:
+Cada señal tendrá diez intentos:
 
-- duración máxima de 15 minutos;
-- espacio necesario;
-- material imprescindible o útil;
-- lado de trabajo;
-- objetivo y lugar.
+- **Por repetición**: completa los diez intentos de una señal antes de avanzar a la siguiente.
+- **En circuito**: realiza cada señal una vez por vuelta y repite el conjunto durante diez vueltas.
 
-La estructura sugerida es dos minutos de activación, diez u once de trabajo y dos o tres de cierre positivo. Puedes finalizar antes si el perro, el entorno o cualquier otra circunstancia lo aconseja.
+Selecciona también el lugar y, cuando una señal se entrene por ambos lados, el lado correspondiente. Si eliges muchas señales, la aplicación avisa de que la sesión será larga, pero no impide continuar.
 
 ## 6. Registrar intentos
 
-Pulsa únicamente el resultado observable:
+La pantalla activa muestra siempre la señal oficial y su descripción reglamentaria. Pulsa únicamente el resultado observable:
 
 - **Incorrecta**: no completa el comportamiento acordado;
-- **Con ayuda**: lo completa con orden adicional, gesto, señuelo visible, correa u otra ayuda;
-- **Autónoma**: lo completa con el criterio entrenado y sin ayuda adicional.
+- **Correcta**: completa el comportamiento que estabas evaluando.
 
-Si pulsas por error, usa **Deshacer último**. Al finalizar, elige **Difícil**, **Adecuada** o **Fácil**. Si has usado ayudas, puedes indicar la predominante; si terminas antes, puedes señalar el motivo. No hace falta escribir comentarios.
+La siguiente señal o repetición aparece automáticamente. Si pulsas por error, usa **Deshacer último resultado**. Puedes abrir **Impresiones y notas** para marcar observaciones rápidas, escribir una nota general o añadir un detalle de la señal actual.
 
-## 7. Entender el progreso
+## 7. Pausas y recordatorios
+
+Los 15 minutos no son un límite. Cada 15 minutos de trabajo activo aparece un recordatorio con dos opciones:
+
+- **Iniciar descanso**: pausa la sesión y excluye ese tiempo de la duración de entrenamiento;
+- **Continuar sin descanso**: reinicia el intervalo y permite seguir.
+
+También puedes pulsar **Pausar** en cualquier momento. La sesión se guarda tras cada resultado y puede recuperarse después de cerrar o recargar la aplicación.
+
+## 8. Finalizar y guardar
+
+Puedes finalizar aunque no hayas completado los diez intentos. El resumen muestra:
+
+- porcentaje global;
+- duración activa y total;
+- número de descansos;
+- correctas, incorrectas y porcentaje de cada señal;
+- estado **Superada** si alcanza al menos 7 correctas de 10;
+- impresiones y notas.
+
+Desde el resumen puedes **Guardar sesión**, **Continuar entrenando**, **Repetir pendientes** o **Descartar sesión**. Descartar exige confirmación y sus resultados no cuentan para el progreso.
+
+## 9. Entender el progreso
 
 El progreso se calcula por perro y por lado:
 
 - **Sin practicar**: no existe evidencia individual;
 - **En progreso**: ya hay intentos, pero todavía no cumple el criterio;
-- **Aprendida**: al menos 7 de las últimas 10 repeticiones comparables son autónomas y se hicieron en dos fechas locales distintas;
+- **Aprendida**: al menos 7 de las últimas 10 repeticiones comparables son correctas y se confirmaron en dos fechas locales distintas;
 - **Consolidada**: cumple un criterio más exigente de mantenimiento;
 - **Necesita repaso**: han pasado 30 días, aparecen errores consecutivos o el rendimiento ha descendido después de aprenderla.
 
-Los intentos dentro de un recorrido se conservan, pero no sustituyen automáticamente la evidencia individual para aprender una señal.
+Los intentos en circuito cuentan como ejecuciones reales de la señal. El resumen **Superada** describe esa sesión; el estado **Aprendida** exige además la confirmación en dos días.
 
-## 8. Consultar señales
+## 10. Consultar señales
 
 En **Señales** puedes buscar por nombre o número. Cada ficha separa:
 
@@ -86,7 +104,7 @@ En **Señales** puedes buscar por nombre o número. Cada ficha separa:
 
 Todas las señales pueden consultarse aunque la progresión recomiende entrenar otras primero.
 
-## 9. Construir una pista
+## 11. Construir una pista
 
 Desde **Inicio**, pulsa **Construir pista**:
 
@@ -97,17 +115,17 @@ Desde **Inicio**, pulsa **Construir pista**:
 
 Una misma señal puede aparecer dos veces. La vista actual sirve para diseñar y consultar la secuencia; la ejecución guiada con resultados por señal corresponde a un incremento posterior.
 
-## 10. Modo examen
+## 12. Modo examen
 
 El modo examen propone diez explicaciones sencillas y cuatro señales posibles en cada una. Tras responder muestra la descripción correcta. Funciona sin conexión y no modifica el progreso de entrenamiento: reconocer una señal no demuestra que el perro pueda ejecutarla.
 
-## 11. Varios perros
+## 13. Varios perros
 
 Abre el botón de perfil en la esquina superior derecha. Puedes añadir perros y seleccionar cuál está activo. El progreso y las recomendaciones se calculan de forma independiente.
 
 Eliminar un perro exige dos confirmaciones y elimina también sus entrenamientos. Antes de hacerlo, exporta una copia si quieres conservarlos.
 
-## 12. Copias de seguridad
+## 14. Copias de seguridad
 
 En **Perros y ajustes**:
 
@@ -118,7 +136,7 @@ Conviene exportar al menos una vez al mes y guardar el archivo en una ubicación
 
 **Borrar todo** elimina perros, sesiones, progreso, pistas y ajustes después de dos confirmaciones. Esta acción solo puede recuperarse restaurando una copia anterior.
 
-## 13. Uso responsable
+## 15. Uso responsable
 
 - Entrena con refuerzo positivo y sesiones adaptadas al estado del perro.
 - Finaliza si aparece dolor, miedo, fatiga o frustración creciente.

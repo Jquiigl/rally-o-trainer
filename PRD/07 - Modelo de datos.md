@@ -209,7 +209,7 @@ Registro único con clave `settings`.
 | `installHintDismissedAt` | epoch ms o `null` | No | `null` |
 | `updatedAt` | epoch ms | Sí | Creación |
 
-No guardará duración configurable; el producto fija 15 minutos.
+No guardará duración máxima configurable; conserva tiempo activo y un ciclo fijo de recordatorio cada 15 minutos.
 
 #### 5.3 `DogContext`
 
@@ -453,11 +453,19 @@ La referencia desde `SignalRevision` distinguirá `requiredForFinalExecution` y 
 |---|---|:---:|---|
 | `id` | UUID | Sí | Estable |
 | `dogId` | UUID | Sí | Un único perro |
-| `status` | enum | Sí | `active`, `completed` |
+| `status` | enum | Sí | `active`, `paused`, `completed`, `discarded` |
 | `origin` | enum | Sí | `recommended`, `substituted`, `manual` |
 | `objective` | enum | Sí | Objetivo aprobado |
 | `location` | enum | Sí | Contexto de práctica |
-| `plannedDurationSeconds` | entero | Sí | `900` en MVP |
+| `trainingMode` | enum | Sí | `repetition`, `circuit` |
+| `targetAttempts` | entero | Sí | `10` por señal |
+| `breakCount` | entero | Sí | Descansos iniciados |
+| `quickImpressions` | string[] | Sí | Selección opcional |
+| `activeSince` | epoch ms o `null` | Sí | Inicio del tramo activo |
+| `effectiveTrainingMs` | entero | Sí | Acumulado sin pausas |
+| `restCycleStartedAt` | epoch ms o `null` | Sí | Base del aviso recurrente |
+| `pausedAt` | epoch ms o `null` | Sí | Momento de pausa |
+| `pauseKind` | enum o `null` | Sí | `manual`, `break` |
 | `startedAt` | epoch ms | Sí | UTC |
 | `startedLocalDate` | fecha civil | Sí | Días diferentes |
 | `timeZone` | string o `null` | Sí | IANA si existe |
@@ -484,7 +492,7 @@ Motivos de finalización:
 - `unwell`;
 - `other`.
 
-Una sesión completada puede tener cero registros cuando resulte útil conservar indisposición o interrupción. Una sesión creada por error y sin registros se puede descartar eliminándola.
+Una sesión completada puede tener menos de diez registros por señal. Una sesión descartada se conserva para trazabilidad, pero no aporta evidencia ni aparece en el historial normal.
 
 #### 8.2 `PracticeBlock`
 
@@ -497,17 +505,17 @@ Una sesión completada puede tener cero registros cuando resulte útil conservar
 | `signalRevisionId` | string | Sí | Revisión practicada |
 | `progressCompatibilityKey` | string | Sí | Instantánea de compatibilidad |
 | `side` | enum | Sí | `not-applicable`, `left`, `right` |
-| `practiceContext` | enum | Sí | `individual`; futuros `sequence`, `course` |
-| `entryMode` | enum | Sí | `individual`, `aggregate` |
+| `practiceContext` | enum | Sí | `individual`, `course` |
+| `inputMode` | enum | Sí | `attempt` |
 | `startedAt` | epoch ms | Sí | Orden temporal |
 | `endedAt` | epoch ms o `null` | Sí | Puede cerrarse con sesión |
 | `notes` | string o `null` | Sí | Opcional |
 
-En el MVP todos los bloques usarán `practiceContext = individual`, pero el campo evita migrar hechos cuando se introduzcan recorridos.
+Repetición usa `practiceContext = individual`; circuito usa `course`. La sesión crea un bloque por cada señal seleccionada.
 
 #### 8.3 `PracticeRecord`
 
-Unión discriminada almacenada en una sola tabla.
+Registro individual almacenado en una sola tabla. El modelo agregado propuesto inicialmente no se implementa porque contradice el avance automático y no es necesario para el uso en pista.
 
 Campos comunes:
 
@@ -515,17 +523,17 @@ Campos comunes:
 |---|---|:---:|---|
 | `id` | UUID | Sí | Estable |
 | `blockId` | UUID | Sí | Bloque propietario |
-| `kind` | enum | Sí | `attempt`, `aggregate` |
 | `sequence` | entero | Sí | Único dentro de bloque |
+| `sessionSequence` | entero | No | Orden global de sesión para deshacer |
 | `recordedAt` | epoch ms | Sí | Momento de registro |
-| `createdAt` | epoch ms | Sí | Persistencia |
+| `repetitionNumber` | entero | No | 1–10 |
+| `circuitRound` | entero | No | 1–10 en circuito |
 
 Variante `attempt`:
 
 | Campo | Tipo | Regla |
 |---|---|---|
-| `result` | enum | `incorrect`, `assisted`, `autonomous` |
-| `assistanceTypes` | enum[] | Vacío salvo resultado `assisted`; detalle opcional |
+| `result` | enum | Nuevos: `incorrect`, `autonomous`; `assisted` solo histórico |
 
 Tipos de ayuda:
 
@@ -538,20 +546,7 @@ Tipos de ayuda:
 - `simplified-exercise`;
 - `other`.
 
-Variante `aggregate`:
-
-| Campo | Tipo | Regla |
-|---|---|---|
-| `totalCount` | entero | 1–100; límite final pendiente |
-| `incorrectCount` | entero | ≥ 0 |
-| `assistedCount` | entero | ≥ 0 |
-| `autonomousCount` | entero | ≥ 0 |
-
-Invariante:
-
-```text
-totalCount = incorrectCount + assistedCount + autonomousCount
-```
+La interfaz presenta `autonomous` como **Correcta**. Se conserva el valor `assisted` para no destruir sesiones y copias anteriores; en resúmenes nuevos cuenta como no correcto.
 
 Un bloque no mezclará registros `attempt` y `aggregate` en el MVP. Cambiar el modo después de registrar exigirá descartar los registros del bloque con confirmación.
 
@@ -708,10 +703,10 @@ IndexedDB no aplica claves foráneas; la capa de aplicación deberá garantizar:
 | Crear perro | `Dog`, `DogContext`, quizá `AppSettings.activeDogId` | Recomendación del perro |
 | Editar perro | `Dog` | Presentaciones; no progreso |
 | Archivar perro | `Dog.archivedAt`, posible perro activo | Inicio y selectores |
-| Iniciar sesión | `TrainingSession`, primer `PracticeBlock` | Ninguna proyección hasta evidencia |
+| Iniciar sesión | `TrainingSession`, todos los `PracticeBlock` seleccionados | Ninguna proyección hasta evidencia |
 | Registrar intento | `PracticeRecord`, marcas temporales del bloque/sesión, `dataRevision` | Progreso y recomendación del perro/señal |
-| Registrar agregado | `PracticeRecord`, `dataRevision` | Igual que intento |
 | Deshacer | Eliminar último `PracticeRecord`, `dataRevision` | Igual que registro |
+| Pausar/reanudar | `TrainingSession` y acumulado temporal | Ninguna proyección |
 | Finalizar | `TrainingSession`, `PracticeBlock`, `dataRevision` | Progreso, historial, recomendación |
 | Eliminar sesión | Cascada bloques/registros, `dataRevision` | Todas las proyecciones afectadas |
 | Activar contenido | Paquete y entidades editoriales | Progreso compatible, biblioteca y recomendación |

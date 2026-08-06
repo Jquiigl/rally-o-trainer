@@ -28,7 +28,7 @@
 - El logotipo de referencia aportado contiene el texto anterior “Rally Entrena” y no puede usarse sin adaptación.
 - La ilustración detallada del perro no escala bien a 48 px.
 - Verde y dorado necesitan variantes accesibles en claro y oscuro.
-- Los tres resultados deben diferenciarse sin sugerir castigo o culpa.
+- Los dos resultados deben diferenciarse sin sugerir castigo o culpa.
 - El sistema debe funcionar sin fuentes o iconos remotos.
 
 ### Mejoras propuestas
@@ -153,9 +153,8 @@ Todos los pares finales se verificarán con WCAG AA sobre su superficie real ant
 
 | Resultado | Icono | Etiqueta | Color auxiliar |
 |---|---|---|---|
-| Incorrecto | `X` | Incorrecto | peligro |
-| Correcto con ayuda | mano/ayuda | Con ayuda | advertencia |
-| Correcto autónomo | marca de verificación | Autónomo | éxito |
+| Incorrecta | `X` | Incorrecta | peligro |
+| Correcta | marca de verificación | Correcta | éxito |
 
 Los botones mantienen texto completo y orden estable. No usar rojo/amarillo/verde como única codificación.
 
@@ -434,7 +433,7 @@ Los colores se asignarán mediante tema y tokens semánticos; los componentes no
 - [ ] Todos los componentes usan tokens semánticos.
 - [ ] La interfaz usa fuentes locales del sistema.
 - [ ] Los objetivos táctiles cumplen 44 px.
-- [ ] Los tres resultados se distinguen sin color.
+- [ ] Correcta e Incorrecta se distinguen por icono, texto y color.
 - [ ] Modos claro y oscuro conservan jerarquía y contraste.
 - [ ] Movimiento reducido elimina animaciones no esenciales.
 - [ ] El tono no culpa al usuario ni al perro.

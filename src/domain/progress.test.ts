@@ -25,10 +25,10 @@ describe('calculateProgress', () => {
     expect(result.learnedAt).toBe(day);
   });
 
-  it('does not count course evidence as individual learning evidence', () => {
+  it('counts circuit evidence because it is a valid execution of the signal', () => {
     const rows = evidence(Array(10).fill('autonomous'));
     rows.forEach((row) => { row.practiceContext = 'course'; });
-    expect(calculateProgress(rows, 'left').state).toBe('not-started');
+    expect(calculateProgress(rows, 'left').totalEvidence).toBe(10);
   });
 
   it('marks a previously learned signal for review after regression', () => {

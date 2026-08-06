@@ -1,12 +1,11 @@
-# PRD — Capítulo 10: Entrenamientos
+# PRD — Capítulo 10: Entrenamientos multiseñal
 
 | Campo | Valor |
 |---|---|
 | Producto | Rally O Trainer |
-| Estado | Especificación funcional |
-| Fecha | 5 de agosto de 2026 |
+| Estado | Aprobado e implementado |
+| Fecha | 6 de agosto de 2026 |
 | Dependencias | Capítulos 02, 04, 05, 07 y 09 |
-| Próximo capítulo | Planificador y repaso inteligente |
 
 ---
 
@@ -14,32 +13,33 @@
 
 ### Hipótesis revisadas
 
-| Hipótesis | Problema | Decisión |
+| Hipótesis anterior | Debilidad | Decisión vigente |
 |---|---|---|
-| Una sesión debe durar exactamente 15 minutos | Puede perjudicar bienestar o no encajar en la situación real | Quince minutos es máximo y estructura orientativa; finalizar antes es normal |
-| Registrar más dimensiones produce mejores datos | El guía tiene una mano y el perro espera | Tres resultados rápidos; las dimensiones solo orientan la decisión |
-| La sesión inicial debe mezclar ejercicios | Aumenta carga cognitiva y dificulta atribuir progreso | MVP centrado en una señal; secuencias preparadas para después |
-| Un temporizador debe forzar fases | Interrumpe la práctica y puede premiar el reloj sobre el perro | Temporización suave con avisos opcionales, nunca bloqueo |
-| Toda ayuda debe detallarse en cada intento | Excesiva fricción | Resultado “con ayuda”; tipo de ayuda opcional por bloque |
-| La ausencia de resultados es un fracaso | Una interrupción puede ser la decisión correcta | Registrar motivo de finalización sin afectar progreso |
+| Una sesión trabaja una única señal | Obliga a crear varias sesiones y no representa un entrenamiento real | Selección de una o varias señales |
+| Quince minutos es el máximo de sesión | Confunde bienestar con un límite arbitrario y corta sesiones válidas | Recordatorio de descanso recurrente cada 15 minutos activos |
+| Tres resultados producen mejor diagnóstico | Exige decidir el tipo de ayuda durante la práctica | Captura binaria: Correcta o Incorrecta |
+| El usuario debe decidir manualmente el siguiente ejercicio | Añade fricción con el perro esperando | Avance automático según modalidad |
+| Una sesión incompleta no es válida | Favorece completar repeticiones aunque no convenga | Finalización y guardado disponibles en todo momento |
+| El historial de circuito no sirve para aprender | Desaprovecha ejecuciones reales de una señal | Repetición y circuito aportan evidencia; aprendizaje estable exige dos días |
 
-### Debilidades detectadas
+### Puntos débiles detectados
 
-- Un toque accidental altera estadísticas si no existe deshacer inmediato.
-- La pantalla activa debe evitar navegación y contenido distractorios.
-- iOS puede suspender la PWA o cerrarla; la sesión debe recuperarse.
-- Diez repeticiones no siempre son adecuadas en una única sesión.
-- Practicar lados alternos sin indicación puede mezclar evidencias.
-- El temporizador y botones deben funcionar sin precisión motora fina.
+- Una selección sin búsqueda o filtros sería lenta con 100 señales.
+- Una lista demasiado grande puede generar sesiones poco realistas.
+- Guardar un índice actual separado de los resultados puede desincronizarse tras recarga o deshacer.
+- Contar el tiempo de pausa como entrenamiento distorsiona el resumen.
+- Un toque accidental necesita corrección inmediata.
+- El resumen debe diferenciar “superada en esta sesión” de “aprendida de forma estable”.
 
-### Mejoras propuestas
+### Mejoras adoptadas
 
-1. Preparación breve antes de iniciar, con material y espacio visibles.
-2. Bloque activo centrado en una señal y un lado.
-3. Tres botones grandes y deshacer el último registro.
-4. Intentos individuales por defecto y agregado como alternativa explícita.
-5. Guardado transaccional después de cada acción.
-6. Cierre positivo guiado, incluso al finalizar anticipadamente.
+1. Selector con imagen oficial, número, nombre, grado, categoría, búsqueda y filtros.
+2. Aviso no bloqueante al seleccionar más de diez señales.
+3. Dos modalidades explícitas: repetición y circuito.
+4. Siguiente paso derivado de bloques y registros persistidos.
+5. Guardado después de cada resultado, impresión, nota o cambio de estado.
+6. Tiempo activo acumulado separado de duración total.
+7. Resumen accionable con continuar, repetir pendientes, guardar o descartar.
 
 ---
 
@@ -47,292 +47,259 @@
 
 ### 1. Objetivo
 
-Una sesión responde:
+La función responde a cuatro preguntas en secuencia:
 
-> ¿Qué practico ahora y cómo registro el resultado sin dejar de atender a mi perro?
+1. ¿Qué señales quiero practicar?
+2. ¿Quiero repetir cada una o combinarlas en circuito?
+3. ¿El intento ha sido correcto o incorrecto?
+4. ¿Qué conviene guardar o repetir al terminar?
 
-### 2. Estructura temporal
-
-| Fase | Duración orientativa | Finalidad |
-|---|---:|---|
-| Activación | 2 min | Conexión, movimiento suave y conducta fácil |
-| Trabajo | 10–11 min | Señal elegida, pausas incluidas |
-| Cierre | 2–3 min | Ejercicio sencillo, juego o refuerzo positivo |
-| Total máximo | 15 min | Puede finalizar antes por cualquier motivo |
-
-Los tiempos no son cuotas de trabajo continuo. El guía decide descansos, número de intentos y fin.
-
-### 3. Preparación
-
-Antes de comenzar se muestra una sola pantalla con:
-
-- perro;
-- señal y lado;
-- objetivo de la sesión;
-- ubicación;
-- duración máxima;
-- material requerido;
-- material útil opcional;
-- hasta tres criterios observables;
-- propuesta de activación y cierre;
-- botones `Empezar` y `Cambiar señal`.
-
-Si falta material requerido, `Empezar` no desaparece: se ofrece practicar un prerrequisito compatible o confirmar una adaptación que no contará como ejecución completa.
-
-### 4. Objetivos de sesión
-
-| Objetivo | Uso |
-|---|---|
-| Aprender | Introducir o construir la conducta con ayudas |
-| Mejorar autonomía | Retirar ayudas y buscar respuesta final |
-| Mejorar precisión | Afinar criterios de una conducta conocida |
-| Repasar | Verificar mantenimiento tras intervalo |
-| Practicar lado | Trabajar específicamente izquierda o derecha |
-
-El planificador propone uno. El usuario puede cambiarlo.
-
-### 5. Flujo
+### 2. Flujo general
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Preparacion
-    Preparacion --> Activa: empezar
-    Activa --> Pausada: pausar
-    Pausada --> Activa: continuar
-    Activa --> Cierre: terminar trabajo
-    Pausada --> Cierre: finalizar antes
-    Cierre --> Completada: guardar valoración
-    Activa --> Recuperable: aplicación suspendida
-    Recuperable --> Activa: recuperar
-    Recuperable --> Cierre: finalizar
+    [*] --> Seleccion
+    Seleccion --> Modalidad: una o más señales
+    Modalidad --> Activa: repetición o circuito
+    Activa --> Pausada: pausa manual o descanso
+    Pausada --> Activa: reanudar
+    Activa --> Resumen: finalizar o completar intentos
+    Pausada --> Resumen: finalizar
+    Resumen --> Completada: guardar
+    Resumen --> ActivaNueva: continuar o repetir pendientes
+    Resumen --> Descartada: confirmar descarte
     Completada --> [*]
+    Descartada --> [*]
 ```
 
-### 6. Pantalla activa
+### 3. Selección de señales
 
-Solo muestra:
+Cada elemento seleccionable muestra:
 
-- nombre corto de la señal;
-- perro y lado;
-- fase y tiempo transcurrido;
-- criterio principal desplegable;
-- `Incorrecto`;
-- `Correcto con ayuda`;
-- `Correcto autónomo`;
-- contador por resultado;
-- `Deshacer`;
-- `Pausar/Finalizar`.
+- señal gráfica oficial RSCE o FCI;
+- número y nombre;
+- grado de entrada;
+- categoría o área;
+- indicador seleccionado.
 
-No muestra navegación inferior, estadísticas, reglamento completo ni recomendaciones nuevas.
+Controles:
 
-### 7. Registro individual
+- búsqueda por número o nombre;
+- filtro por RSCE Debutante, grados 1–3 o FCI Internacional;
+- filtro por categoría;
+- seleccionar o quitar todas las señales visibles;
+- contador persistente durante el filtrado;
+- acción `Continuar con N` desactivada cuando `N = 0`.
 
-Cada pulsación guarda inmediatamente:
+La selección manual siempre prevalece sobre el planificador. Más de diez señales genera una advertencia sobre duración, pero no bloquea la decisión.
 
-- sesión y bloque;
-- secuencia;
-- instante;
-- resultado;
-- lado y contexto ya fijados en el bloque.
+### 4. Modalidades
 
-Interacción:
+#### 4.1 Por repetición
 
-- confirmación visual breve;
-- vibración opcional y diferente solo si el dispositivo la permite;
-- no abrir diálogos;
-- botón pulsado mantiene posición;
-- `Deshacer` elimina únicamente el último registro del bloque activo.
+- diez intentos consecutivos por señal;
+- al registrar el décimo, avanza a la siguiente;
+- contadores: `Señal X de N` e `Intento Y de 10`.
 
-### 8. Registro agregado
+#### 4.2 En circuito
 
-Disponible desde preparación o antes del primer intento.
+- cada vuelta contiene todas las señales una vez y en el orden seleccionado;
+- se realizan diez vueltas;
+- contadores: `Vuelta Y de 10` y `Señal X de N`.
 
-El usuario introduce:
+Ambas modalidades producen exactamente diez resultados por señal al completarse. La preparación permite elegir izquierda o derecha para cada señal que admita ambos lados; el lado queda fijado en su bloque y nunca se mezcla en un mismo resultado 7/10.
 
-- total;
-- incorrectas;
-- correctas con ayuda;
-- correctas autónomas.
+### 5. Pantalla activa
 
-La suma debe coincidir. Un bloque no mezcla modos. Cambiar después de registrar exige descartar el bloque con confirmación.
+La pantalla elimina la navegación global y contiene únicamente:
 
-El agregado no inventa orden ni marcas temporales y se identifica como evidencia menos precisa.
+- modalidad;
+- acción `Pausar`;
+- acción `Finalizar`;
+- contadores y barra de progreso;
+- número, nombre e imagen oficial de la señal actual;
+- descripción reglamentaria;
+- botones grandes `Incorrecta` y `Correcta`;
+- contador local de ambos resultados;
+- `Deshacer último resultado`;
+- panel opcional de impresiones y notas.
 
-### 9. Ayudas
+La imagen debe ser legible en un iPhone 16 Pro sin ampliar. Los botones binarios ocupan el ancho disponible, mantienen posición y tienen un área táctil superior a 44 × 44 puntos.
 
-El resultado `Correcto con ayuda` es suficiente durante la captura. Opcionalmente, antes del bloque se puede elegir una ayuda predominante:
+### 6. Registro y avance
 
-- verbal adicional;
-- gesto adicional;
-- señuelo visible;
-- guía suave con correa;
-- diana;
-- apoyo del entorno;
-- criterio reducido;
-- otra nota breve.
+Cada pulsación crea inmediatamente un registro local con:
 
-No se exige seleccionar ayuda después de cada repetición.
+- identificador de sesión y bloque;
+- secuencia dentro del bloque;
+- secuencia global de sesión;
+- resultado interno `autonomous` para Correcta o `incorrect` para Incorrecta;
+- fecha y hora local;
+- número de repetición;
+- vuelta si la modalidad es circuito.
 
-### 10. Cambio de lado
+No se guarda un índice actual duplicado. El siguiente paso se calcula con datos persistidos:
 
-- un bloque solo tiene un lado;
-- cambiar de lado crea otro bloque;
-- los contadores se reinician visualmente para el nuevo bloque;
-- la sesión puede incluir ambos lados de la misma señal;
-- el planificador puede proponer empezar por el lado más débil;
-- nunca se mezclan ambos lados en un único resultado 7/10.
+```text
+repetición: primer bloque con menos de 10 registros
+circuito: records.length módulo blocks.length
+vuelta: floor(records.length / blocks.length) + 1
+```
 
-### 11. Pausas
+Esto permite recuperar el estado exacto tras cierre, suspensión, recarga o deshacer.
 
-Pausar:
+### 7. Deshacer
 
-- detiene el tiempo activo mostrado;
-- conserva todo;
-- muestra `Continuar` y `Finalizar sesión`;
-- no registra un resultado;
-- no necesita motivo.
+- elimina únicamente el último registro global de la sesión;
+- utiliza `sessionSequence` para resolver registros con la misma marca temporal;
+- recalcula señal, vuelta, intento, contadores y progreso;
+- queda desactivado si no existen registros.
 
-El tiempo de pared y el tiempo activo se conservan por separado para diagnóstico, pero ninguna estadística penaliza las pausas.
+### 8. Criterio 7/10
 
-### 12. Avisos temporales
+Una señal queda **Superada en la sesión** cuando:
 
-- al terminar activación: aviso suave y descartable;
-- al llegar al minuto 12: sugerencia de cierre;
-- al minuto 15: indicar que se alcanzó el máximo recomendado;
-- nunca bloquear botones ni cerrar automáticamente;
-- respetar reducción de movimiento y preferencias hápticas;
-- no usar sonidos por defecto.
+```text
+total de intentos >= 10 AND correctas >= 7
+```
 
-### 13. Finalización anticipada
+Con menos de diez intentos figura **Pendiente**, aunque el porcentaje sea alto. El estado estable **Aprendida** conserva el requisito de 7/10 en una ventana comparable y al menos dos fechas locales distintas.
 
-Motivos rápidos opcionales:
+### 9. Pausas y tiempo
 
-- perro cansado o desconectado;
-- entorno o distracción;
-- falta de tiempo;
-- material o espacio inadecuado;
-- objetivo conseguido antes;
-- otro;
-- sin indicar motivo.
+La sesión guarda:
 
-El motivo pertenece a la sesión, no convierte intentos previos en inválidos. Una sesión sin evidencias no modifica progreso.
+- hora de inicio total;
+- tiempo activo acumulado;
+- inicio del tramo activo actual;
+- número de descansos;
+- estado `active` o `paused`;
+- tipo de pausa manual o descanso.
 
-### 14. Cierre y valoración
+`Pausar` detiene el tiempo activo. Al reanudar empieza un tramo nuevo. La duración total incluye pausas; la duración de entrenamiento no.
 
-La pantalla de cierre propone una acción breve positiva y pregunta:
+### 10. Recordatorio de descanso
 
-> ¿Cómo ha ido la sesión en general?
+Tras 15 minutos desde el comienzo del tramo de descanso vigente se muestra una pantalla completa:
 
-Respuesta opcional de un toque:
+- identifica al perro;
+- explica que una pausa protege motivación y calidad;
+- `Iniciar descanso` pausa y aumenta el contador;
+- `Continuar sin descanso` reinicia el intervalo sin aumentar el contador.
 
-- Difícil.
-- Adecuada.
-- Fácil.
+El aviso vuelve a aparecer tras otros 15 minutos activos. No cierra ni invalida la sesión.
 
-Además:
+### 11. Impresiones y notas
 
-- nota opcional;
-- resumen de conteos por bloque y lado;
-- duración;
-- motivo de fin, si existe;
-- `Guardar y terminar`.
+Etiquetas rápidas:
 
-La valoración general no sustituye resultados ni modifica directamente el estado de una señal. Puede ayudar al futuro planificador como evidencia secundaria cuando se defina.
+- Muy concentrado;
+- Buena motivación;
+- Se distrae;
+- Necesita ayuda;
+- Responde con fluidez;
+- Dificultad con la posición;
+- Dificultad con el guía;
+- Entorno con distracciones;
+- Fatiga;
+- Mejor que la sesión anterior.
 
-### 15. Recuperación
+Se admiten una nota general y una nota opcional por señal. Ningún campo es obligatorio ni interrumpe la captura principal.
 
-Después de cada cambio se persiste la sesión. Al abrir la aplicación con una sesión activa:
+### 12. Resumen
 
-- Inicio muestra `Continuar sesión` como acción principal;
-- se recuperan fase, bloques, resultados y tiempo registrado;
-- el tiempo en segundo plano no se suma como actividad;
-- se ofrece continuar o finalizar;
-- nunca se inicia otra sesión simultánea.
+El resumen muestra:
 
-### 16. Corrección y eliminación
+- perro, fecha y hora;
+- modalidad;
+- duración total y activa;
+- número de descansos;
+- porcentaje global;
+- por señal: miniatura oficial, correctas, incorrectas, porcentaje, nota y estado;
+- impresiones y nota general.
 
-- durante el bloque: deshacer último registro;
-- durante la preparación: cambiar cualquier dato;
-- tras completar: no editar intentos individuales en el MVP;
-- se puede eliminar la sesión completa con confirmación;
-- eliminar recalcula progreso;
-- la nota posterior queda pendiente de decisión del capítulo 7.
+Acciones:
 
-### 17. Historial inmediato
+| Acción | Resultado |
+|---|---|
+| Guardar sesión | Marca `completed`, incorpora evidencia y abre historial |
+| Continuar entrenando | Completa la actual y crea otra con las mismas señales y modalidad |
+| Repetir pendientes | Completa la actual y crea otra solo con señales no superadas |
+| Descartar sesión | Solicita confirmación, marca `discarded` y excluye sus resultados |
 
-Al finalizar se muestra:
+### 13. Recuperación desde Inicio
 
-- resultado resumido;
-- cambio de estado si lo hubo;
-- próximo paso recomendado;
-- `Volver a Inicio`;
-- `Ver detalle`.
+Con una sesión `active` o `paused`, Inicio muestra:
 
-No se propone comenzar otra sesión automáticamente.
+- señal de referencia y modalidad;
+- número de resultados guardados;
+- `Continuar sesión`;
+- `Finalizar y guardar`;
+- `Descartar sesión` con confirmación.
 
-### 18. Bienestar y seguridad
+No puede iniciarse otra sesión abierta ni cambiar de perro hasta cerrar la existente.
 
-- detenerse siempre está disponible;
-- ninguna meta exige terminar diez repeticiones seguidas;
-- se sugieren descansos y sesiones cortas;
-- las ayudas aversivas están excluidas;
-- una caída de rendimiento sostenida propone bajar criterio o cerrar;
-- el lenguaje evita culpa y competición contra otros perros;
-- material y superficie deben ser seguros;
-- la aplicación no sustituye valoración veterinaria o profesional.
+### 14. Historial
 
-### 19. Reglas de dominio
+Solo muestra sesiones completadas. Cada tarjeta contiene:
 
-1. Máximo una sesión activa por instalación.
-2. Una sesión pertenece a un perro.
-3. Un bloque usa una señal, revisión, lado, modalidad y contexto.
-4. Un bloque no mezcla intento y agregado.
-5. Un intento tiene exactamente un resultado.
-6. Un agregado cumple la suma invariante.
-7. Una sesión sin evidencia no cambia progreso.
-8. Finalizar nunca borra intentos válidos.
-9. El tiempo no determina éxito.
-10. Quince minutos es máximo recomendado, no restricción técnica destructiva.
+- fecha;
+- modalidad y número de señales;
+- nombres de señales;
+- porcentaje global;
+- correctas e incorrectas;
+- señales superadas;
+- impresiones y nota, si existen.
 
-### 20. Criterios de aceptación
+Las sesiones descartadas permanecen en almacenamiento para trazabilidad, pero no aparecen ni aportan evidencia.
 
-- [ ] Se inicia una recomendación desde Inicio en menos de tres pulsaciones.
-- [ ] Material y espacio se conocen antes de empezar.
-- [ ] La pantalla activa se usa con una mano.
-- [ ] Cada resultado se guarda sin diálogo adicional.
-- [ ] Deshacer corrige el último toque.
-- [ ] Los lados nunca se mezclan.
-- [ ] Se puede finalizar antes sin perder datos.
-- [ ] La sesión se recupera tras recarga o suspensión.
-- [ ] No puede existir una segunda sesión activa.
-- [ ] Una sesión sin intentos no afecta al progreso.
-- [ ] El cierre positivo está disponible.
-- [ ] Todo funciona offline.
+### 15. Compatibilidad
+
+- las sesiones antiguas se migran como modalidad `repetition`;
+- sus bloques y registros no se eliminan;
+- `assisted` se conserva y se interpreta como no correcto en el nuevo resumen;
+- las copias JSON v1 se aceptan y normalizan al formato actual;
+- las nuevas copias utilizan esquema 2;
+- las 100 señales y sus imágenes oficiales no se regeneran ni sustituyen.
+
+### 16. Criterios de aceptación
+
+- [x] Se puede elegir una o varias señales entre las 100 publicadas.
+- [x] Búsqueda, grado, categoría, selección visible y contador funcionan juntos.
+- [x] Repetición completa diez intentos antes de avanzar y conserva el lado elegido.
+- [x] Circuito recorre todas las señales durante diez vueltas.
+- [x] Correcta e Incorrecta guardan y avanzan con un toque.
+- [x] Deshacer recupera el paso global anterior.
+- [x] 7/10 marca Superada; 6/10 no.
+- [x] Se puede finalizar con intentos incompletos.
+- [x] Pausa y reanudación excluyen el descanso del tiempo activo.
+- [x] El aviso de 15 minutos es recurrente y no bloqueante.
+- [x] La sesión se recupera desde Inicio.
+- [x] Resumen, historial, impresiones y notas reflejan varias señales.
+- [x] Copias v1 e historial anterior siguen siendo válidos.
+- [x] La imagen oficial aparece durante la ejecución.
+- [x] El flujo funciona sin red una vez instalada la PWA.
 
 ## Riesgos
 
 | Riesgo | Mitigación |
 |---|---|
-| Pulsaciones accidentales | Botones separados, confirmación breve y deshacer |
-| Obsesión con completar 10 intentos | No mostrar objetivo obligatorio; lenguaje de calidad y bienestar |
-| Suspensión de iOS | Persistencia por acción y flujo de recuperación |
-| Demasiadas opciones antes de empezar | Valores recordados y preparación en una sola pantalla |
-| Temporizador distrae | Avisos suaves y tiempo secundario |
-| Tipo de ayuda demasiado impreciso | Selección opcional por bloque, no por intento |
+| Seleccionar demasiadas señales | Contador y aviso a partir de once |
+| Fatiga por diez intentos | Pausa siempre visible, aviso recurrente y finalización anticipada |
+| Pulsación accidental | Botones separados y deshacer global |
+| Pérdida tras suspensión de iOS | Persistencia por acción y paso derivado |
+| Confundir Superada con Aprendida | Etiquetas y criterios separados |
+| Historial heredado con tres resultados | Mantener enum interno y adaptar solo la presentación |
 
 ## Mejoras posibles
 
-- Control por voz o auriculares después de validar privacidad y fiabilidad.
-- Modo pantalla bloqueada, si las capacidades web lo permiten de forma consistente.
-- Secuencias de varias señales y recorridos completos.
-- Plantillas personales de activación y cierre.
-- Detección de fatiga basada en patrones, siempre explicable y desactivable.
+- Reordenar las señales seleccionadas antes de iniciar.
+- Elegir lado por señal en la preparación avanzada.
+- Permitir guardar conjuntos personales sin convertirlos en una red social.
+- Aviso háptico opcional tras registro si iOS y Android lo soportan de forma consistente.
 
 ## Decisiones pendientes
 
-| ID | Decisión | Momento límite |
-|---|---|---|
-| DP-10-001 | Límite máximo de intentos de un agregado | Algoritmo y pruebas de entrada |
-| DP-10-002 | Edición posterior de notas | Wireframes de historial |
-| DP-10-003 | Uso de vibración por defecto en Android y disponibilidad efectiva en iOS | Pruebas de dispositivos |
-| DP-10-004 | Influencia exacta de la valoración general en planificación | Planificador inteligente |
+- Validar el recordatorio de descanso en una sesión física superior a 15 minutos.
+- Validar el flujo completo en un Android real del club.
+- Decidir si la selección debe limitar visualmente las señales según espacio y material sin bloquear consulta.

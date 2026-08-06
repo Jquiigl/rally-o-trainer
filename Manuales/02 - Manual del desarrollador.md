@@ -49,7 +49,7 @@ La separación clave es contenido versionado frente a evidencia del usuario. Una
 
 ## 4. Persistencia
 
-La base `rally-o-trainer` usa la versión 1 y las tablas:
+La base `rally-o-trainer` usa actualmente la versión 3 y las tablas:
 
 - `dogs`;
 - `settings`;
@@ -59,11 +59,22 @@ La base `rally-o-trainer` usa la versión 1 y las tablas:
 - `courses`;
 - `courseItems`.
 
-La versión 2 añade pistas y elementos sin modificar las tablas del entrenamiento. Los cambios que alteren datos existentes deben crear una nueva versión Dexie con migración idempotente. No se modifica una versión ya publicada. Una sesión activa se crea junto a su primer bloque en una sola transacción. Solo las sesiones completadas aportan evidencia al progreso.
+La versión 2 añade pistas. La versión 3 convierte la sesión individual en una sesión estructurada multiseñal y añade modalidad, estado pausado, tiempo activo, descansos, impresiones y notas por bloque. La migración completa valores seguros sin eliminar perros, sesiones, bloques ni registros anteriores. Los cambios que alteren datos existentes deben crear una nueva versión Dexie con migración idempotente. No se modifica una versión ya publicada.
+
+Una sesión nueva se crea con todos sus bloques en una transacción. Solo puede existir una sesión `active` o `paused` por instalación, y solo las sesiones `completed` aportan evidencia al progreso. Las descartadas conservan trazabilidad local pero quedan excluidas del historial y de las estadísticas.
+
+La modalidad se interpreta sin duplicar un “índice actual” mutable:
+
+- `repetition`: el siguiente paso es el primer bloque con menos de diez registros;
+- `circuit`: el siguiente bloque se deriva de `records.length % blocks.length`;
+- cada registro nuevo recibe `sessionSequence`, además de su secuencia dentro del bloque;
+- `Deshacer` elimina el registro con la última secuencia global y el paso se recalcula.
 
 ## 5. Algoritmo de progreso
 
-`calculateProgress` es una función pura. Filtra por lado y contexto individual, ordena cronológicamente y evalúa ventanas móviles de diez intentos. Conserva el primer momento en el que se alcanzó aprendizaje para poder detectar una regresión posterior.
+`calculateProgress` es una función pura. Filtra por lado, acepta evidencia individual o en circuito, ordena cronológicamente y evalúa ventanas móviles de diez intentos. Conserva el primer momento en el que se alcanzó aprendizaje para poder detectar una regresión posterior. En registros nuevos, `autonomous` representa la pulsación visible **Correcta** y `incorrect` representa **Incorrecta**; el valor heredado `assisted` se conserva para importar historial antiguo y se contabiliza como no correcto en los nuevos resúmenes.
+
+`trainingSession.ts` contiene las reglas puras de orden de pasos, umbral 7/10, tiempo activo, recordatorio de descanso y selección del último registro. La UI no debe reimplementar esas reglas.
 
 No cambies umbrales sin:
 
@@ -101,7 +112,7 @@ El flujo `.github/workflows/deploy-pages.yml` publica `dist/` en GitHub Pages de
 
 ## 8. Copias e importación
 
-El formato incluye identificador, versión de esquema, fecha, versión del contenido y todas las tablas. La restauración valida la envoltura antes de abrir una transacción que reemplaza los datos. Las migraciones futuras deben aceptar versiones anteriores mediante adaptadores explícitos.
+El formato v2 incluye identificador, versión de esquema, fecha, versión del contenido y todas las tablas. La restauración acepta también copias v1 y añade los valores de sesión estructurada antes de abrir la transacción que reemplaza los datos. Las migraciones futuras deben aceptar versiones anteriores mediante adaptadores explícitos.
 
 Nunca ejecutes código contenido en una copia ni incluyas HTML sin sanear en notas.
 
@@ -110,8 +121,11 @@ Nunca ejecutes código contenido en una copia ni incluyas HTML sin sanear en not
 - `pnpm check` sin errores;
 - `git diff --check` sin problemas de espacio;
 - alta y cambio de perro;
-- elección recomendada y manual;
-- registro, deshacer y cierre anticipado;
+- selección de una y varias señales, búsqueda y filtros;
+- repetición y circuito, avance automático y umbral 7/10;
+- registro binario, deshacer global y cierre anticipado;
+- pausa, reanudación, recordatorio recurrente y recuperación tras recarga;
+- impresiones, notas, resumen y repetición de pendientes;
 - progresión separada por lados;
 - exportación y restauración;
 - instalación y sesión sin conexión;

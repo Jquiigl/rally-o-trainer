@@ -71,7 +71,7 @@ La tipografía base respeta preferencias del navegador. No se ofrece una escala 
 | Objetivo preferido | Último usado o ninguno |
 | Avisos de fase | Activados/desactivados |
 
-La duración máxima permanece fija en 15 minutos. No se configura fecha de competición.
+El intervalo de recordatorio de descanso permanece fijo en 15 minutos activos. No existe una duración máxima configurable ni se solicita fecha de competición.
 
 ### 4. Inventario opcional
 

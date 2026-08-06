@@ -13,10 +13,11 @@ La versión actual incluye:
 - biblioteca completa hasta RSCE Grado 3 y clase internacional: 89 señales oficiales FCI y 11 señales nacionales RSCE, disponibles offline;
 - ficha con descripción reglamentaria de redacción propia, explicación sencilla y consejo positivo;
 - recomendación determinista y elección manual de cualquier señal;
-- preparación de sesiones individuales de hasta 15 minutos;
-- registro a un toque: incorrecta, con ayuda o autónoma;
+- sesiones de una o varias señales, por repetición o en circuito;
+- registro a un toque: correcta o incorrecta, con avance automático y deshacer;
+- pausa recuperable, recordatorio de descanso cada 15 minutos y resumen por señal;
 - progreso independiente por perro y lado;
-- aprendizaje con 7 ejecuciones autónomas de 10 en al menos dos días;
+- resultado de sesión superado con 7 correctas de 10; aprendizaje estable tras confirmarlo en al menos dos días;
 - detección de regresión y repaso tras 30 días;
 - exportación y restauración de una copia local completa;
 - temas claro, oscuro y según dispositivo.

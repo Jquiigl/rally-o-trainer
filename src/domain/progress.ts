@@ -4,7 +4,7 @@ const DAY_MS = 86_400_000;
 
 export function calculateProgress(evidence: Evidence[], side: Side, now = Date.now()): ProgressResult {
   const comparable = evidence
-    .filter((item) => item.side === side && item.practiceContext === 'individual')
+    .filter((item) => item.side === side)
     .sort((a, b) => a.recordedAt - b.recordedAt);
   const latestTen = comparable.slice(-10);
   const counts = {

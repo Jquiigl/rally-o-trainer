@@ -5,6 +5,7 @@ import { signals } from '../content/signals';
 import { db, ensureSettings, getEvidence } from '../data/db';
 import { useLiveData } from '../data/useLiveData';
 import { calculateProgress } from '../domain/progress';
+import { summarizeSession } from '../domain/trainingSession';
 import type { Side } from '../domain/types';
 import { OfficialSignalSign } from '../components/OfficialSignalSign';
 
@@ -12,7 +13,9 @@ export function ProgressPage() {
   const settings = useLiveData(ensureSettings, [], undefined);
   const dog = useLiveData(async () => settings?.activeDogId ? db.dogs.get(settings.activeDogId) : undefined, [settings?.activeDogId], undefined);
   const evidence = useLiveData(async () => dog ? getEvidence(dog.id) : [], [dog?.id], []);
-  const sessions = useLiveData(async () => dog ? db.sessions.where('dogId').equals(dog.id).reverse().sortBy('startedAt') : [], [dog?.id], []);
+  const sessions = useLiveData(async () => dog ? (await db.sessions.where('dogId').equals(dog.id).toArray()).sort((a, b) => b.startedAt - a.startedAt) : [], [dog?.id], []);
+  const blocks = useLiveData(() => db.blocks.toArray(), [], []);
+  const records = useLiveData(() => db.records.toArray(), [], []);
   const rows = useMemo(() => signals.map((signal) => {
     const sides: Side[] = signal.trainingSideMode === 'both' ? ['left', 'right'] :
       signal.trainingSideMode === 'left-only' ? ['left'] :
@@ -23,11 +26,12 @@ export function ProgressPage() {
   const trained = rows.filter((row) => row.progress.some((item) => item.totalEvidence > 0)).length;
   const learned = rows.filter((row) => row.progress.every((item) => ['learned', 'consolidated'].includes(item.state))).length;
   const recent = [...evidence].sort((a, b) => b.recordedAt - a.recordedAt).slice(0, 30);
-  const recentCounts = { autonomous: recent.filter((item) => item.result === 'autonomous').length, assisted: recent.filter((item) => item.result === 'assisted').length, incorrect: recent.filter((item) => item.result === 'incorrect').length };
+  const recentCounts = { correct: recent.filter((item) => item.result === 'autonomous').length, incorrect: recent.filter((item) => item.result !== 'autonomous').length };
+  const completed = sessions.filter((item) => item.status === 'completed');
   return <>
     <div className="page-heading"><p className="eyebrow">{dog?.name ?? 'Tu perro'}</p><h1>Progreso</h1><p>Resultados sencillos para decidir el próximo entrenamiento.</p></div>
-    <div className="stat-grid"><div><strong>{sessions.filter((item) => item.status === 'completed').length}</strong><span>sesiones</span></div><div><strong>{trained}</strong><span>señales iniciadas</span></div><div><strong>{learned}</strong><span>dominadas</span></div></div>
-    <section className="card"><div className="card-row"><h2>Últimos {recent.length || 0} intentos</h2><strong>{recent.length ? Math.round(recentCounts.autonomous / recent.length * 100) : 0}% autónomos</strong></div><div className="result-bar" aria-label={`${recentCounts.autonomous} autónomos, ${recentCounts.assisted} con ayuda y ${recentCounts.incorrect} incorrectos`}><span className="autonomous" style={{ flex: recentCounts.autonomous }} /><span className="assisted" style={{ flex: recentCounts.assisted }} /><span className="incorrect" style={{ flex: recentCounts.incorrect }} /></div><div className="legend"><span>● Autónoma {recentCounts.autonomous}</span><span>● Con ayuda {recentCounts.assisted}</span><span>● Incorrecta {recentCounts.incorrect}</span></div></section>
+    <div className="stat-grid"><div><strong>{completed.length}</strong><span>sesiones</span></div><div><strong>{trained}</strong><span>señales iniciadas</span></div><div><strong>{learned}</strong><span>dominadas</span></div></div>
+    <section className="card"><div className="card-row"><h2>Últimos {recent.length} intentos</h2><strong>{recent.length ? Math.round(recentCounts.correct / recent.length * 100) : 0}% correctos</strong></div><div className="result-bar" aria-label={`${recentCounts.correct} correctos y ${recentCounts.incorrect} incorrectos`}><span className="autonomous" style={{ flex: recentCounts.correct }} /><span className="incorrect" style={{ flex: recentCounts.incorrect }} /></div><div className="legend binary-legend"><span>● Correcta {recentCounts.correct}</span><span>● Incorrecta {recentCounts.incorrect}</span></div></section>
     <h2 className="section-title">Por señal y lado</h2>
     <div className="list">
       {rows.map(({ signal, progress }) => <Link className="progress-item" key={signal.id} to={`/signals/${encodeURIComponent(signal.id)}`}>
@@ -35,6 +39,17 @@ export function ProgressPage() {
       </Link>)}
     </div>
     <h2 className="section-title">Últimas sesiones</h2>
-    <div className="card history">{sessions.filter((item) => item.status === 'completed').slice(0, 5).map((session) => <div key={session.id}><span>{new Date(session.startedAt).toLocaleDateString('es-ES')}</span><strong>{session.rating === 'easy' ? 'Fácil' : session.rating === 'difficult' ? 'Difícil' : 'Adecuada'}</strong></div>)}{!sessions.some((item) => item.status === 'completed') && <p>Aún no hay sesiones completadas.</p>}</div>
+    <div className="history-cards">{completed.slice(0, 10).map((session) => {
+      const sessionBlocks = blocks.filter((block) => block.sessionId === session.id);
+      const summary = summarizeSession(sessionBlocks, records.filter((record) => record.sessionId === session.id));
+      const correct = summary.reduce((sum, item) => sum + item.correctCount, 0);
+      const total = summary.reduce((sum, item) => sum + item.total, 0);
+      const names = summary.map((item) => signals.find((signal) => signal.id === item.block.signalId)?.name).filter(Boolean);
+      return <article className="card history-session" key={session.id}>
+        <div className="card-row"><div><strong>{new Date(session.startedAt).toLocaleDateString('es-ES')}</strong><small>{session.trainingMode === 'circuit' ? 'Circuito' : 'Repetición'} · {summary.length} señal{summary.length === 1 ? '' : 'es'}</small></div><strong>{total ? Math.round(correct / total * 100) : 0}%</strong></div>
+        <p>{names.join(' · ') || 'Sesión histórica'}</p><div className="history-results"><span>{correct} correctas</span><span>{total - correct} incorrectas</span><span>{summary.filter((item) => item.passed).length}/{summary.length} superadas</span></div>
+        {session.quickImpressions.length > 0 && <small>{session.quickImpressions.join(' · ')}</small>}{session.note && <p className="history-note">{session.note}</p>}
+      </article>;
+    })}{!completed.length && <p>Aún no hay sesiones completadas.</p>}</div>
   </>;
 }

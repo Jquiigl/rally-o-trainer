@@ -204,7 +204,7 @@ journey
 - recomendación explicable;
 - sustitución y elección manual;
 - ficha de señal con las tres capas de contenido;
-- sesión individual de hasta 15 minutos;
+- sesión de una o varias señales con pausa y recordatorio de descanso;
 - registro rápido y agregado;
 - finalización anticipada;
 - estados de progreso y repaso;
@@ -370,8 +370,8 @@ journey
 | US-LIB-01 | Must | Como guía, quiero navegar por RSCE y FCI separadamente para no confundir ámbitos. | Autoridad y versión permanecen visibles en listado y detalle. |
 | US-SIG-01 | Must | Como principiante, quiero una explicación sencilla para comprender la señal. | Regla, explicación y consejo aparecen separados y etiquetados. |
 | US-SIG-02 | Must | Como guía, quiero saber el material y ubicación antes de practicar. | Ambos aparecen antes del botón de inicio. |
-| US-SES-01 | Must | Como guía, quiero iniciar una sesión de 15 minutos rápidamente. | Aceptar la recomendación desde inicio requiere un máximo de tres pulsaciones. |
-| US-SES-02 | Must | Como guía, quiero registrar un intento con un toque para mantener la atención en el perro. | Cada uno de los tres resultados se guarda con una pulsación. |
+| US-SES-01 | Must | Como guía, quiero iniciar rápidamente una sesión con una o varias señales. | Aceptar la recomendación, seleccionar modalidad e iniciar requiere un máximo de tres pulsaciones. |
+| US-SES-02 | Must | Como guía, quiero registrar un intento con un toque para mantener la atención en el perro. | Correcta e Incorrecta se guardan con una pulsación y avanzan automáticamente. |
 | US-SES-03 | Must | Como guía, quiero introducir un resultado agregado para guardar el teléfono mientras practico. | Puede indicar total, autónomas, con ayuda e incorrectas; la suma se valida. |
 | US-SES-04 | Must | Como guía, quiero deshacer el último resultado para corregir un toque accidental. | Deshacer está visible tras registrar y restaura cálculos y datos. |
 | US-SES-05 | Must | Como guía, quiero terminar antes e indicar el motivo para respetar al perro y el contexto. | Se puede finalizar en cualquier momento con una sola selección de motivo. |

@@ -510,7 +510,7 @@ El contenido editorial rechazará:
 - repetir cuando el perro muestre estrés, dolor o desconexión persistente;
 - instrucciones que prioricen completar la sesión sobre el bienestar.
 
-La sesión de 15 minutos es un máximo, no una obligación. El consejo puede indicar detenerse antes y cerrar con una actividad sencilla y positiva.
+Los 15 minutos son un intervalo de recordatorio de descanso, no un máximo. El consejo puede indicar detenerse antes y cerrar con una actividad sencilla y positiva.
 
 ### 13. Progresión RSCE–FCI
 

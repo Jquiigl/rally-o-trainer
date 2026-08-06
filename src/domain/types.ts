@@ -2,7 +2,8 @@ export type Side = 'left' | 'right' | 'not-applicable';
 export type Location = 'home' | 'outdoor-small' | 'club';
 export type SessionObjective = 'learn' | 'autonomy' | 'precision' | 'review' | 'side';
 export type PracticeResult = 'incorrect' | 'assisted' | 'autonomous';
-export type SessionStatus = 'active' | 'completed';
+export type SessionStatus = 'active' | 'paused' | 'completed' | 'discarded';
+export type TrainingMode = 'repetition' | 'circuit';
 
 export type MaterialRequirement = {
   id: string;
@@ -70,6 +71,15 @@ export type TrainingSession = {
   rating: 'difficult' | 'appropriate' | 'easy' | null;
   note: string;
   plannerRulesVersion: '1';
+  trainingMode: TrainingMode;
+  targetAttempts: 10;
+  breakCount: number;
+  quickImpressions: string[];
+  activeSince: number | null;
+  effectiveTrainingMs: number;
+  restCycleStartedAt: number | null;
+  pausedAt: number | null;
+  pauseKind: 'manual' | 'break' | null;
 };
 
 export type PracticeBlock = {
@@ -83,6 +93,7 @@ export type PracticeBlock = {
   practiceContext: 'individual' | 'course';
   inputMode: 'attempt';
   dominantHelp: string | null;
+  note: string;
 };
 
 export type PracticeRecord = {
@@ -93,6 +104,9 @@ export type PracticeRecord = {
   result: PracticeResult;
   recordedAt: number;
   localDate: string;
+  sessionSequence?: number;
+  repetitionNumber?: number;
+  circuitRound?: number;
 };
 
 export type Evidence = {

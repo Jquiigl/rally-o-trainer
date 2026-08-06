@@ -6,15 +6,43 @@ const id = z.string().min(1);
 const timestamp = z.number().int().nonnegative();
 const dogSchema = z.object({ id, name: z.string(), nameNormalized: z.string(), breed: z.string(), createdAt: timestamp, updatedAt: timestamp, archivedAt: timestamp.nullable() });
 const settingsSchema = z.object({ id: z.literal('settings'), activeDogId: id.nullable(), theme: z.enum(['system', 'light', 'dark']), preferredLocation: z.enum(['home', 'outdoor-small', 'club']), availableMaterialIds: z.array(z.string()), lastBackupAt: timestamp.nullable(), updatedAt: timestamp });
-const sessionSchema = z.object({ id, dogId: id, status: z.enum(['active', 'completed']), objective: z.enum(['learn', 'autonomy', 'precision', 'review', 'side']), location: z.enum(['home', 'outdoor-small', 'club']), startedAt: timestamp, startedLocalDate: z.string(), endedAt: timestamp.nullable(), endReason: z.string().nullable(), rating: z.enum(['difficult', 'appropriate', 'easy']).nullable(), note: z.string(), plannerRulesVersion: z.literal('1') });
-const blockSchema = z.object({ id, sessionId: id, sequence: z.number().int().positive(), signalId: id, signalRevisionId: id, progressCompatibilityKey: id, side: z.enum(['left', 'right', 'not-applicable']), practiceContext: z.enum(['individual', 'course']), inputMode: z.literal('attempt'), dominantHelp: z.string().nullable() });
-const recordSchema = z.object({ id, blockId: id, sessionId: id, sequence: z.number().int().positive(), result: z.enum(['incorrect', 'assisted', 'autonomous']), recordedAt: timestamp, localDate: z.string() });
+const sessionSchema = z.object({
+  id, dogId: id,
+  status: z.enum(['active', 'paused', 'completed', 'discarded']),
+  objective: z.enum(['learn', 'autonomy', 'precision', 'review', 'side']),
+  location: z.enum(['home', 'outdoor-small', 'club']),
+  startedAt: timestamp, startedLocalDate: z.string(), endedAt: timestamp.nullable(),
+  endReason: z.string().nullable(), rating: z.enum(['difficult', 'appropriate', 'easy']).nullable(),
+  note: z.string(), plannerRulesVersion: z.literal('1'),
+  trainingMode: z.enum(['repetition', 'circuit']).optional(),
+  targetAttempts: z.literal(10).optional(),
+  breakCount: z.number().int().nonnegative().optional(),
+  quickImpressions: z.array(z.string()).optional(),
+  activeSince: timestamp.nullable().optional(),
+  effectiveTrainingMs: timestamp.optional(),
+  restCycleStartedAt: timestamp.nullable().optional(),
+  pausedAt: timestamp.nullable().optional(),
+  pauseKind: z.enum(['manual', 'break']).nullable().optional()
+}).transform((session) => ({
+  ...session,
+  trainingMode: session.trainingMode ?? 'repetition' as const,
+  targetAttempts: session.targetAttempts ?? 10 as const,
+  breakCount: session.breakCount ?? 0,
+  quickImpressions: session.quickImpressions ?? [],
+  activeSince: session.activeSince ?? (session.status === 'active' ? session.startedAt : null),
+  effectiveTrainingMs: session.effectiveTrainingMs ?? (session.endedAt ? Math.max(0, session.endedAt - session.startedAt) : 0),
+  restCycleStartedAt: session.restCycleStartedAt ?? (session.status === 'active' ? session.startedAt : null),
+  pausedAt: session.pausedAt ?? null,
+  pauseKind: session.pauseKind ?? null
+}));
+const blockSchema = z.object({ id, sessionId: id, sequence: z.number().int().positive(), signalId: id, signalRevisionId: id, progressCompatibilityKey: id, side: z.enum(['left', 'right', 'not-applicable']), practiceContext: z.enum(['individual', 'course']), inputMode: z.literal('attempt'), dominantHelp: z.string().nullable(), note: z.string().default('') });
+const recordSchema = z.object({ id, blockId: id, sessionId: id, sequence: z.number().int().positive(), result: z.enum(['incorrect', 'assisted', 'autonomous']), recordedAt: timestamp, localDate: z.string(), sessionSequence: z.number().int().positive().optional(), repetitionNumber: z.number().int().positive().optional(), circuitRound: z.number().int().positive().optional() });
 const courseSchema = z.object({ id, name: z.string(), rulesetId: z.enum(['rsce:debutante', 'rsce:grade-1', 'rsce:grade-2', 'rsce:grade-3', 'fci:international']), createdAt: timestamp, updatedAt: timestamp });
 const courseItemSchema = z.object({ id, courseId: id, sequence: z.number().int().positive(), signalId: id, side: z.enum(['left', 'right', 'not-applicable']) });
 
 const backupSchema = z.object({
   format: z.literal('rally-o-trainer-backup'),
-  schemaVersion: z.literal(1),
+  schemaVersion: z.union([z.literal(1), z.literal(2)]),
   exportedAt: z.string(),
   contentPackageVersion: z.string(),
   data: z.object({
@@ -50,7 +78,7 @@ export function parseBackup(raw: string) {
   if (parsed.data.blocks.some((item) => !sessionIds.has(item.sessionId))) throw new Error('La copia contiene bloques sin sesión.');
   if (parsed.data.records.some((item) => !sessionIds.has(item.sessionId) || !blockIds.has(item.blockId) || blockById.get(item.blockId)?.sessionId !== item.sessionId)) throw new Error('La copia contiene resultados huérfanos o incoherentes.');
   if (parsed.data.courseItems.some((item) => !courseIds.has(item.courseId))) throw new Error('La copia contiene elementos de pista huérfanos.');
-  if (parsed.data.sessions.filter((item) => item.status === 'active').length > 1) throw new Error('La copia contiene más de una sesión activa.');
+  if (parsed.data.sessions.filter((item) => item.status === 'active' || item.status === 'paused').length > 1) throw new Error('La copia contiene más de una sesión abierta.');
   return parsed;
 }
 
@@ -63,7 +91,7 @@ export async function createBackup(): Promise<string> {
     courses: await db.courses.toArray(), courseItems: await db.courseItems.toArray()
   };
   return JSON.stringify({
-    format: 'rally-o-trainer-backup', schemaVersion: 1,
+    format: 'rally-o-trainer-backup', schemaVersion: 2,
     exportedAt: new Date().toISOString(), contentPackageVersion: CONTENT_PACKAGE_VERSION, data
   }, null, 2);
 }

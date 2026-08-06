@@ -1,71 +1,132 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { getSignal } from '../content/signals';
-import { completeSession, db, recordAttempt, undoLastAttempt } from '../data/db';
+import {
+  db, discardSession, finishSession, pauseSession, recordStructuredAttempt, resumeSession,
+  continueAfterRestNotice, startStructuredSession, undoLastAttempt, updateSessionImpressions, updateSignalNote
+} from '../data/db';
 import { useLiveData } from '../data/useLiveData';
-import type { PracticeResult, TrainingSession } from '../domain/types';
+import { effectiveTrainingMs, getSessionStep, restDue, summarizeSession } from '../domain/trainingSession';
 import { OfficialSignalSign } from '../components/OfficialSignalSign';
 
-const MAX_SECONDS = 15 * 60;
+const quickOptions = [
+  'Muy concentrado', 'Buena motivación', 'Se distrae', 'Necesita ayuda', 'Responde con fluidez',
+  'Dificultad con la posición', 'Dificultad con el guía', 'Entorno con distracciones', 'Fatiga',
+  'Mejor que la sesión anterior'
+];
+
+function formatDuration(milliseconds: number): string {
+  const totalSeconds = Math.max(0, Math.floor(milliseconds / 1_000));
+  const hours = Math.floor(totalSeconds / 3_600);
+  const minutes = Math.floor((totalSeconds % 3_600) / 60);
+  const seconds = totalSeconds % 60;
+  return hours ? `${hours} h ${minutes} min` : `${minutes}:${String(seconds).padStart(2, '0')}`;
+}
 
 export function SessionPage() {
   const { sessionId = '' } = useParams();
   const navigate = useNavigate();
   const session = useLiveData(() => db.sessions.get(sessionId), [sessionId], undefined);
-  const block = useLiveData(() => db.blocks.where('sessionId').equals(sessionId).first(), [sessionId], undefined);
+  const blocks = useLiveData(() => db.blocks.where('sessionId').equals(sessionId).sortBy('sequence'), [sessionId], []);
   const records = useLiveData(() => db.records.where('sessionId').equals(sessionId).sortBy('recordedAt'), [sessionId], []);
+  const dog = useLiveData(async () => session ? db.dogs.get(session.dogId) : undefined, [session?.dogId], undefined);
   const [now, setNow] = useState(Date.now());
-  const [finishing, setFinishing] = useState(false);
   const [busy, setBusy] = useState(false);
-  const [endReason, setEndReason] = useState('ended-early');
-  const [dominantHelp, setDominantHelp] = useState('');
-  const elapsed = session ? Math.max(0, Math.floor((now - session.startedAt) / 1000)) : 0;
-  const remaining = Math.max(0, MAX_SECONDS - elapsed);
-  const phase = elapsed < 120 ? 'Activación' : elapsed < 12 * 60 ? 'Trabajo' : 'Cierre positivo';
-  const signal = block ? getSignal(block.signalId) : undefined;
-  const counts = useMemo(() => ({
-    incorrect: records.filter((item) => item.result === 'incorrect').length,
-    assisted: records.filter((item) => item.result === 'assisted').length,
-    autonomous: records.filter((item) => item.result === 'autonomous').length
-  }), [records]);
+  const [summaryOpen, setSummaryOpen] = useState(false);
+  const [notesOpen, setNotesOpen] = useState(false);
+  const [note, setNote] = useState('');
 
-  useEffect(() => {
-    const id = window.setInterval(() => setNow(Date.now()), 1_000);
-    return () => window.clearInterval(id);
-  }, []);
+  useEffect(() => { const timer = window.setInterval(() => setNow(Date.now()), 1_000); return () => window.clearInterval(timer); }, []);
+  useEffect(() => { if (session) setNote(session.note); }, [session?.id]);
 
-  async function add(result: PracticeResult) {
+  const step = useMemo(() => session ? getSessionStep(session.trainingMode, blocks, records, session.targetAttempts) : null, [session, blocks, records]);
+  const summaries = useMemo(() => summarizeSession(blocks, records), [blocks, records]);
+  const currentSignal = step?.block ? getSignal(step.block.signalId) : undefined;
+  const totalCorrect = summaries.reduce((sum, item) => sum + item.correctCount, 0);
+  const totalAttempts = summaries.reduce((sum, item) => sum + item.total, 0);
+  const globalRate = totalAttempts ? Math.round(totalCorrect / totalAttempts * 100) : 0;
+
+  async function run(action: () => Promise<void>) {
+    if (busy) return;
     setBusy(true);
-    try { await recordAttempt(sessionId, result); } finally { setBusy(false); }
+    try { await action(); } finally { setBusy(false); }
   }
 
-  async function finish(rating: TrainingSession['rating'], reason: string | null) {
-    if (dominantHelp && block) await db.blocks.update(block.id, { dominantHelp });
-    await completeSession(sessionId, rating, reason);
-    navigate('/progress');
+  async function saveNotes(impressions = session?.quickImpressions ?? [], nextNote = note) {
+    if (session) await updateSessionImpressions(session.id, impressions, nextNote);
   }
 
-  if (!session || !block || !signal) return <p>Cargando sesión…</p>;
-  if (session.status === 'completed') return <section className="center-card"><h1>Sesión finalizada</h1><button className="button button--primary" onClick={() => navigate('/progress')}>Ver progreso</button></section>;
+  function toggleImpression(value: string) {
+    if (!session) return;
+    const next = session.quickImpressions.includes(value) ? session.quickImpressions.filter((item) => item !== value) : [...session.quickImpressions, value];
+    void saveNotes(next);
+  }
 
-  if (finishing) return <section className="finish-panel">
-    <p className="eyebrow">Último paso</p><h1>¿Cómo ha ido?</h1><p>Una valoración rápida basta.</p>
-    {remaining > 0 && <label>Motivo de finalización<select value={endReason} onChange={(event) => setEndReason(event.target.value)}><option value="ended-early">Sesión breve suficiente</option><option value="dog-state">Estado del perro</option><option value="environment">Entorno o interrupción</option><option value="handler-state">Estado del guía</option><option value="other">Otro motivo</option></select></label>}
-    {counts.assisted > 0 && <label>Ayuda predominante (opcional)<select value={dominantHelp} onChange={(event) => setDominantHelp(event.target.value)}><option value="">Sin indicar</option><option value="verbal-extra">Orden verbal adicional</option><option value="gesture">Gesto adicional</option><option value="visible-lure">Señuelo visible</option><option value="leash">Uso de correa</option><option value="position-help">Ayuda de posición</option><option value="other">Otra</option></select></label>}
-    <div className="rating-buttons"><button onClick={() => finish('difficult', remaining > 0 ? endReason : null)}>Difícil</button><button onClick={() => finish('appropriate', remaining > 0 ? endReason : null)}>Adecuada</button><button onClick={() => finish('easy', remaining > 0 ? endReason : null)}>Fácil</button></div>
-    <button className="button button--ghost" onClick={() => setFinishing(false)}>Seguir entrenando</button>
+  async function createContinuation(signalIds: string[]) {
+    if (!session) return;
+    const selectedBlocks = blocks.filter((block) => signalIds.includes(block.signalId));
+    await finishSession(session.id);
+    const next = await startStructuredSession({
+      dogId: session.dogId, mode: session.trainingMode, location: session.location,
+      signals: selectedBlocks.map((block) => ({ signalId: block.signalId, signalRevisionId: block.signalRevisionId, compatibilityKey: block.progressCompatibilityKey, side: block.side }))
+    });
+    navigate(`/session/${next.id}`, { replace: true });
+  }
+
+  if (!session || !blocks.length || !dog) return <section className="center-card"><p>Cargando sesión…</p></section>;
+  if (session.status === 'completed' || session.status === 'discarded') return <section className="center-card"><h1>{session.status === 'completed' ? 'Sesión guardada' : 'Sesión descartada'}</h1><button className="button button--primary" onClick={() => navigate(session.status === 'completed' ? '/progress' : '/')}>{session.status === 'completed' ? 'Ver historial' : 'Volver al inicio'}</button></section>;
+
+  if (summaryOpen || step?.complete) return <section className="session-summary">
+    <div className="page-heading"><p className="eyebrow">Resumen</p><h1>Sesión con {dog.name}</h1><p>{new Date(session.startedAt).toLocaleString('es-ES', { dateStyle: 'medium', timeStyle: 'short' })}</p></div>
+    <div className="summary-stats"><div><strong>{globalRate}%</strong><span>acierto global</span></div><div><strong>{formatDuration(effectiveTrainingMs(session, now))}</strong><span>entrenamiento</span></div><div><strong>{session.breakCount}</strong><span>descansos</span></div></div>
+    <p className="meta">Duración total {formatDuration(now - session.startedAt)} · Modo {session.trainingMode === 'circuit' ? 'circuito' : 'repetición'}</p>
+    <div className="summary-signal-list">{summaries.map((item) => { const signal = getSignal(item.block.signalId); return <article key={item.block.id} className="summary-signal">
+      <OfficialSignalSign signal={signal} compact /><div><strong>{signal.officialNumber} · {signal.name}</strong><span>{item.correctCount} correctas · {item.incorrectCount} incorrectas · {item.successRate}%</span>{item.block.note && <small>Nota: {item.block.note}</small>}</div><span className={`result-state ${item.passed ? 'passed' : 'pending'}`}>{item.passed ? 'Superada' : 'Pendiente'}</span>
+    </article>; })}</div>
+    {(session.quickImpressions.length > 0 || session.note) && <section className="card"><h2>Impresiones</h2>{session.quickImpressions.length > 0 && <p>{session.quickImpressions.join(' · ')}</p>}{session.note && <p>{session.note}</p>}</section>}
+    <div className="summary-actions">
+      <button className="button button--primary" disabled={busy} onClick={() => run(async () => { await finishSession(session.id); navigate('/progress'); })}>Guardar sesión</button>
+      <button className="button button--secondary" disabled={busy} onClick={() => run(() => createContinuation(blocks.map((block) => block.signalId)))}>Continuar entrenando</button>
+      <button className="button button--ghost" disabled={busy || summaries.every((item) => item.passed)} onClick={() => run(() => createContinuation(summaries.filter((item) => !item.passed).map((item) => item.block.signalId)))}>Repetir pendientes</button>
+      <button className="danger-link" disabled={busy} onClick={() => { if (window.confirm('¿Descartar esta sesión? Sus resultados no contarán en el progreso.')) void run(async () => { await discardSession(session.id); navigate('/'); }); }}>Descartar sesión</button>
+    </div>
   </section>;
 
+  if (session.status === 'paused') return <section className="session-overlay break-screen">
+    <span className="break-icon" aria-hidden="true">☕</span><p className="eyebrow">Sesión pausada</p><h1>Momento de recuperar</h1>
+    <p>Deja que {dog.name} beba, olfatee o descanse. Reanuda cuando ambos estéis preparados.</p>
+    <p className="meta">{session.pauseKind === 'break' ? `Descanso ${session.breakCount}` : 'Pausa manual'} · El tiempo de pausa no cuenta como entrenamiento.</p>
+    <button className="button button--primary" disabled={busy} onClick={() => run(() => resumeSession(session.id))}>Reanudar sesión</button>
+    <button className="button button--ghost" onClick={() => setSummaryOpen(true)}>Finalizar sesión</button>
+  </section>;
+
+  if (restDue(session, now) && !summaryOpen) return <section className="session-overlay rest-reminder">
+    <span className="break-icon" aria-hidden="true">15</span><p className="eyebrow">Recordatorio de descanso</p><h1>{dog.name} lleva 15 minutos trabajando</h1>
+    <p>Una pausa breve ayuda a mantener la motivación y la calidad. Puedes continuar si el perro sigue cómodo y concentrado.</p>
+    <button className="button button--primary" disabled={busy} onClick={() => run(() => pauseSession(session.id, 'break'))}>Iniciar descanso</button>
+    <button className="button button--ghost" disabled={busy} onClick={() => run(() => continueAfterRestNotice(session.id))}>Continuar sin descanso</button>
+  </section>;
+
+  if (!step || !step.block || !currentSignal) return <section className="center-card"><p>No se pudo recuperar el siguiente intento.</p></section>;
+  const currentSummary = summaries.find((item) => item.block.id === step.block?.id);
+  const progress = step.totalAttempts ? Math.round(step.completedAttempts / step.totalAttempts * 100) : 0;
   return <section className="active-session">
-    <div className="session-head"><span className="number">{signal.officialNumber}</span><div><p className="eyebrow">{phase}</p><h1>{signal.name}</h1></div></div>
-    <OfficialSignalSign signal={signal} compact className="official-sign--session" />
-    <div className="timer" role="timer" aria-label={`${Math.floor(remaining / 60)} minutos y ${remaining % 60} segundos restantes`}><strong>{String(Math.floor(remaining / 60)).padStart(2, '0')}:{String(remaining % 60).padStart(2, '0')}</strong><span>{remaining === 0 ? 'Puedes cerrar cuando quieras' : 'restantes'}</span></div>
-    <p className="session-prompt">Registra cada intento con un solo toque.</p>
-    <div className="attempt-buttons">
-      <button className="attempt attempt--wrong" disabled={busy} onClick={() => add('incorrect')}><span>×</span>Incorrecta <small>{counts.incorrect}</small></button>
-      <button className="attempt attempt--help" disabled={busy} onClick={() => add('assisted')}><span>≈</span>Con ayuda <small>{counts.assisted}</small></button>
-      <button className="attempt attempt--good" disabled={busy} onClick={() => add('autonomous')}><span>✓</span>Autónoma <small>{counts.autonomous}</small></button>
+    <header className="session-toolbar"><button className="text-button" disabled={busy} onClick={() => run(() => pauseSession(session.id, 'manual'))}>Pausar</button><span>{session.trainingMode === 'circuit' ? 'Circuito' : 'Repetición'}</span><button className="text-button" onClick={() => setSummaryOpen(true)}>Finalizar</button></header>
+    <div className="session-counters"><span>{session.trainingMode === 'circuit' ? `Vuelta ${step.circuitRound} de 10` : `Señal ${step.signalIndex + 1} de ${blocks.length}`}</span><strong>{session.trainingMode === 'circuit' ? `Señal ${step.signalIndex + 1} de ${blocks.length}` : `Intento ${step.repetition} de 10`}</strong></div>
+    <div className="session-progress" aria-label={`${progress}% de la sesión completado`}><span style={{ width: `${progress}%` }} /></div>
+    <div className="session-signal-title"><span className="number">{currentSignal.officialNumber}</span><h1>{currentSignal.name}</h1></div>
+    <OfficialSignalSign signal={currentSignal} className="official-sign--session" />
+    <p className="regulatory-prompt">{currentSignal.regulatoryDescription}</p>
+    <div className="binary-attempts">
+      <button className="attempt attempt--wrong" disabled={busy} onClick={() => run(() => recordStructuredAttempt(session.id, 'incorrect'))}><span>×</span>Incorrecta <small>{currentSummary?.incorrectCount ?? 0}</small></button>
+      <button className="attempt attempt--good" disabled={busy} onClick={() => run(() => recordStructuredAttempt(session.id, 'autonomous'))}><span>✓</span>Correcta <small>{currentSummary?.correctCount ?? 0}</small></button>
     </div>
-    <div className="session-actions"><button className="button button--ghost" disabled={!records.length} onClick={() => undoLastAttempt(sessionId)}>Deshacer último</button><button className="button button--secondary" onClick={() => setFinishing(true)}>Finalizar</button></div>
+    <button className="button button--ghost undo-button" disabled={busy || !records.length} onClick={() => run(() => undoLastAttempt(session.id))}>Deshacer último resultado</button>
+    <button className="notes-toggle" onClick={() => setNotesOpen((value) => !value)}>Impresiones y notas {notesOpen ? '−' : '+'}</button>
+    {notesOpen && <section className="session-notes">
+      <div className="impression-chips">{quickOptions.map((option) => <button key={option} className={session.quickImpressions.includes(option) ? 'selected' : ''} onClick={() => toggleImpression(option)}>{option}</button>)}</div>
+      <label>Nota general (opcional)<textarea value={note} onChange={(event) => setNote(event.target.value)} onBlur={() => void saveNotes()} placeholder="Algo útil para la próxima sesión" /></label>
+      <label>Nota de esta señal (opcional)<textarea defaultValue={step.block.note} key={step.block.id} onBlur={(event) => void updateSignalNote(step.block!.id, event.target.value)} placeholder="Detalle concreto de la señal" /></label>
+    </section>}
   </section>;
 }

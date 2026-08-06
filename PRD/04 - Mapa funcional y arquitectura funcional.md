@@ -26,7 +26,7 @@
 | Para preparar sincronización futura conviene usar eventos y abstracciones distribuidas desde ahora. | Añade complejidad sin backend ni necesidad actual. | Aplicación modular local. Los eventos serán notificaciones internas de dominio, no una infraestructura de event sourcing. |
 | Offline es un módulo aislado. | Todas las capacidades principales deben funcionar localmente; tratarlo como añadido produce dependencias ocultas de red. | Offline será una condición transversal de cada caso de uso y contrato funcional. |
 | RSCE y FCI pueden identificarse mediante condiciones dentro de la interfaz. | Acoplaría reglas y contenido a pantallas, dificultando versiones y equivalencias. | Paquetes de contenido versionados consultados mediante un catálogo común. |
-| El constructor futuro exige generalizar hoy todo entrenamiento. | Una abstracción prematura de señales, bloques, recorridos y vídeos complicaría el MVP. | Implementar señal individual como objetivo actual y documentar puntos de extensión mínimos sin crear entidades futuras innecesarias. |
+| El constructor exige un motor geométrico para entrenar varias señales. | Confunde orden de ejecución con dibujo de pista. | La sesión usa bloques ordenados y modo circuito; el plano geométrico sigue fuera del núcleo. |
 | Varias sesiones activas aportan flexibilidad. | Aumentan el riesgo de registrar en el perro equivocado y complican recuperación, cronómetro y cierre. | Proponer una única sesión activa por instalación; varios perros conservan historiales independientes. |
 | Un agregado 7/10 puede expandirse en diez intentos artificiales. | Inventaría orden, tiempo y tipo de ayuda que el usuario no registró. | Guardar el resumen como bloque agregado y usar sus conteos sin fabricar intentos individuales. |
 
@@ -229,7 +229,7 @@ Reglas:
 
 - solo existirá una sesión activa por instalación;
 - cada sesión pertenece a un solo perro;
-- el objetivo inicial del MVP es una señal individual;
+- el entrenamiento admite una o varias señales mediante bloques ordenados;
 - una sesión conservará una referencia inequívoca a la revisión de contenido practicada;
 - cada intento confirmado se persistirá de inmediato;
 - cerrar la aplicación no cambia una sesión activa a finalizada;
@@ -283,7 +283,7 @@ El historial inicial priorizará respuestas accionables:
 | Posee | Preferencias del usuario y contexto recordado. |
 | No debe | Convertir reglas deportivas o criterios de dominio en preferencias arbitrarias. |
 
-La duración de 15 minutos y los criterios principales de progreso serán reglas de producto, no controles visibles en el MVP.
+El recordatorio de descanso cada 15 minutos y los criterios principales de progreso son reglas de producto, no configuraciones avanzadas.
 
 #### 3.10 Portabilidad y ciclo de vida de datos
 
@@ -468,7 +468,7 @@ Las marcas en UC-10 y UC-11 indican que la copia, restauración y borrado abarca
 - un perro;
 - un paquete de contenido y una señal revisada;
 - recomendación simple;
-- sesión individual;
+- sesión multiseñal por repetición o circuito;
 - registro de intentos;
 - estado de progreso;
 - persistencia tras cierre.
@@ -555,7 +555,7 @@ Cada corte debe añadir contenido y capacidades sin sustituir las fuentes de ver
 | La restauración no puede revertirse por límites técnicos | Alto | Media | Validar en almacenamiento temporal y sustituir solo tras comprobar integridad. |
 | El paquete exportado depende de contenido ya no instalado | Alto | Media | Incluir referencias y datos suficientes para interpretar el historial restaurado. |
 | Preferencias terminan controlando reglas deportivas | Medio | Media | Distinguir configuración de conveniencia y reglas versionadas de dominio. |
-| Se generaliza prematuramente para recorridos | Medio | Alta | Implementar solo señal individual y añadir extensiones cuando exista el caso real. |
+| Se generaliza prematuramente para planos de recorridos | Medio | Alta | Compartir bloques ordenados sin introducir geometría en la sesión. |
 
 ## Mejoras posibles
 

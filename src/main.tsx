@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
-import { db } from './data/db';
+import { db, ensureSettings } from './data/db';
 import './styles.css';
 
 if ('serviceWorker' in navigator && import.meta.env.PROD) {
@@ -12,7 +12,7 @@ if ('serviceWorker' in navigator && import.meta.env.PROD) {
     });
     navigator.serviceWorker.register('./sw.js').then(async (registration) => {
       const offerUpdate = async (worker: ServiceWorker | null) => {
-        if (!worker || await db.sessions.where('status').equals('active').count()) return;
+        if (!worker || await db.sessions.where('status').anyOf('active', 'paused').count()) return;
         if (window.confirm('Hay una versión nueva de Rally O Trainer. ¿Actualizar ahora?')) worker.postMessage({ type: 'SKIP_WAITING' });
       };
       await offerUpdate(registration.waiting);
@@ -28,4 +28,9 @@ if ('serviceWorker' in navigator && import.meta.env.PROD) {
   });
 }
 
-createRoot(document.getElementById('root')!).render(<StrictMode><App /></StrictMode>);
+async function startApp() {
+  await ensureSettings();
+  createRoot(document.getElementById('root')!).render(<StrictMode><App /></StrictMode>);
+}
+
+void startApp();

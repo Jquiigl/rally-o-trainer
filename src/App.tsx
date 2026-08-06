@@ -9,7 +9,7 @@ import { ProgressPage } from './pages/ProgressPage';
 import { SessionPage } from './pages/SessionPage';
 import { SetupPage } from './pages/SetupPage';
 import { SignalDetailPage, SignalsPage } from './pages/SignalsPage';
-import { PreparePage, TrainPage } from './pages/TrainPage';
+import { PreparePage, TrainPage, TrainingModePage } from './pages/TrainPage';
 import { CourseBuilderPage, CourseDetailPage, CoursesPage } from './pages/CoursesPage';
 import { ExamPage } from './pages/ExamPage';
 
@@ -28,6 +28,7 @@ function RoutedApp() {
     <Route element={<AppShell />}>
       <Route path="/" element={<HomePage />} />
       <Route path="/train" element={<TrainPage />} />
+      <Route path="/train/mode" element={<TrainingModePage />} />
       <Route path="/train/prepare/:signalId" element={<PreparePage />} />
       <Route path="/signals" element={<SignalsPage />} />
       <Route path="/signals/:signalId" element={<SignalDetailPage />} />

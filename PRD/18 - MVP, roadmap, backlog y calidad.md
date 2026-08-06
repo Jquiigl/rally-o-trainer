@@ -32,7 +32,7 @@
 - aproximadamente cinco personas para piloto;
 - Android todavía sin dispositivo confirmado;
 - prioridad inmediata: saber qué practicar cada día;
-- máximo de 15 minutos por sesión;
+- recordatorio de descanso cada 15 minutos, sin límite máximo de sesión;
 - sencillez por encima del número de funciones.
 
 ### Mejoras propuestas
@@ -54,12 +54,12 @@ El MVP es una PWA personal que permite:
 1. crear un perro con nombre y raza;
 2. consultar la biblioteca RSCE Debutante completa;
 3. recibir una recomendación explicada;
-4. preparar una sesión individual de hasta 15 minutos;
-5. registrar incorrecto, con ayuda o autónomo;
+4. seleccionar una o varias señales y elegir repetición o circuito;
+5. registrar correcta o incorrecta con avance automático y deshacer;
 6. guardar y recuperar una sesión interrumpida;
 7. calcular progreso 7/10 por lado y dos días;
 8. indicar repasos y siguiente práctica;
-9. consultar historial y resumen;
+9. pausar, recuperar y consultar un resumen multiseñal e historial;
 10. crear y restaurar una copia completa;
 11. instalarse y funcionar offline en iPhone y Android compatible.
 
@@ -216,7 +216,7 @@ Se corrige el roadmap inicial: el planificador básico pasa al MVP porque sin é
 | ID | Historia | Prioridad | Criterio resumido |
 |---|---|---:|---|
 | S19 | Ver material antes de empezar | Must | Requerido y opcional diferenciados |
-| S20 | Registrar tres resultados | Must | Un toque y persistencia |
+| S20 | Registrar Correcta o Incorrecta | Must | Un toque, persistencia y avance automático |
 | S21 | Deshacer último resultado | Must | Recalcula contador |
 | S22 | Cambiar de lado | Must | Nuevo bloque separado |
 | S23 | Pausar y recuperar | Must | Sin perder datos |

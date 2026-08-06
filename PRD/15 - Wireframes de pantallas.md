@@ -3,8 +3,8 @@
 | Campo | Valor |
 |---|---|
 | Producto | Rally O Trainer |
-| Estado | Wireframes funcionales de baja fidelidad |
-| Fecha | 5 de agosto de 2026 |
+| Estado | Wireframes funcionales actualizados |
+| Fecha | 6 de agosto de 2026 |
 | Dispositivo principal | iPhone 16 Pro en vertical |
 | Adaptación | Android, iPad, Mac y PC |
 | Dependencias | Capítulos 05 y 09–14 |
@@ -200,108 +200,109 @@ Hoja inferior breve:
 
 Seleccionar cierra la hoja y recalcula la pantalla actual.
 
-### 7. W05 — Entrenar
+### 7. W05 — Seleccionar señales
 
 ```text
 ┌──────────────────────────┐
-│ Entrenar          Luna ▾ │
+│ Nueva sesión      Luna ▾ │
 │                          │
-│ RECOMENDADA              │
-│ [tarjeta señal]          │
-│ Por qué ahora…           │
-│ [ Preparar sesión ]      │
+│ Selecciona las señales   │
+│ [ Buscar número/nombre ] │
+│ [ Grado ▾ ][ Área ▾ ]    │
+│ 2 seleccionadas          │
 │                          │
-│ OTRAS OPCIONES           │
-│ Alternativa 1          › │
-│ Alternativa 2          › │
-│ Elegir cualquier señal › │
+│ [img] 101 · Tumbado   ✓  │
+│       Debutante · A      │
+│ [img] 102 · Pausa...  ✓  │
+│       Debutante · A      │
+│ [img] 103 · Rodear    +  │
+│                          │
+│ [ Continuar con 2 ]      │
 └──────────────────────────┘
 ```
 
-No muestra una lista infinita: remite a Biblioteca para elección libre.
+La lista completa es virtualmente desplazable. La acción queda fija sobre la navegación inferior y el filtrado no pierde selecciones previas.
 
-### 8. W06 — Preparación
+### 8. W06 — Elegir modalidad
 
 ```text
 ┌──────────────────────────┐
-│ ← Preparar sesión        │
-│ Giro a la derecha        │
-│ Luna · lado derecho      │
+│ ← Cambiar selección      │
+│ ¿Cómo quieres entrenar?  │
+│ 2 señales · 10 intentos  │
+│ [101] [102]              │
 │                          │
-│ Objetivo  [ Repasar ▾ ]  │
 │ Lugar     [ Casa ▾ ]     │
-│ Máximo    15 min         │
 │                          │
-│ NECESITAS                │
-│ Ningún material especial │
+│ ┌──────────────────────┐ │
+│ │ 10×  Por repetición  │ │
+│ │ Diez seguidas/señal  │ │
+│ └──────────────────────┘ │
 │                          │
-│ OBSERVA                  │
-│ • giro simultáneo        │
-│ • alineación final       │
-│                          │
-│ [ Empezar ]              │
-│ Cambiar señal            │
+│ ┌──────────────────────┐ │
+│ │ ↻    En circuito     │ │
+│ │ Diez vueltas         │ │
+│ └──────────────────────┘ │
+│ Descanso cada 15 min     │
 └──────────────────────────┘
 ```
-
-Un acordeón secundario permite elegir modo individual/agregado y ayuda predominante.
 
 ### 9. W07 — Sesión activa
 
 ```text
 ┌──────────────────────────┐
-│ Luna · Giro derecha      │
-│ Trabajo             06:42│
-│ Lado derecho             │
+│ Pausar   CIRCUITO  Final.│
+│ Vuelta 1/10   Señal 1/2  │
+│ ▬▬▬▬▬░░░░░░░░░░░░░░░░░ │
 │                          │
-│      ○ Incorrectas  1    │
-│      ○ Con ayuda    2    │
-│      ○ Autónomas    5    │
+│ 101  Tumbado             │
+│ ┌──────────────────────┐ │
+│ │   SEÑAL OFICIAL      │ │
+│ └──────────────────────┘ │
+│ Descripción breve...     │
 │                          │
-│ [   Incorrecto        ]  │
-│ [ Correcto con ayuda  ]  │
-│ [ Correcto autónomo   ]  │
+│ [ × Incorrecta ][✓ Corr.]│
+│ [ Deshacer último ]      │
 │                          │
-│ Deshacer        Pausar   │
+│ Impresiones y notas +    │
 └──────────────────────────┘
 ```
 
-- Botones ocupan toda la anchura útil y no cambian de orden.
-- Resultado autónomo no usa verde como única diferencia.
-- Un toque muestra confirmación dentro del contador, no una notificación flotante.
+- Los dos botones ocupan la zona inferior útil y no cambian de orden.
+- La señal oficial debe verse completa sin zoom en iPhone 16 Pro.
+- El avance ocurre inmediatamente y Deshacer recupera el paso anterior.
 
 ### 10. W08 — Sesión pausada
 
 ```text
 ┌──────────────────────────┐
 │ Sesión pausada           │
-│ 8 resultados guardados   │
+│ Momento de recuperar     │
+│ El tiempo de pausa no    │
+│ cuenta como entrenamiento│
 │                          │
-│ [ Continuar ]            │
-│ [ Pasar al cierre ]      │
-│ Finalizar por otro motivo│
+│ [ Reanudar sesión ]      │
+│ [ Finalizar sesión ]     │
 └──────────────────────────┘
 ```
 
-El fondo de la sesión queda inerte. Atrás del sistema equivale a cerrar la hoja, no perder sesión.
+El aviso automático de 15 minutos usa el mismo patrón, con `Iniciar descanso` y `Continuar sin descanso`.
 
-### 11. W09 — Cierre
+### 11. W09 — Impresiones
 
 ```text
 ┌──────────────────────────┐
-│ Cierre · 2–3 min         │
+│ Impresiones y notas      │
 │                          │
-│ Termina con algo sencillo│
-│ que Luna disfrute.       │
+│ [Muy concentrado]        │
+│ [Buena motivación]       │
+│ [Se distrae] [Fatiga]    │
 │                          │
-│ Sugerencia               │
-│ 3 posiciones fáciles y   │
-│ un juego breve.          │
+│ Nota general             │
+│ [......................] │
 │                          │
-│ ¿Cómo ha ido?            │
-│ [Difícil][Adecuada][Fácil]│
-│ Nota opcional            │
-│ [ Guardar y terminar ]   │
+│ Nota de señal 101        │
+│ [......................] │
 └──────────────────────────┘
 ```
 
@@ -309,19 +310,16 @@ El fondo de la sesión queda inerte. Atrás del sistema equivale a cerrar la hoj
 
 ```text
 ┌──────────────────────────┐
-│ Sesión guardada          │
-│ 12 min · 8 repeticiones  │
+│ Resumen · Luna           │
+│ 70% · 18:20 · 1 descanso│
 │                          │
-│ Incorrectas          1   │
-│ Con ayuda            2   │
-│ Autónomas            5   │
+│ [101] 7/10  SUPERADA     │
+│ [102] 6/10  PENDIENTE    │
 │                          │
-│ Sigue en progreso.       │
-│ Faltan evidencias en otro│
-│ día.                     │
-│                          │
-│ [ Volver a Inicio ]      │
-│ Ver detalle              │
+│ [ Guardar sesión ]       │
+│ [ Continuar entrenando ] │
+│ [ Repetir pendientes ]   │
+│ Descartar sesión         │
 └──────────────────────────┘
 ```
 
@@ -628,7 +626,7 @@ En escritorio, texto de lectura no supera aproximadamente 72 caracteres por lín
 - [ ] Cada pantalla responde a una pregunta principal.
 - [ ] Toda acción importante se alcanza en menos de tres pulsaciones.
 - [ ] La sesión activa no muestra navegación global.
-- [ ] Los tres resultados permanecen en orden y posición.
+- [ ] Correcta e Incorrecta permanecen en orden y posición.
 - [ ] Atrás nunca descarta datos sin avisar.
 - [ ] Ninguna tarea depende solo de arrastrar o deslizar.
 - [ ] Las acciones destructivas están separadas.
