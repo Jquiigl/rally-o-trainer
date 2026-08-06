@@ -26,11 +26,13 @@ export function HomePage() {
         <p>Tu aplicación para entrenar Rally Obedience de forma fácil, organizada y efectiva.</p>
       </div>
       <img src="./images/rally-obedience-home.webp" alt="Guía y perro entrenando juntos en una pista de Rally Obedience" />
-      <Link className="welcome-hotspot welcome-hotspot--instructions" to="/instructions">
-        <span className="sr-only">Abrir las instrucciones de uso</span>
+      <Link className="welcome-hotspot welcome-hotspot--instructions" to="/instructions" aria-label="Abrir las instrucciones de uso">
+        <span className="welcome-hotspot-icon" aria-hidden="true">?</span>
+        <span><strong>Instrucciones de uso</strong><small>Cómo funciona la aplicación</small></span>
       </Link>
-      <Link className="welcome-hotspot welcome-hotspot--training" to="/train">
-        <span className="sr-only">Configurar un entrenamiento</span>
+      <Link className="welcome-hotspot welcome-hotspot--training" to="/train" aria-label="Configurar un entrenamiento">
+        <span className="welcome-hotspot-icon" aria-hidden="true">⚙</span>
+        <span><strong>Configurar entrenamiento</strong><small>Elige señales y modalidad</small></span>
       </Link>
     </section>
     {activeSession && activeBlock && activeSignal && <section className="card active-reminder"><p className="eyebrow">Sesión {activeSession.status === 'paused' ? 'pausada' : 'en curso'}</p><div className="signal-reference"><OfficialSignalSign signal={activeSignal} compact /><h2>{activeSignal.name}{(activeSession.trainingMode === 'circuit') ? ' · Circuito' : ''}</h2></div><p>Tienes {activeRecords} resultado{activeRecords === 1 ? '' : 's'} guardado{activeRecords === 1 ? '' : 's'}. Elige cómo continuar.</p><div className="active-reminder-actions"><Link className="button button--primary" to={`/session/${activeSession.id}`}>Continuar sesión</Link><button className="button button--secondary" onClick={async () => { await finishSession(activeSession.id, 'ended-from-home'); navigate('/progress'); }}>Finalizar y guardar</button><button className="danger-link" onClick={async () => { if (window.confirm('¿Descartar la sesión abierta? Sus resultados no contarán en el progreso.')) await discardSession(activeSession.id); }}>Descartar sesión</button></div></section>}

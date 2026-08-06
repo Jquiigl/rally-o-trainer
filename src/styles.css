@@ -47,10 +47,14 @@ input:focus, select:focus, textarea:focus, button:focus-visible, a:focus-visible
 .hero .eyebrow { color: var(--gold); }
 .welcome-visual { position: relative; margin: -24px -16px 20px; overflow: hidden; background: #e9eadf; }
 .welcome-visual > img { display: block; width: 100%; height: auto; }
-.welcome-hotspot { position: absolute; z-index: 1; left: 54.2%; width: 39%; border-radius: 14px; }
-.welcome-hotspot--instructions { top: 49.5%; height: 10.5%; }
-.welcome-hotspot--training { top: 60.9%; height: 10.8%; }
-.welcome-hotspot:hover { background: rgb(255 255 255 / .08); }
+.welcome-hotspot { position: absolute; z-index: 1; left: 53.2%; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: clamp(6px, 1.5vw, 12px); width: 40.5%; min-height: 0; padding: clamp(7px, 1.7vw, 14px); border: 1px solid rgb(255 255 255 / .28); border-radius: clamp(9px, 2vw, 16px); box-shadow: 0 6px 18px rgb(0 0 0 / .2); }
+.welcome-hotspot--instructions { top: 49.2%; height: 10.8%; color: #fff; background: rgb(22 76 40 / .97); }
+.welcome-hotspot--training { top: 60.8%; height: 11%; color: #102f20; background: rgb(239 239 205 / .98); border-color: rgb(38 76 43 / .35); }
+.welcome-hotspot > span:last-child { display: grid; gap: 2px; min-width: 0; }
+.welcome-hotspot strong { font-size: clamp(.64rem, 2.15vw, .98rem); line-height: 1.05; text-transform: uppercase; }
+.welcome-hotspot small { font-size: clamp(.54rem, 1.65vw, .78rem); line-height: 1.15; }
+.welcome-hotspot-icon { display: grid; place-items: center; width: clamp(24px, 6vw, 42px); height: clamp(24px, 6vw, 42px); color: currentColor; border: 2px solid currentColor; border-radius: 50%; font-size: clamp(.8rem, 3vw, 1.35rem); font-weight: 900; }
+.welcome-hotspot:hover { filter: brightness(1.08); }
 .welcome-hotspot:focus-visible { outline: 4px solid var(--gold); outline-offset: 2px; }
 .eyebrow { margin-bottom: .35rem; color: var(--forest-2); font-size: .76rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .page-heading { margin-bottom: 20px; }
