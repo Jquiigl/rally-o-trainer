@@ -252,6 +252,16 @@ export async function deleteDog(dogId: string): Promise<void> {
   });
 }
 
+export async function deleteCompletedSession(sessionId: string): Promise<void> {
+  await db.transaction('rw', db.sessions, db.blocks, db.records, async () => {
+    const session = await db.sessions.get(sessionId);
+    if (!session || session.status !== 'completed') throw new Error('Solo se puede eliminar una sesión guardada.');
+    await db.records.where('sessionId').equals(sessionId).delete();
+    await db.blocks.where('sessionId').equals(sessionId).delete();
+    await db.sessions.delete(sessionId);
+  });
+}
+
 export async function pauseSession(sessionId: string, kind: 'manual' | 'break'): Promise<void> {
   const session = await db.sessions.get(sessionId);
   if (!session || session.status !== 'active') throw new Error('La sesión no está activa.');

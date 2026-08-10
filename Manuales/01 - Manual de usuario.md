@@ -89,6 +89,8 @@ Antes de guardar puedes revisar las observaciones generales, completar una nota 
 
 Al guardar se abre el detalle de la sesión. Desde **Progreso → Ver historial** puedes consultar todas las sesiones por fecha y hora. El detalle permite editar después las observaciones y la valoración final; los aciertos y errores quedan protegidos para conservar la fiabilidad del progreso.
 
+Si una sesión se registró por error, abre su detalle y pulsa **Eliminar sesión**. La aplicación pedirá confirmación antes de borrar definitivamente la sesión, sus notas y todas sus repeticiones. Al eliminarla, sus resultados dejan de contar en el progreso del perro. Esta acción solo puede recuperarse restaurando una copia de seguridad anterior.
+
 ## 9. Entender el progreso
 
 El progreso se calcula por perro y por lado:

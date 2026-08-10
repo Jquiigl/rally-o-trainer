@@ -42,7 +42,7 @@ export function InstructionsPage() {
         <li><strong>Examen:</strong> practica el reconocimiento de señales sin alterar el progreso del perro.</li>
         <li><strong>Constructor de pistas:</strong> prepara y ordena recorridos para practicarlos.</li>
         <li><strong>Varios perros:</strong> progreso y recomendaciones independientes para cada perro.</li>
-        <li><strong>Historial:</strong> sesiones, resultados, notas y valoración final guardados por fecha y hora.</li>
+        <li><strong>Historial:</strong> sesiones, resultados, notas y valoración final guardados por fecha y hora. Desde el detalle puedes editar las anotaciones o eliminar definitivamente la sesión.</li>
         <li><strong>Copias de seguridad:</strong> exporta y restaura todos tus datos desde Perros y configuración.</li>
       </ul>
     </section>

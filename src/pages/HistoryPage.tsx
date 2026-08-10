@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Link, Navigate, useParams } from 'react-router-dom';
+import { Link, Navigate, useNavigate, useParams } from 'react-router-dom';
 import { OfficialSignalSign } from '../components/OfficialSignalSign';
 import { getSignal } from '../content/signals';
-import { db, ensureSettings, updateSessionReview } from '../data/db';
+import { db, deleteCompletedSession, ensureSettings, updateSessionReview } from '../data/db';
 import { useLiveData } from '../data/useLiveData';
 import { summarizeSession } from '../domain/trainingSession';
 
@@ -40,6 +40,7 @@ export function HistoryPage() {
 
 export function SessionDetailPage() {
   const { sessionId = '' } = useParams();
+  const navigate = useNavigate();
   const sessionState = useLiveData(async () => ({ loaded: true, session: await db.sessions.get(sessionId) }), [sessionId], { loaded: false, session: undefined });
   const session = sessionState.session;
   const dog = useLiveData(async () => session ? db.dogs.get(session.dogId) : undefined, [session?.dogId], undefined);
@@ -70,6 +71,15 @@ export function SessionDetailPage() {
     } finally { setBusy(false); }
   }
 
+  async function removeSession() {
+    if (!session || !window.confirm('¿Eliminar definitivamente esta sesión? Se borrarán sus resultados y notas, y dejará de contar en el progreso.')) return;
+    setBusy(true);
+    try {
+      await deleteCompletedSession(session.id);
+      navigate('/history', { replace: true });
+    } finally { setBusy(false); }
+  }
+
   return <>
     <Link className="back-link" to="/history">‹ Historial</Link>
     <div className="page-heading"><p className="eyebrow">Sesión guardada</p><h1>{formatDateTime(session.startedAt)}</h1><p>{dog?.name} · {session.trainingMode === 'circuit' ? 'Circuito' : 'Repeticiones'} · {formatDuration(session.effectiveTrainingMs)}</p></div>
@@ -90,6 +100,6 @@ export function SessionDetailPage() {
         <h3>Valoración final</h3><p>{session.finalAssessment || 'Sin valoración final.'}</p>
       </>}
     </section>
-    {editing ? <div className="edit-actions"><button className="button button--primary" disabled={busy} onClick={() => void saveEdits()}>Guardar anotaciones</button><button className="button button--ghost" disabled={busy} onClick={() => setEditing(false)}>Cancelar</button></div> : <button className="button button--secondary" onClick={() => setEditing(true)}>Editar anotaciones</button>}
+    {editing ? <div className="edit-actions"><button className="button button--primary" disabled={busy} onClick={() => void saveEdits()}>Guardar anotaciones</button><button className="button button--ghost" disabled={busy} onClick={() => setEditing(false)}>Cancelar</button></div> : <div className="history-detail-actions"><button className="button button--secondary" disabled={busy} onClick={() => setEditing(true)}>Editar anotaciones</button><button className="danger-link" disabled={busy} onClick={() => void removeSession()}>Eliminar sesión</button></div>}
   </>;
 }
