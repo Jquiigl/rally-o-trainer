@@ -28,7 +28,11 @@ export function InstructionsPage() {
     </section>
     <section className="card instruction-block">
       <span className="instruction-number" aria-hidden="true">4</span>
-      <div><h2>Comprueba la evolución</h2><p>En <strong>Progreso</strong> verás el estado de cada señal y lado. Una señal se considera aprendida al lograr al menos 7 aciertos de 10 en dos días diferentes.</p></div>
+      <div><h2>Valora y guarda</h2><p>Al terminar, revisa las notas de cada señal, añade una valoración final y guarda la sesión. Puedes dictar texto con el micrófono del teclado de iPhone o Android.</p></div>
+    </section>
+    <section className="card instruction-block">
+      <span className="instruction-number" aria-hidden="true">5</span>
+      <div><h2>Comprueba la evolución</h2><p>En <strong>Progreso</strong> verás el estado de cada señal y lado. Toca una señal para consultar su evolución cronológica. Desde el historial puedes volver a abrir una sesión y corregir sus anotaciones, pero no sus resultados.</p></div>
     </section>
 
     <section className="card">
@@ -38,6 +42,7 @@ export function InstructionsPage() {
         <li><strong>Examen:</strong> practica el reconocimiento de señales sin alterar el progreso del perro.</li>
         <li><strong>Constructor de pistas:</strong> prepara y ordena recorridos para practicarlos.</li>
         <li><strong>Varios perros:</strong> progreso y recomendaciones independientes para cada perro.</li>
+        <li><strong>Historial:</strong> sesiones, resultados, notas y valoración final guardados por fecha y hora.</li>
         <li><strong>Copias de seguridad:</strong> exporta y restaura todos tus datos desde Perros y configuración.</li>
       </ul>
     </section>

@@ -51,7 +51,7 @@ La separación clave es contenido versionado frente a evidencia del usuario. Una
 
 ## 4. Persistencia
 
-La base `rally-o-trainer` usa actualmente la versión 3 y las tablas:
+La base `rally-o-trainer` usa actualmente la versión 4 y las tablas:
 
 - `dogs`;
 - `settings`;
@@ -61,7 +61,7 @@ La base `rally-o-trainer` usa actualmente la versión 3 y las tablas:
 - `courses`;
 - `courseItems`.
 
-La versión 2 añade pistas. La versión 3 convierte la sesión individual en una sesión estructurada multiseñal y añade modalidad, estado pausado, tiempo activo, descansos, impresiones y notas por bloque. La migración completa valores seguros sin eliminar perros, sesiones, bloques ni registros anteriores. Los cambios que alteren datos existentes deben crear una nueva versión Dexie con migración idempotente. No se modifica una versión ya publicada.
+La versión 2 añade pistas. La versión 3 convierte la sesión individual en una sesión estructurada multiseñal y añade modalidad, estado pausado, tiempo activo, descansos, impresiones y notas por bloque. La versión 4 añade `finalAssessment` con cadena vacía como valor seguro para sesiones históricas. La migración no elimina perros, sesiones, bloques ni registros anteriores. Los cambios que alteren datos existentes deben crear una nueva versión Dexie con migración idempotente. No se modifica una versión ya publicada.
 
 Una sesión nueva se crea con todos sus bloques en una transacción. Solo puede existir una sesión `active` o `paused` por instalación, y solo las sesiones `completed` aportan evidencia al progreso. Las descartadas conservan trazabilidad local pero quedan excluidas del historial y de las estadísticas.
 
@@ -114,7 +114,7 @@ El flujo `.github/workflows/deploy-pages.yml` publica `dist/` en GitHub Pages de
 
 ## 8. Copias e importación
 
-El formato v2 incluye identificador, versión de esquema, fecha, versión del contenido y todas las tablas. La restauración acepta también copias v1 y añade los valores de sesión estructurada antes de abrir la transacción que reemplaza los datos. Las migraciones futuras deben aceptar versiones anteriores mediante adaptadores explícitos.
+El formato v3 incluye identificador, versión de esquema, fecha, versión del contenido y todas las tablas. La restauración acepta copias v1 y v2, añade los valores de sesión estructurada y completa `finalAssessment` antes de abrir la transacción que reemplaza los datos. Las migraciones futuras deben aceptar versiones anteriores mediante adaptadores explícitos.
 
 Nunca ejecutes código contenido en una copia ni incluyas HTML sin sanear en notas.
 
@@ -127,7 +127,8 @@ Nunca ejecutes código contenido en una copia ni incluyas HTML sin sanear en not
 - repetición y circuito, avance automático y umbral 7/10;
 - registro binario, deshacer global y cierre anticipado;
 - pausa, reanudación, recordatorio recurrente y recuperación tras recarga;
-- impresiones, notas, resumen y repetición de pendientes;
+- impresiones, notas generales y por señal, valoración final y repetición de pendientes;
+- historial, detalle de sesión, edición exclusiva de anotaciones y evolución por señal;
 - progresión separada por lados;
 - exportación y restauración;
 - instalación y sesión sin conexión;

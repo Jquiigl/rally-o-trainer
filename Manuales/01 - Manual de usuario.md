@@ -85,6 +85,10 @@ Puedes finalizar aunque no hayas completado los diez intentos. El resumen muestr
 
 Desde el resumen puedes **Guardar sesión**, **Continuar entrenando**, **Repetir pendientes** o **Descartar sesión**. Descartar exige confirmación y sus resultados no cuentan para el progreso.
 
+Antes de guardar puedes revisar las observaciones generales, completar una nota específica para cada señal y escribir una valoración final. En iPhone y Android puedes usar el micrófono del teclado dentro de cualquier campo de texto. El dictado depende del sistema operativo y no envía audio a Rally O Trainer.
+
+Al guardar se abre el detalle de la sesión. Desde **Progreso → Ver historial** puedes consultar todas las sesiones por fecha y hora. El detalle permite editar después las observaciones y la valoración final; los aciertos y errores quedan protegidos para conservar la fiabilidad del progreso.
+
 ## 9. Entender el progreso
 
 El progreso se calcula por perro y por lado:
@@ -96,6 +100,10 @@ El progreso se calcula por perro y por lado:
 - **Necesita repaso**: han pasado 30 días, aparecen errores consecutivos o el rendimiento ha descendido después de aprenderla.
 
 Los intentos en circuito cuentan como ejecuciones reales de la señal. El resumen **Superada** describe esa sesión; el estado **Aprendida** exige además la confirmación en dos días.
+
+Pulsa cualquier fila de **Por señal y lado** para ver su evolución cronológica: modalidad, lado, porcentaje, aciertos, errores y notas de cada sesión. La tendencia compara de forma sencilla las dos sesiones más recientes y evita interpretar como cambio una diferencia de cinco puntos o menos.
+
+La vista general muestra sesiones, señales iniciadas, dominadas y pendientes de repaso. También reúne las observaciones recientes y ofrece acceso al historial completo.
 
 ## 10. Consultar señales
 

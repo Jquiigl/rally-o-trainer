@@ -64,6 +64,17 @@ class RallyDatabase extends Dexie {
       });
       await transaction.table('blocks').toCollection().modify((block) => { block.note ??= ''; });
     });
+    this.version(4).stores({
+      dogs: 'id, nameNormalized, archivedAt, updatedAt',
+      settings: 'id, activeDogId',
+      sessions: 'id, dogId, status, startedAt, [dogId+startedAt], [dogId+status]',
+      blocks: 'id, sessionId, signalId, [sessionId+sequence], [signalId+side]',
+      records: 'id, blockId, sessionId, recordedAt, [blockId+sequence]',
+      courses: 'id, rulesetId, updatedAt',
+      courseItems: 'id, courseId, [courseId+sequence], signalId'
+    }).upgrade(async (transaction) => {
+      await transaction.table('sessions').toCollection().modify((session) => { session.finalAssessment ??= ''; });
+    });
   }
 }
 
@@ -159,6 +170,7 @@ export async function startStructuredSession(input: {
     endReason: null,
     rating: null,
     note: '',
+    finalAssessment: '',
     plannerRulesVersion: '1',
     trainingMode: input.mode,
     targetAttempts: 10,
@@ -240,28 +252,6 @@ export async function deleteDog(dogId: string): Promise<void> {
   });
 }
 
-export async function completeSession(
-  sessionId: string,
-  rating: TrainingSession['rating'],
-  endReason: string | null,
-  note = ''
-): Promise<void> {
-  const session = await db.sessions.get(sessionId);
-  if (!session || session.status !== 'active') throw new Error('La sesión no está activa.');
-  await db.sessions.update(sessionId, {
-    status: 'completed',
-    endedAt: Date.now(),
-    rating,
-    endReason,
-    note: note.trim(),
-    effectiveTrainingMs: effectiveTrainingMs(session),
-    activeSince: null,
-    restCycleStartedAt: null,
-    pausedAt: null,
-    pauseKind: null
-  });
-}
-
 export async function pauseSession(sessionId: string, kind: 'manual' | 'break'): Promise<void> {
   const session = await db.sessions.get(sessionId);
   if (!session || session.status !== 'active') throw new Error('La sesión no está activa.');
@@ -292,6 +282,21 @@ export async function updateSessionImpressions(sessionId: string, quickImpressio
 
 export async function updateSignalNote(blockId: string, note: string): Promise<void> {
   await db.blocks.update(blockId, { note: note.trim() });
+}
+
+export async function updateSessionReview(input: {
+  sessionId: string;
+  note: string;
+  finalAssessment: string;
+  blockNotes: Record<string, string>;
+}): Promise<void> {
+  await db.transaction('rw', db.sessions, db.blocks, async () => {
+    const session = await db.sessions.get(input.sessionId);
+    if (!session || session.status === 'discarded') throw new Error('La sesión no admite cambios.');
+    const blocks = await db.blocks.where('sessionId').equals(input.sessionId).toArray();
+    await db.sessions.update(input.sessionId, { note: input.note.trim(), finalAssessment: input.finalAssessment.trim() });
+    await Promise.all(blocks.map((block) => db.blocks.update(block.id, { note: (input.blockNotes[block.id] ?? block.note).trim() })));
+  });
 }
 
 export async function finishSession(sessionId: string, endReason: string | null = null): Promise<void> {

@@ -13,7 +13,7 @@ const sessionSchema = z.object({
   location: z.enum(['home', 'outdoor-small', 'club']),
   startedAt: timestamp, startedLocalDate: z.string(), endedAt: timestamp.nullable(),
   endReason: z.string().nullable(), rating: z.enum(['difficult', 'appropriate', 'easy']).nullable(),
-  note: z.string(), plannerRulesVersion: z.literal('1'),
+  note: z.string(), finalAssessment: z.string().default(''), plannerRulesVersion: z.literal('1'),
   trainingMode: z.enum(['repetition', 'circuit']).optional(),
   targetAttempts: z.literal(10).optional(),
   breakCount: z.number().int().nonnegative().optional(),
@@ -42,7 +42,7 @@ const courseItemSchema = z.object({ id, courseId: id, sequence: z.number().int()
 
 const backupSchema = z.object({
   format: z.literal('rally-o-trainer-backup'),
-  schemaVersion: z.union([z.literal(1), z.literal(2)]),
+  schemaVersion: z.union([z.literal(1), z.literal(2), z.literal(3)]),
   exportedAt: z.string(),
   contentPackageVersion: z.string(),
   data: z.object({
@@ -91,7 +91,7 @@ export async function createBackup(): Promise<string> {
     courses: await db.courses.toArray(), courseItems: await db.courseItems.toArray()
   };
   return JSON.stringify({
-    format: 'rally-o-trainer-backup', schemaVersion: 2,
+    format: 'rally-o-trainer-backup', schemaVersion: 3,
     exportedAt: new Date().toISOString(), contentPackageVersion: CONTENT_PACKAGE_VERSION, data
   }, null, 2);
 }

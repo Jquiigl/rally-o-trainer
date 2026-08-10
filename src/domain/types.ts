@@ -81,6 +81,7 @@ export type TrainingSession = {
   endReason: string | null;
   rating: 'difficult' | 'appropriate' | 'easy' | null;
   note: string;
+  finalAssessment: string;
   plannerRulesVersion: '1';
   trainingMode: TrainingMode;
   targetAttempts: 10;

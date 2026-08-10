@@ -14,7 +14,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { getSignal } from '../content/signals';
 import {
   db, discardSession, finishSession, pauseSession, recordStructuredAttempt, resumeSession,
-  continueAfterRestNotice, startStructuredSession, undoLastAttempt, updateSessionImpressions, updateSignalNote
+  continueAfterRestNotice, startStructuredSession, undoLastAttempt, updateSessionImpressions, updateSessionReview, updateSignalNote
 } from '../data/db';
 import { useLiveData } from '../data/useLiveData';
 import { effectiveTrainingMs, getSessionStep, restDue, shouldPauseBeforeNextSignal, summarizeSession } from '../domain/trainingSession';
@@ -49,10 +49,13 @@ export function SessionPage() {
   const [summaryOpen, setSummaryOpen] = useState(false);
   const [notesOpen, setNotesOpen] = useState(false);
   const [note, setNote] = useState('');
+  const [finalAssessment, setFinalAssessment] = useState('');
+  const [blockNotes, setBlockNotes] = useState<Record<string, string>>({});
   const [signalTransition, setSignalTransition] = useState<SignalTransition | null>(null);
 
   useEffect(() => { const timer = window.setInterval(() => setNow(Date.now()), 1_000); return () => window.clearInterval(timer); }, []);
-  useEffect(() => { if (session) setNote(session.note); }, [session?.id]);
+  useEffect(() => { if (session) { setNote(session.note); setFinalAssessment(session.finalAssessment); } }, [session?.id]);
+  useEffect(() => { setBlockNotes(Object.fromEntries(blocks.map((block) => [block.id, block.note]))); }, [sessionId, blocks]);
 
   const step = useMemo(() => session ? getSessionStep(session.trainingMode, blocks, records, session.targetAttempts) : null, [session, blocks, records]);
   const summaries = useMemo(() => summarizeSession(blocks, records), [blocks, records]);
@@ -69,6 +72,11 @@ export function SessionPage() {
 
   async function saveNotes(impressions = session?.quickImpressions ?? [], nextNote = note) {
     if (session) await updateSessionImpressions(session.id, impressions, nextNote);
+  }
+
+  async function saveReview() {
+    if (!session) return;
+    await updateSessionReview({ sessionId: session.id, note, finalAssessment, blockNotes });
   }
 
   async function recordAttempt(result: 'incorrect' | 'autonomous') {
@@ -93,6 +101,7 @@ export function SessionPage() {
   async function createContinuation(signalIds: string[]) {
     if (!session) return;
     const selectedBlocks = blocks.filter((block) => signalIds.includes(block.signalId));
+    await saveReview();
     await finishSession(session.id);
     const next = await startStructuredSession({
       dogId: session.dogId, mode: session.trainingMode, location: session.location,
@@ -109,11 +118,18 @@ export function SessionPage() {
     <div className="summary-stats"><div><strong>{globalRate}%</strong><span>acierto global</span></div><div><strong>{formatDuration(effectiveTrainingMs(session, now))}</strong><span>entrenamiento</span></div><div><strong>{session.breakCount}</strong><span>descansos</span></div></div>
     <p className="meta">Duración total {formatDuration(now - session.startedAt)} · Modo {session.trainingMode === 'circuit' ? 'circuito' : 'repetición'}</p>
     <div className="summary-signal-list">{summaries.map((item) => { const signal = getSignal(item.block.signalId); return <article key={item.block.id} className="summary-signal">
-      <OfficialSignalSign signal={signal} compact /><div><strong>{signal.officialNumber} · {signal.name}</strong><span>{item.correctCount} correctas · {item.incorrectCount} incorrectas · {item.successRate}%</span>{item.block.note && <small>Nota: {item.block.note}</small>}</div><span className={`result-state ${item.passed ? 'passed' : 'pending'}`}>{item.passed ? 'Superada' : 'Pendiente'}</span>
+      <OfficialSignalSign signal={signal} compact /><div><strong>{signal.officialNumber} · {signal.name}</strong><span>{item.correctCount}/{item.total} correctas · {item.incorrectCount} errores · {item.successRate}%</span>{item.block.note && <small>Nota durante el ejercicio: {item.block.note}</small>}</div><span className={`result-state ${item.passed ? 'passed' : 'pending'}`}>{item.passed ? 'Superada' : 'Necesita trabajo'}</span>
     </article>; })}</div>
-    {(session.quickImpressions.length > 0 || session.note) && <section className="card"><h2>Impresiones</h2>{session.quickImpressions.length > 0 && <p>{session.quickImpressions.join(' · ')}</p>}{session.note && <p>{session.note}</p>}</section>}
+    <section className="card final-review">
+      <p className="eyebrow">Antes de guardar</p><h2>Valoración final</h2>
+      <p>Revisa o completa las observaciones. En iPhone y Android puedes utilizar el micrófono del teclado para dictarlas.</p>
+      {session.quickImpressions.length > 0 && <p className="review-impressions">{session.quickImpressions.join(' · ')}</p>}
+      <label>Observaciones generales<textarea value={note} onChange={(event) => setNote(event.target.value)} placeholder="Incidencias o detalles de la sesión" /></label>
+      <div className="review-signal-notes">{summaries.map((item) => { const signal = getSignal(item.block.signalId); return <label key={item.block.id}>{signal.officialNumber} · {signal.name}<textarea value={blockNotes[item.block.id] ?? ''} onChange={(event) => setBlockNotes((current) => ({ ...current, [item.block.id]: event.target.value }))} placeholder="Observación de esta señal" /></label>; })}</div>
+      <label>Valoración final de la sesión<textarea value={finalAssessment} onChange={(event) => setFinalAssessment(event.target.value)} placeholder="Cómo ha ido y qué conviene trabajar la próxima vez" /></label>
+    </section>
     <div className="summary-actions">
-      <button className="button button--primary" disabled={busy} onClick={() => run(async () => { await finishSession(session.id); navigate('/progress'); })}>Guardar sesión</button>
+      <button className="button button--primary" disabled={busy} onClick={() => run(async () => { await saveReview(); await finishSession(session.id); navigate(`/history/${session.id}`); })}>Guardar sesión</button>
       <button className="button button--secondary" disabled={busy} onClick={() => run(() => createContinuation(blocks.map((block) => block.signalId)))}>Continuar entrenando</button>
       <button className="button button--ghost" disabled={busy || summaries.every((item) => item.passed)} onClick={() => run(() => createContinuation(summaries.filter((item) => !item.passed).map((item) => item.block.signalId)))}>Repetir pendientes</button>
       <button className="danger-link" disabled={busy} onClick={() => { if (window.confirm('¿Descartar esta sesión? Sus resultados no contarán en el progreso.')) void run(async () => { await discardSession(session.id); navigate('/'); }); }}>Descartar sesión</button>
@@ -176,8 +192,9 @@ export function SessionPage() {
     <button className="notes-toggle" onClick={() => setNotesOpen((value) => !value)}>Impresiones y notas {notesOpen ? '−' : '+'}</button>
     {notesOpen && <section className="session-notes">
       <div className="impression-chips">{quickOptions.map((option) => <button key={option} className={session.quickImpressions.includes(option) ? 'selected' : ''} onClick={() => toggleImpression(option)}>{option}</button>)}</div>
-      <label>Nota general (opcional)<textarea value={note} onChange={(event) => setNote(event.target.value)} onBlur={() => void saveNotes()} placeholder="Algo útil para la próxima sesión" /></label>
-      <label>Nota de esta señal (opcional)<textarea defaultValue={step.block.note} key={step.block.id} onBlur={(event) => void updateSignalNote(step.block!.id, event.target.value)} placeholder="Detalle concreto de la señal" /></label>
+      <label>Nota general (opcional)<textarea value={note} onChange={(event) => setNote(event.target.value)} onBlur={() => void saveNotes()} placeholder="Algo útil para la próxima sesión" enterKeyHint="done" /></label>
+      <label>Nota de esta señal (opcional)<textarea defaultValue={step.block.note} key={step.block.id} onBlur={(event) => void updateSignalNote(step.block!.id, event.target.value)} placeholder="Detalle concreto de la señal" enterKeyHint="done" /></label>
+      <small className="dictation-hint">Puedes dictar las notas con el micrófono del teclado del teléfono.</small>
     </section>}
   </section>;
 }

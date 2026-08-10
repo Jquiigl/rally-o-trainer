@@ -25,19 +25,25 @@ export function ProgressPage() {
   }), [evidence]);
   const trained = rows.filter((row) => row.progress.some((item) => item.totalEvidence > 0)).length;
   const learned = rows.filter((row) => row.progress.every((item) => ['learned', 'consolidated'].includes(item.state))).length;
+  const needsReview = rows.filter((row) => row.progress.some((item) => item.state === 'needs-review')).length;
   const recent = [...evidence].sort((a, b) => b.recordedAt - a.recordedAt).slice(0, 30);
   const recentCounts = { correct: recent.filter((item) => item.result === 'autonomous').length, incorrect: recent.filter((item) => item.result !== 'autonomous').length };
   const completed = sessions.filter((item) => item.status === 'completed');
   return <>
     <div className="page-heading"><p className="eyebrow">{dog?.name ?? 'Tu perro'}</p><h1>Progreso</h1><p>Resultados sencillos para decidir el próximo entrenamiento.</p></div>
-    <div className="stat-grid"><div><strong>{completed.length}</strong><span>sesiones</span></div><div><strong>{trained}</strong><span>señales iniciadas</span></div><div><strong>{learned}</strong><span>dominadas</span></div></div>
+    <div className="stat-grid stat-grid--four"><div><strong>{completed.length}</strong><span>sesiones</span></div><div><strong>{trained}</strong><span>iniciadas</span></div><div><strong>{learned}</strong><span>dominadas</span></div><div><strong>{needsReview}</strong><span>para repasar</span></div></div>
     <section className="card"><div className="card-row"><h2>Últimos {recent.length} intentos</h2><strong>{recent.length ? Math.round(recentCounts.correct / recent.length * 100) : 0}% correctos</strong></div><div className="result-bar" aria-label={`${recentCounts.correct} correctos y ${recentCounts.incorrect} incorrectos`}><span className="autonomous" style={{ flex: recentCounts.correct }} /><span className="incorrect" style={{ flex: recentCounts.incorrect }} /></div><div className="legend binary-legend"><span>● Correcta {recentCounts.correct}</span><span>● Incorrecta {recentCounts.incorrect}</span></div></section>
-    <h2 className="section-title">Por señal y lado</h2>
-    <div className="list">
-      {rows.map(({ signal, progress }) => <Link className="progress-item" key={signal.id} to={`/signals/${encodeURIComponent(signal.id)}`}>
-        <OfficialSignalSign signal={signal} compact /><span className="progress-main"><strong>{signal.officialNumber} · {signal.name}</strong><span className="side-statuses">{progress.map((item) => <span key={item.side}><small>{item.side === 'left' ? 'Izq.' : item.side === 'right' ? 'Der.' : 'General'}</small><StatusBadge state={item.state} /></span>)}</span></span><span aria-hidden="true">›</span>
-      </Link>)}
-    </div>
+    <section className="card observations-card"><div className="card-row"><h2>Últimas observaciones</h2><Link to="/history">Ver historial</Link></div>
+      {completed.flatMap((session) => {
+        const sessionBlocks = blocks.filter((block) => block.sessionId === session.id);
+        return [
+          ...(session.finalAssessment ? [{ id: `${session.id}-assessment`, text: session.finalAssessment, label: 'Valoración final', sessionId: session.id, at: session.startedAt }] : []),
+          ...(session.note ? [{ id: `${session.id}-note`, text: session.note, label: 'Sesión', sessionId: session.id, at: session.startedAt }] : []),
+          ...sessionBlocks.filter((block) => block.note).map((block) => ({ id: block.id, text: block.note, label: signals.find((signal) => signal.id === block.signalId)?.name ?? 'Señal', sessionId: session.id, at: session.startedAt }))
+        ];
+      }).sort((a, b) => b.at - a.at).slice(0, 5).map((item) => <Link className="observation-item" key={item.id} to={`/history/${item.sessionId}`}><span><strong>{item.label}</strong><small>{new Date(item.at).toLocaleDateString('es-ES')}</small></span><p>{item.text}</p></Link>)}
+      {!completed.some((session) => session.note || session.finalAssessment || blocks.some((block) => block.sessionId === session.id && block.note)) && <p>Aún no hay observaciones guardadas.</p>}
+    </section>
     <h2 className="section-title">Últimas sesiones</h2>
     <div className="history-cards">{completed.slice(0, 10).map((session) => {
       const sessionBlocks = blocks.filter((block) => block.sessionId === session.id);
@@ -45,11 +51,18 @@ export function ProgressPage() {
       const correct = summary.reduce((sum, item) => sum + item.correctCount, 0);
       const total = summary.reduce((sum, item) => sum + item.total, 0);
       const names = summary.map((item) => signals.find((signal) => signal.id === item.block.signalId)?.name).filter(Boolean);
-      return <article className="card history-session" key={session.id}>
+      return <Link className="card history-session history-session-link" key={session.id} to={`/history/${session.id}`}>
         <div className="card-row"><div><strong>{new Date(session.startedAt).toLocaleDateString('es-ES')}</strong><small>{session.trainingMode === 'circuit' ? 'Circuito' : 'Repetición'} · {summary.length} señal{summary.length === 1 ? '' : 'es'}</small></div><strong>{total ? Math.round(correct / total * 100) : 0}%</strong></div>
         <p>{names.join(' · ') || 'Sesión histórica'}</p><div className="history-results"><span>{correct} correctas</span><span>{total - correct} incorrectas</span><span>{summary.filter((item) => item.passed).length}/{summary.length} superadas</span></div>
         {session.quickImpressions.length > 0 && <small>{session.quickImpressions.join(' · ')}</small>}{session.note && <p className="history-note">{session.note}</p>}
-      </article>;
+      </Link>;
     })}{!completed.length && <p>Aún no hay sesiones completadas.</p>}</div>
+    {completed.length > 0 && <Link className="button button--secondary" to="/history">Ver historial completo</Link>}
+    <h2 className="section-title">Por señal y lado</h2>
+    <div className="list">
+      {rows.map(({ signal, progress }) => <Link className="progress-item" key={signal.id} to={`/progress/signals/${encodeURIComponent(signal.id)}`}>
+        <OfficialSignalSign signal={signal} compact /><span className="progress-main"><strong>{signal.officialNumber} · {signal.name}</strong><span className="side-statuses">{progress.map((item) => <span key={item.side}><small>{item.side === 'left' ? 'Izq.' : item.side === 'right' ? 'Der.' : 'General'}</small><StatusBadge state={item.state} /></span>)}</span></span><span aria-hidden="true">›</span>
+      </Link>)}
+    </div>
   </>;
 }

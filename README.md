@@ -16,11 +16,13 @@ La versión actual incluye:
 - sesiones de una o varias señales, por repetición o en circuito;
 - registro a un toque: correcta o incorrecta, con avance automático y deshacer;
 - pausa recuperable, recordatorio de descanso cada 15 minutos y resumen por señal;
+- notas generales y por señal durante la práctica, valoración final y edición posterior de anotaciones;
+- historial detallado de sesiones y evolución cronológica por señal;
 - progreso independiente por perro y lado;
 - resultado de sesión superado con 7 correctas de 10; aprendizaje estable tras confirmarlo en al menos dos días;
 - detección de regresión y repaso tras 30 días;
 - exportación y restauración de una copia local completa;
-- temas claro, oscuro y según dispositivo.
+- temas claro, oscuro y según dispositivo;
 - constructor local de pistas Debutante de hasta diez señales;
 - modo examen offline de reconocimiento de señales;
 - navegación separada RSCE/FCI y por grado, mostrando únicamente fichas revisadas.

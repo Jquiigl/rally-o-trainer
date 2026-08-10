@@ -10,7 +10,7 @@
  * See LICENSE and THIRD_PARTY_NOTICES.md.
  */
 import { useEffect } from 'react';
-import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { HashRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { AppShell } from './components/AppShell';
 import { db, ensureSettings } from './data/db';
 import { useLiveData } from './data/useLiveData';
@@ -25,6 +25,8 @@ import { CourseBuilderPage, CourseDetailPage, CoursesPage } from './pages/Course
 import { ExamPage } from './pages/ExamPage';
 import { AuthorshipPage } from './pages/AuthorshipPage';
 import { InstructionsPage } from './pages/InstructionsPage';
+import { HistoryPage, SessionDetailPage } from './pages/HistoryPage';
+import { SignalProgressPage } from './pages/SignalProgressPage';
 
 function RoutedApp() {
   const settings = useLiveData(ensureSettings, [], undefined);
@@ -46,6 +48,9 @@ function RoutedApp() {
       <Route path="/signals" element={<SignalsPage />} />
       <Route path="/signals/:signalId" element={<SignalDetailPage />} />
       <Route path="/progress" element={<ProgressPage />} />
+      <Route path="/progress/signals/:signalId" element={<SignalProgressPage />} />
+      <Route path="/history" element={<HistoryPage />} />
+      <Route path="/history/:sessionId" element={<SessionDetailPage />} />
       <Route path="/dogs" element={<DogsSettingsPage />} />
       <Route path="/courses" element={<CoursesPage />} />
       <Route path="/courses/new" element={<CourseBuilderPage />} />
@@ -60,4 +65,10 @@ function RoutedApp() {
   </Routes>;
 }
 
-export default function App() { return <HashRouter><RoutedApp /></HashRouter>; }
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo({ top: 0, left: 0 }); }, [pathname]);
+  return null;
+}
+
+export default function App() { return <HashRouter><ScrollToTop /><RoutedApp /></HashRouter>; }

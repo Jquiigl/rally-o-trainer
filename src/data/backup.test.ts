@@ -11,6 +11,12 @@ describe('backup validation', () => {
     expect(parseBackup(emptyBackup).format).toBe('rally-o-trainer-backup');
   });
 
+  it('accepts the current backup schema version', () => {
+    const payload = JSON.parse(emptyBackup);
+    payload.schemaVersion = 3;
+    expect(parseBackup(JSON.stringify(payload)).schemaVersion).toBe(3);
+  });
+
   it('keeps version-one backups compatible when they have no course tables', () => {
     const payload = JSON.parse(emptyBackup);
     delete payload.data.courses; delete payload.data.courseItems;
@@ -24,7 +30,7 @@ describe('backup validation', () => {
     payload.data.dogs.push({ id: 'd', name: 'Luna', nameNormalized: 'luna', breed: 'Mestiza', createdAt: 0, updatedAt: 0, archivedAt: null });
     payload.data.sessions.push({ id: 's', dogId: 'd', status: 'completed', objective: 'learn', location: 'home', startedAt: 1, startedLocalDate: '2026-08-05', endedAt: 1001, endReason: null, rating: 'appropriate', note: '', plannerRulesVersion: '1' });
     const parsed = parseBackup(JSON.stringify(payload));
-    expect(parsed.data.sessions[0]).toMatchObject({ trainingMode: 'repetition', targetAttempts: 10, breakCount: 0, quickImpressions: [], effectiveTrainingMs: 1000 });
+    expect(parsed.data.sessions[0]).toMatchObject({ trainingMode: 'repetition', targetAttempts: 10, breakCount: 0, quickImpressions: [], effectiveTrainingMs: 1000, finalAssessment: '' });
   });
 
   it('rejects unknown formats and invalid record results', () => {
