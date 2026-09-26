@@ -1,10 +1,16 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link, Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { getSignal, signals } from '../content/signals';
 import { db, ensureSettings, startStructuredSession } from '../data/db';
 import { useLiveData } from '../data/useLiveData';
 import type { Location, Side, TrainingMode } from '../domain/types';
 import { OfficialSignalSign } from '../components/OfficialSignalSign';
+import {
+  clearPendingTrainingSelection,
+  loadPendingTrainingSelection,
+  resolveTrainingSignalIds,
+  savePendingTrainingSelection
+} from '../data/pendingTraining';
 
 const locationLabels: Record<Location, string> = { home: 'Casa', 'outdoor-small': 'Exterior reducido', club: 'Club' };
 const regulationLabels: Record<string, string> = {
@@ -33,7 +39,10 @@ export function TrainPage() {
   const [query, setQuery] = useState('');
   const [regulation, setRegulation] = useState('all');
   const [category, setCategory] = useState('all');
-  const [selected, setSelected] = useState<Set<string>>(() => new Set(preset && signals.some((signal) => signal.id === preset) ? [preset] : []));
+  const [selected, setSelected] = useState<Set<string>>(() => {
+    if (preset && signals.some((signal) => signal.id === preset)) return new Set([preset]);
+    return new Set((loadPendingTrainingSelection()?.signalIds ?? []).filter((id) => signals.some((signal) => signal.id === id)));
+  });
   const categories = useMemo(() => [...new Set(signals.map((signal) => signal.exerciseArea))].sort(), []);
   const visible = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase('es');
@@ -63,6 +72,15 @@ export function TrainPage() {
 
   const preferredSide = params.get('side');
   const modeParams = [...selected].map((id) => `signals=${encodeURIComponent(id)}`).concat(preferredSide && preset && selected.has(preset) ? [`preferredSignal=${encodeURIComponent(preset)}`, `preferredSide=${encodeURIComponent(preferredSide)}`] : []).join('&');
+  function rememberSelection() {
+    savePendingTrainingSelection({
+      signalIds: [...selected],
+      preferredSignal: preferredSide && preset && selected.has(preset) ? preset : null,
+      preferredSide: preferredSide === 'left' || preferredSide === 'right' ? preferredSide : null,
+      location: null,
+      sides: {}
+    });
+  }
   return <>
     <div className="page-heading"><p className="eyebrow">Nueva sesión</p><h1>Selecciona las señales</h1><p>Elige una o varias. Puedes cambiar la recomendación en cualquier momento.</p></div>
     <div className="signal-filters">
@@ -85,7 +103,7 @@ export function TrainPage() {
       })}
       {!visible.length && <p className="empty-state">No hay señales con estos filtros.</p>}
     </div>
-    <div className="sticky-action"><Link className={`button button--primary${selected.size ? '' : ' disabled'}`} aria-disabled={!selected.size} to={selected.size ? `/train/mode?${modeParams}` : '/train'}>Continuar con {selected.size || 0}</Link></div>
+    <div className="sticky-action"><Link className={`button button--primary${selected.size ? '' : ' disabled'}`} aria-disabled={!selected.size} onClick={selected.size ? rememberSelection : undefined} to={selected.size ? `/train/mode?${modeParams}` : '/train'}>Continuar con {selected.size || 0}</Link></div>
   </>;
 }
 
@@ -94,14 +112,27 @@ export function TrainingModePage() {
   const navigate = useNavigate();
   const settings = useLiveData(ensureSettings, [], undefined);
   const dog = useLiveData(async () => settings?.activeDogId ? db.dogs.get(settings.activeDogId) : undefined, [settings?.activeDogId], undefined);
-  const selectedSignals = [...new Set(params.getAll('signals'))].map((id) => signals.find((signal) => signal.id === id)).filter((signal): signal is (typeof signals)[number] => Boolean(signal));
+  const pending = useMemo(() => loadPendingTrainingSelection(), [params]);
+  const selectedSignalIds = resolveTrainingSignalIds(params.getAll('signals'), pending);
+  const selectedSignals = selectedSignalIds.map((id) => signals.find((signal) => signal.id === id)).filter((signal): signal is (typeof signals)[number] => Boolean(signal));
   const requestedLocation = params.get('location');
-  const [chosenLocation, setChosenLocation] = useState<Location | null>(requestedLocation && Object.hasOwn(locationLabels, requestedLocation) ? requestedLocation as Location : null);
+  const [chosenLocation, setChosenLocation] = useState<Location | null>(requestedLocation && Object.hasOwn(locationLabels, requestedLocation) ? requestedLocation as Location : pending?.location ?? null);
   const location = chosenLocation ?? settings?.preferredLocation ?? 'home';
-  const preferredSignal = params.get('preferredSignal');
-  const preferredSide = params.get('preferredSide');
-  const [sides, setSides] = useState<Record<string, Side>>(() => Object.fromEntries(selectedSignals.map((signal) => [signal.id, signal.id === preferredSignal && (preferredSide === 'left' || preferredSide === 'right') ? preferredSide : defaultSide(signal)])));
+  const preferredSignal = params.get('preferredSignal') ?? pending?.preferredSignal;
+  const preferredSide = params.get('preferredSide') ?? pending?.preferredSide;
+  const [sides, setSides] = useState<Record<string, Side>>(() => Object.fromEntries(selectedSignals.map((signal) => [signal.id, pending?.sides[signal.id] ?? (signal.id === preferredSignal && (preferredSide === 'left' || preferredSide === 'right') ? preferredSide : defaultSide(signal))])));
   const [busy, setBusy] = useState<TrainingMode | null>(null);
+
+  useEffect(() => {
+    if (!selectedSignals.length) return;
+    savePendingTrainingSelection({
+      signalIds: selectedSignals.map((signal) => signal.id),
+      preferredSignal: typeof preferredSignal === 'string' ? preferredSignal : null,
+      preferredSide: preferredSide === 'left' || preferredSide === 'right' || preferredSide === 'not-applicable' ? preferredSide : null,
+      location,
+      sides
+    });
+  }, [location, preferredSide, preferredSignal, selectedSignals, sides]);
 
   async function begin(mode: TrainingMode) {
     if (!dog || !selectedSignals.length) return;
@@ -111,14 +142,15 @@ export function TrainingModePage() {
         dogId: dog.id, mode, location,
         signals: selectedSignals.map((signal) => ({ signalId: signal.id, signalRevisionId: signal.revisionId, compatibilityKey: signal.progressCompatibilityKey, side: sides[signal.id] ?? defaultSide(signal) }))
       });
+      clearPendingTrainingSelection();
       navigate(`/session/${session.id}`);
     } catch (error) {
       const open = await db.sessions.where('status').anyOf('active', 'paused').first();
-      if (open) navigate(`/session/${open.id}`); else throw error;
+      if (open) { clearPendingTrainingSelection(); navigate(`/session/${open.id}`); } else throw error;
     } finally { setBusy(null); }
   }
 
-  if (!selectedSignals.length) return <Navigate to="/train" replace />;
+  if (!selectedSignals.length) return <section className="center-card"><h1>No se ha podido recuperar la selección</h1><p>Vuelve a elegir las señales. Conservaremos la próxima selección aunque la aplicación se recargue.</p><Link className="button button--primary" to="/train">Volver a la selección</Link></section>;
   return <>
     <Link className="back-link" to="/train">‹ Cambiar selección</Link>
     <div className="page-heading"><p className="eyebrow">Paso 2 de 2</p><h1>¿Cómo quieres entrenar?</h1><p>{selectedSignals.length} señal{selectedSignals.length === 1 ? '' : 'es'} · Elige entrenamiento individual o circuito.</p></div>
