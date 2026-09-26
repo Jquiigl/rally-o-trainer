@@ -27,7 +27,7 @@ assert(manifest.start_url === './#/', 'Manifest start_url must open the hash rou
 assert(index.includes('viewport-fit=cover'), 'iOS safe-area viewport metadata is missing');
 assert(index.includes('apple-mobile-web-app-capable'), 'iOS install metadata is missing');
 assert(index.includes('manifest.webmanifest'), 'Manifest link is missing from index');
-assert(serviceWorker.includes('SKIP_WAITING'), 'Service worker update message support is missing');
+assert(serviceWorker.includes('SKIP_WAITING') || serviceWorker.includes('skipWaiting()'), 'Service worker update activation support is missing');
 assert(serviceWorker.includes('index.html') && serviceWorker.includes('manifest.webmanifest'), 'Core shell is not precached');
 assert(serviceWorker.includes('signals/fci/101.webp') && serviceWorker.includes('signals/rsce/13.webp'), 'Official signs are not available in the offline precache');
 
